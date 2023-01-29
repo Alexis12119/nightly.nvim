@@ -1,0 +1,2 @@
+# nightly.nvim
+Colorscheme
