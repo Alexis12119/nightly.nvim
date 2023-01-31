@@ -1,6 +1,7 @@
 local theme = {}
 
 function theme.setup()
+  -- TODO: Try to find out why it's being called twice
   local color = require("nightly.palette").colors
   local options = require("nightly.config").options
 
@@ -761,13 +762,9 @@ function theme.setup()
     vim.g[option] = value
   end
 
-  for group, colors in pairs(theme.highlights) do
-    if not vim.tbl_isempty(colors) then
-      vim.api.nvim_set_hl(0, group, colors)
-    end
-  end
+  theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.highlights)
 
-  for group, colors in pairs(options.highlights) do
+  for group, colors in pairs(theme.highlights) do
     if not vim.tbl_isempty(colors) then
       vim.api.nvim_set_hl(0, group, colors)
     end
