@@ -2,7 +2,6 @@ local theme = {}
 
 function theme.setup()
   local color = require("nightly.palette").colors
-  local transparent = require("nightly.config").options.transparent
   local options = require("nightly.config").options
 
   if options.color == "green" then
@@ -27,20 +26,19 @@ function theme.setup()
   end
 
   if options.color == "gray" then
-    -- color.bg = "#181A21"
     color.bg = "#1C1C1C"
     color.sky = "#6B7478"
     color.header = "#6B7478"
     color.folder = "#6B7478"
     color.root = "#6B7478"
     color.border = "#6B7478"
-    -- color.fill = "#303030"
     color.fill = "#252526"
   end
 
-  if transparent then
+  if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
+    color.sep = "#292E42"
     -- fix black issue on autocompletion
     vim.opt.pumblend = 0
   end
@@ -326,7 +324,7 @@ function theme.setup()
     -- NvimTree
     NvimTreeGitDeleted = { fg = color.red },
     NvimTreeWinSeparator = {
-      fg = color.bg,
+      fg = color.sep or color.bg,
     },
     NvimTreeEndOfBuffer = { link = "EndOfBuffer" },
     NvimTreeSpecialFile = { underline = true, sp = color.fg_cursorlinenr },
@@ -761,6 +759,8 @@ function theme.setup()
   for option, value in pairs(theme.terminal_colors) do
     vim.g[option] = value
   end
+
+  theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.highlights)
 
   for group, colors in pairs(theme.highlights) do
     if not vim.tbl_isempty(colors) then

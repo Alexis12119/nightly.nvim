@@ -9,6 +9,7 @@ local defaults = {
     keywords = { italic = false },
     variables = { italic = false },
   },
+  highlights = {},
 }
 
 M.options = {}
