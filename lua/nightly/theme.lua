@@ -2,7 +2,6 @@ local theme = {}
 
 function theme.setup()
   local color = require("nightly.palette").colors
-  local transparent = require("nightly.config").options.transparent
   local options = require("nightly.config").options
 
   if options.color == "green" then
@@ -38,7 +37,7 @@ function theme.setup()
     color.fill = "#252526"
   end
 
-  if transparent then
+  if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
     -- fix black issue on autocompletion
@@ -763,6 +762,12 @@ function theme.setup()
   end
 
   for group, colors in pairs(theme.highlights) do
+    if not vim.tbl_isempty(colors) then
+      vim.api.nvim_set_hl(0, group, colors)
+    end
+  end
+
+  for group, colors in pairs(options.highlights) do
     if not vim.tbl_isempty(colors) then
       vim.api.nvim_set_hl(0, group, colors)
     end

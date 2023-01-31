@@ -47,12 +47,15 @@ vim.cmd "colorscheme nightly"
 ```lua
 require("nightly").setup({
     color = "blue", -- gray, green or red
-    transparent = false, -- experimental
+    transparent = false,
     styles = {
         comments = { italic = true },
         functions = { italic= false },
         keywords = { italic = false },
         variables = { italic = false },
+    },
+    highlights = {
+        -- add or override highlights
     },
 })
 ```
