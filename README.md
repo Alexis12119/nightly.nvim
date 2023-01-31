@@ -56,6 +56,7 @@ require("nightly").setup({
     },
     highlights = {
         -- add or override highlights
+        -- Normal = { bg = "#000000" }
     },
 })
 ```
