@@ -1,7 +1,6 @@
 local theme = {}
 
 function theme.setup()
-  -- TODO: Try to find out why it's being called twice
   local color = require("nightly.palette").colors
   local options = require("nightly.config").options
 
