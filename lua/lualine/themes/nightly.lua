@@ -1,5 +1,3 @@
-local color = require "nightly.palette"
-
 local nightly = {
   normal = {
     a = { bg = "NONE", fg = "#BBC2CF" },
