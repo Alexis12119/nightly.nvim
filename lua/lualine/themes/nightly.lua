@@ -2,40 +2,40 @@ local color = require "nightly.palette"
 
 local nightly = {
   normal = {
-    a = { bg = color.blue, fg = color.black },
-    b = { bg = color.fg_gutter, fg = color.blue },
-    c = { bg = color.none, fg = color.fg_sidebar },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
+    c = { bg = "NONE", fg = "#BBC2CF" },
   },
 
   insert = {
-    a = { bg = color.green, fg = color.black },
-    b = { bg = color.fg_gutter, fg = color.green },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
   },
 
   command = {
-    a = { bg = color.yellow, fg = color.black },
-    b = { bg = color.fg_gutter, fg = color.yellow },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
   },
 
   visual = {
-    a = { bg = color.magenta, fg = color.black },
-    b = { bg = color.fg_gutter, fg = color.magenta },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
   },
 
   replace = {
-    a = { bg = color.red, fg = color.black },
-    b = { bg = color.fg_gutter, fg = color.red },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
   },
 
   terminal = {
-    a = { bg = color.green1, fg = color.black },
-    b = { bg = color.fg_gutter, fg = color.green1 },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
   },
 
   inactive = {
-    a = { bg = color.bg_statusline, fg = color.blue },
-    b = { bg = color.bg_statusline, fg = color.fg_gutter },
-    c = { bg = color.bg_statusline, fg = color.fg_gutter },
+    a = { bg = "NONE", fg = "#BBC2CF" },
+    b = { bg = "NONE", fg = "#BBC2CF" },
+    c = { bg = "NONE", fg = "#BBC2CF" },
   },
 }
 return nightly
