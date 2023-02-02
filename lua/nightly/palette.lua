@@ -10,6 +10,7 @@ M.colors = {
   folder = "#A9B1D6",
   root = "#7AA2F7",
   border = "#5F87AF",
+  cursor = "#292E42",
   bg_highlight = "#292E42",
   fg_cursorlinenr = "#AAAAAA",
   bg_dark = "#1F2335",

@@ -12,6 +12,7 @@ function theme.setup()
     color.root = "#98BE65"
     color.border = "#87AF87"
     color.fill = "#242E2F"
+    color.cursor = "#242E32"
   end
 
   if options.color == "red" then
@@ -22,6 +23,7 @@ function theme.setup()
     color.root = "#AF8696"
     color.border = "#81454C"
     color.fill = "#0F080F"
+    color.cursor = "#322E32"
     -- #4D2B39
   end
 
@@ -33,6 +35,7 @@ function theme.setup()
     color.root = "#6B7478"
     color.border = "#6B7478"
     color.fill = "#252526"
+    color.cursor = "#222222"
   end
 
   if options.transparent then
@@ -67,7 +70,7 @@ function theme.setup()
     Special = { fg = color.blue },
     SpecialChar = { fg = color.fg },
     SpecialKey = { fg = color.fg },
-    CursorLine = { bg = color.bg_highlight },
+    CursorLine = { bg = color.cursor },
     Visual = { bg = color.bg_highlight },
     VisualNOS = { bg = color.bg_highlight },
     Title = { fg = color.blue, bold = true },
