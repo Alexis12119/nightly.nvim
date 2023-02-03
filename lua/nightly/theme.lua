@@ -42,7 +42,7 @@ function theme.setup()
     color.bg = "NONE"
     color.dark1 = "NONE"
     color.sep = "#292E42"
-    -- fix black issue on autocompletion
+    -- Fix black issue on autocompletion
     vim.opt.pumblend = 0
   end
 
@@ -134,7 +134,7 @@ function theme.setup()
     SpellLocal = { sp = color.blue, undercurl = true },
     SpellRare = { sp = color.yellow, undercurl = true },
 
-    --Statusline
+    -- Statusline
     StatusLineNC = { bg = color.bg },
     StatusLine = { fg = color.fg, bg = color.fill },
 
@@ -155,9 +155,6 @@ function theme.setup()
     CurSearch = { link = "IncSearch" },
     Search = { fg = color.black, bg = color.blue },
     IncSearch = { fg = color.black, bg = "#87AF87" },
-
-    htmlH1 = { fg = color.magenta, bold = true },
-    htmlH2 = { fg = color.blue, bold = true },
 
     qfLineNr = { link = "CursorLineNr" },
     qfFileName = { fg = color.none },
@@ -193,6 +190,7 @@ function theme.setup()
     GitGutterChange = { fg = color.blue, bg = color.bg },
     GitGutterDelete = { fg = color.red, bg = color.bg },
 
+    -- Markdown
     mkdCodeDelimiter = { bg = color.blue6, fg = color.fg },
     mkdCodeStart = { fg = color.red, bold = true },
     mkdCodeEnd = { fg = color.fg, bold = true },
@@ -210,7 +208,7 @@ function theme.setup()
     markdownLink = { fg = color.fg, underline = true, sp = color.blue8 },
     markdownUrl = { fg = color.fg, underline = true, sp = color.blue8 },
 
-    -- Glyph palette
+    -- Glyph Palette
     GlyphPalette1 = { fg = color.red },
     GlyphPalette2 = { fg = color.green },
     GlyphPalette3 = { fg = color.yellow },
@@ -312,6 +310,8 @@ function theme.setup()
     IndentBlanklineContextChar = { fg = color.gray4 },
 
     -- HTML
+    htmlH1 = { fg = color.magenta, bold = true },
+    htmlH2 = { fg = color.blue, bold = true },
     htmlUnderline = { underline = true, sp = color.dark3 },
     htmlBoldUnderline = { bold = true, underline = true, sp = color.dark3 },
     htmlItalicUnderline = { italic = true, underline = true, sp = color.dark3 },
@@ -343,7 +343,7 @@ function theme.setup()
     NvimTreeGitDirty = { fg = color.blue4 },
     NvimTreeGitNew = { fg = color.green2 },
 
-    -- WhichKey
+    -- Which-Key
     WhichKeyBorder = { fg = color.border, bg = color.none },
     WhichKeyFloat = { link = "NormalFloat" },
     WhichKey = { fg = color.blue5 },
@@ -357,19 +357,19 @@ function theme.setup()
     -- BufferCurrentIndex = { bg = color.fill, fg = color.blue },
     -- BufferCurrentMod = { bg = color.fill, fg = color.yellow },
     -- BufferCurrentSign = { bg = color.fill, fg = color.blue },
-    -- BufferCurrentTarget = { bg = color.fg_gutter, fg = color.red },
-    -- BufferVisible = { bg = color.bg_statusline, fg = color.fg },
-    -- BufferVisibleIndex = { bg = color.bg_statusline, fg = color.blue },
-    -- BufferVisibleMod = { bg = color.bg_statusline, fg = color.yellow },
-    -- BufferVisibleSign = { bg = color.bg_statusline, fg = color.blue },
-    -- BufferVisibleTarget = { bg = color.bg_statusline, fg = color.red },
-    -- BufferInactive = { bg = color.bg_statusline, fg = color.dark5 },
-    -- BufferInactiveIndex = { bg = color.bg_statusline, fg = color.dark5 },
-    -- BufferInactiveMod = { bg = color.bg_statusline, fg = color.yellow },
-    -- BufferInactiveSign = { bg = color.bg_statusline, fg = color.dark3 },
-    -- BufferInactiveTarget = { bg = color.bg_statusline, fg = color.red },
-    -- BufferTabpages = { bg = color.bg_statusline, fg = color.none },
-    -- BufferTabpage = { bg = color.bg_statusline, fg = color.dark3 },
+    -- BufferCurrentTarget = { bg = color.blue7, fg = color.red },
+    -- BufferVisible = { bg = color.dark5, fg = color.fg },
+    -- BufferVisibleIndex = { bg = color.dark5, fg = color.blue },
+    -- BufferVisibleMod = { bg = color.dark5, fg = color.yellow },
+    -- BufferVisibleSign = { bg = color.dark5, fg = color.blue },
+    -- BufferVisibleTarget = { bg = color.dark5, fg = color.red },
+    -- BufferInactive = { bg = color.dark5, fg = color.dark5 },
+    -- BufferInactiveIndex = { bg = color.dark5, fg = color.dark5 },
+    -- BufferInactiveMod = { bg = color.dark5, fg = color.yellow },
+    -- BufferInactiveSign = { bg = color.dark5, fg = color.dark3 },
+    -- BufferInactiveTarget = { bg = color.dark5, fg = color.red },
+    -- BufferTabpages = { bg = color.dark5, fg = color.none },
+    -- BufferTabpage = { bg = color.dark5, fg = color.dark3 },
     -- BufferTabpageFill = { bg = color.fill },
 
     -- Telescope
@@ -384,9 +384,9 @@ function theme.setup()
     -- TelescopePreviewBorder = { fg = color.border, bg = color.none },
     -- TelescopeResultsBorder = { fg = color.border, bg = color.none },
     TelescopeBorder = { fg = color.blue7, bg = color.bg },
-    -- TelescopePromptTitle = { fg = color.terminal_black, bg = color.none },
-    -- TelescopePreviewTitle = { fg = color.terminal_black, bg = color.none },
-    -- TelescopeResultsTitle = { fg = color.terminal_black, bg = color.none },
+    -- TelescopePromptTitle = { fg = color.blue6, bg = color.none },
+    -- TelescopePreviewTitle = { fg = color.blue6, bg = color.none },
+    -- TelescopeResultsTitle = { fg = color.blue6, bg = color.none },
     TelescopeTitle = { fg = color.fg, bg = color.highlight },
 
     -- Alpha
