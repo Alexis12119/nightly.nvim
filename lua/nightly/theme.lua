@@ -12,7 +12,7 @@ function theme.setup()
     color.root = "#98BE65"
     color.border = "#87AF87"
     color.fill = "#242E2F"
-    color.cursor = "#242E32"
+    color.cursorline = "#242E32"
   end
 
   if options.color == "red" then
@@ -23,7 +23,7 @@ function theme.setup()
     color.root = "#AF8696"
     color.border = "#81454C"
     color.fill = "#0F080F"
-    color.cursor = "#322E32"
+    color.cursorline = "#322E32"
     -- #4D2B39
   end
 
@@ -35,7 +35,7 @@ function theme.setup()
     color.root = "#6B7478"
     color.border = "#6B7478"
     color.fill = "#252526"
-    color.cursor = "#222222"
+    color.cursorline = "#222222"
   end
 
   if options.transparent then
@@ -53,31 +53,31 @@ function theme.setup()
     SignColumn = { fg = color.fg, bg = color.bg },
     SignColumnSB = { fg = color.fg, bg = color.bg },
     Conceal = { fg = color.dark3 },
-    ColorColumn = { fg = color.none, bg = color.bg_highlight },
-    CursorColumn = { fg = color.none, bg = color.bg_highlight },
+    ColorColumn = { fg = color.none, bg = color.highlight },
+    CursorColumn = { fg = color.none, bg = color.highlight },
     LineNr = { fg = color.dark2, bg = color.bg },
-    CursorLineNr = { fg = color.fg_cursorlinenr, bg = color.bg },
+    CursorLineNr = { fg = color.gray2, bg = color.bg },
     Directory = { fg = color.sky },
     EndOfBuffer = { fg = color.bg },
-    Substitute = { fg = color.fg, bg = color.terminal_black },
+    Substitute = { fg = color.fg, bg = color.blue6 },
     FocusedSymbol = { fg = color.blue, bg = color.none },
-    Folded = { fg = color.blue, bg = color.fg_gutter },
+    Folded = { fg = color.blue, bg = color.blue7 },
     FoldColumn = { fg = color.dark4, bg = color.none },
-    Keyword = { fg = color.cursor_bg, italic = options.styles.keywords.italic },
-    ModeMsg = { fg = color.fg_dark, bold = true },
-    NonText = { fg = color.fg_dark },
+    Keyword = { fg = color.gray3, italic = options.styles.keywords.italic },
+    ModeMsg = { fg = color.gray4, bold = true },
+    NonText = { fg = color.gray4 },
     Question = { fg = color.blue },
     Special = { fg = color.blue },
     SpecialChar = { fg = color.fg },
     SpecialKey = { fg = color.fg },
-    CursorLine = { bg = color.cursor },
-    Visual = { bg = color.bg_highlight },
-    VisualNOS = { bg = color.bg_highlight },
+    CursorLine = { bg = color.cursorline },
+    Visual = { bg = color.highlight },
+    VisualNOS = { bg = color.highlight },
     Title = { fg = color.blue, bold = true },
     ErrorMsg = { fg = color.red },
     WarningMsg = { fg = color.light_orange },
-    Whitespace = { fg = color.fg_gutter },
-    WildMenu = { bg = color.bg_dark },
+    Whitespace = { fg = color.blue7 },
+    WildMenu = { bg = color.blue9 },
     Identifier = { fg = color.magenta, italic = options.styles.variables.italic },
     Boolean = { fg = color.yellow },
     Comment = { fg = color.dark4, italic = options.styles.comments.italic },
@@ -102,7 +102,7 @@ function theme.setup()
     String = { fg = color.green },
     Structure = { fg = color.yellow },
     Tag = { fg = color.blue },
-    Todo = { fg = color.dark3, bg = color.bg_highlight },
+    Todo = { fg = color.dark3, bg = color.highlight },
     Type = { fg = color.cyan },
     Typedef = { fg = color.purple },
     Error = { fg = color.red },
@@ -120,7 +120,7 @@ function theme.setup()
     Underlined = { underline = true, sp = color.dark3 },
 
     -- Cursor
-    TermCursor = { fg = color.bg_dark, bg = color.cursor_bg },
+    TermCursor = { fg = color.blue9, bg = color.gray3 },
     Cursor = { fg = color.bg, bg = color.fg },
     lCursor = { fg = color.bg, bg = color.fg },
     CursorIM = { fg = color.bg, bg = color.fg },
@@ -136,7 +136,7 @@ function theme.setup()
 
     --Statusline
     StatusLineNC = { bg = color.bg },
-    StatusLine = { fg = color.fg_sidebar, bg = color.fill },
+    StatusLine = { fg = color.fg, bg = color.fill },
 
     -- Float
     NormalFloat = {
@@ -149,7 +149,7 @@ function theme.setup()
     Pmenu = { fg = "#C0CAF5", bg = color.bg },
     PmenuSel = { bg = "#343A55" },
     PmenuSBar = { bg = "#222229" },
-    PmenuThumb = { bg = color.fg_gutter },
+    PmenuThumb = { bg = color.blue7 },
 
     -- Search
     CurSearch = { link = "IncSearch" },
@@ -163,19 +163,19 @@ function theme.setup()
     qfFileName = { fg = color.none },
 
     -- Diff
-    DiffAdd = { fg = color.bg_dark, bg = color.blue },
-    DiffChange = { fg = color.bg_dark, bg = color.green },
-    DiffDelete = { fg = color.bg_dark, bg = color.red },
-    DiffText = { fg = color.bg_dark, bg = color.fg },
+    DiffAdd = { fg = color.blue9, bg = color.blue },
+    DiffChange = { fg = color.blue9, bg = color.green },
+    DiffDelete = { fg = color.blue9, bg = color.red },
+    DiffText = { fg = color.blue9, bg = color.fg },
 
     -- Tabline
-    TabLine = { bg = color.bg_statusline, fg = color.fg },
-    TabLineFill = { bg = color.bg_dark },
+    TabLine = { bg = color.dark5, fg = color.fg },
+    TabLineFill = { bg = color.blue9 },
     TabLineSel = { fg = color.fg, bg = color.bg },
 
     -- Bufferline
     BufferLineSeparator = {
-      fg = color.bg_highlight,
+      fg = color.highlight,
       bg = color.dark1,
     },
     BufferLineFill = { bg = color.fill },
@@ -185,15 +185,15 @@ function theme.setup()
 
     -- Trouble
     TroubleText = { fg = color.fg },
-    TroubleCount = { fg = color.magenta, bg = color.fg_gutter },
-    TroubleNormal = { fg = color.fg_sidebar, bg = color.bg_sidebar },
+    TroubleCount = { fg = color.magenta, bg = color.blue7 },
+    TroubleNormal = { fg = color.fg, bg = color.none },
 
     -- GitGutter
     GitGutterAdd = { fg = color.green, bg = color.bg },
     GitGutterChange = { fg = color.blue, bg = color.bg },
     GitGutterDelete = { fg = color.red, bg = color.bg },
 
-    mkdCodeDelimiter = { bg = color.terminal_black, fg = color.fg },
+    mkdCodeDelimiter = { bg = color.blue6, fg = color.fg },
     mkdCodeStart = { fg = color.red, bold = true },
     mkdCodeEnd = { fg = color.fg, bold = true },
 
@@ -206,9 +206,9 @@ function theme.setup()
     markdownH4 = { fg = color.fg, bold = true },
     markdownH5 = { fg = color.fg, bold = true },
     markdownH6 = { fg = color.fg, bold = true },
-    markdownLinkText = { fg = color.blue, underline = true, sp = color.terminal_black },
-    markdownLink = { fg = color.fg, underline = true, sp = color.cursor_fg },
-    markdownUrl = { fg = color.fg, underline = true, sp = color.cursor_fg },
+    markdownLinkText = { fg = color.blue, underline = true, sp = color.blue6 },
+    markdownLink = { fg = color.fg, underline = true, sp = color.blue8 },
+    markdownUrl = { fg = color.fg, underline = true, sp = color.blue8 },
 
     -- Glyph palette
     GlyphPalette1 = { fg = color.red },
@@ -225,11 +225,11 @@ function theme.setup()
     healthWarning = { fg = color.light_orange },
 
     -- Illuminate
-    IlluminatedWord = { bg = color.fg_gutter },
-    IlluminatedCurWord = { bg = color.fg_gutter },
-    IlluminatedWordText = { bg = color.fg_gutter },
-    IlluminatedWordRead = { bg = color.fg_gutter },
-    IlluminatedWordWrite = { bg = color.fg_gutter },
+    IlluminatedWord = { bg = color.blue7 },
+    IlluminatedCurWord = { bg = color.blue7 },
+    IlluminatedWordText = { bg = color.blue7 },
+    IlluminatedWordRead = { bg = color.blue7 },
+    IlluminatedWordWrite = { bg = color.blue7 },
 
     -- Treesitter
     ["@annotation"] = { link = "PreProc" },
@@ -276,7 +276,7 @@ function theme.setup()
     ["@string.regex"] = { fg = color.blue3 },
     ["@string.special"] = { fg = color.green },
     ["@string.escape"] = { fg = color.green },
-    ["@symbol"] = { fg = color.fg_dark },
+    ["@symbol"] = { fg = color.gray4 },
     ["@tag"] = { link = "Tag" },
     ["@tag.delimiter"] = { link = "Tag" },
     ["@tag.attribute"] = { fg = color.cyan },
@@ -284,18 +284,18 @@ function theme.setup()
     ["@text.uri"] = { underline = true, sp = color.dark3 },
     ["@text.literal"] = { fg = color.green },
     ["@text.math"] = { fg = color.blue },
-    ["@text.environment"] = { fg = color.fg_gutter },
+    ["@text.environment"] = { fg = color.blue7 },
     ["@text.environment.name"] = { fg = color.fg },
     ["@text.reference"] = { fg = color.blue },
     ["@text.title"] = { fg = color.fg },
-    ["@text.note"] = { fg = color.bg_dark, bg = color.fg_dark },
+    ["@text.note"] = { fg = color.blue9, bg = color.gray4 },
     ["@text.warning"] = { fg = color.bg, bg = color.light_orange },
     ["@text.error"] = { fg = color.bg, bg = color.red },
     ["@text.strike"] = { fg = color.fg },
     ["@text.strong"] = { link = "Bold" },
     ["@text.emphasis"] = { link = "Italic" },
     ["@text.underline"] = { link = "Underlined" },
-    ["@text.literal.markdown_inline"] = { bg = color.terminal_black, fg = color.blue },
+    ["@text.literal.markdown_inline"] = { bg = color.blue6, fg = color.blue },
     ["@text.todo"] = { link = "Todo" },
     ["@text.todo.checked"] = { link = "Directory" },
     ["@text.todo.unchecked"] = { link = "PreProc" },
@@ -309,7 +309,7 @@ function theme.setup()
     TSNodeUnmatched = { fg = color.dark2 },
 
     -- Indent Blankline
-    IndentBlanklineContextChar = { fg = color.fg_dark },
+    IndentBlanklineContextChar = { fg = color.gray4 },
 
     -- HTML
     htmlUnderline = { underline = true, sp = color.dark3 },
@@ -330,16 +330,16 @@ function theme.setup()
       fg = color.sep or color.bg,
     },
     NvimTreeEndOfBuffer = { link = "EndOfBuffer" },
-    NvimTreeSpecialFile = { underline = true, sp = color.fg_cursorlinenr },
-    NvimTreeIndentMarker = { fg = color.terminal_black },
+    NvimTreeSpecialFile = { underline = true, sp = color.gray2 },
+    NvimTreeIndentMarker = { fg = color.blue6 },
     NvimTreeSymlink = { fg = color.yellow },
     NvimTreeNormal = { link = "Normal" },
     NvimTreeNormalNC = { link = "NormalNC" },
     NvimTreeFolderIcon = { fg = color.folder },
     NvimTreeRootFolder = { fg = color.root, bold = false },
     NvimTreeFolderName = { fg = color.fg },
-    NvimTreeOpenedFolderName = { fg = color.fg_dark },
-    NvimTreeEmptyFolderName = { fg = color.fg_dark },
+    NvimTreeOpenedFolderName = { fg = color.gray4 },
+    NvimTreeEmptyFolderName = { fg = color.gray4 },
     NvimTreeGitDirty = { fg = color.blue4 },
     NvimTreeGitNew = { fg = color.green2 },
 
@@ -373,7 +373,7 @@ function theme.setup()
     -- BufferTabpageFill = { bg = color.fill },
 
     -- Telescope
-    TelescopeNormal = { fg = color.fg_cursorlinenr, bg = color.bg },
+    TelescopeNormal = { fg = color.gray2, bg = color.bg },
     TelescopeMatching = { fg = color.sky, bg = color.bg },
     TelescopeSelection = { fg = color.sky, bg = color.bg },
     TelescopeMultiSelection = { bg = color.bg },
@@ -383,11 +383,11 @@ function theme.setup()
     -- TelescopePromptBorder = { fg = color.border, bg = color.none },
     -- TelescopePreviewBorder = { fg = color.border, bg = color.none },
     -- TelescopeResultsBorder = { fg = color.border, bg = color.none },
-    TelescopeBorder = { fg = color.fg_gutter, bg = color.bg },
+    TelescopeBorder = { fg = color.blue7, bg = color.bg },
     -- TelescopePromptTitle = { fg = color.terminal_black, bg = color.none },
     -- TelescopePreviewTitle = { fg = color.terminal_black, bg = color.none },
     -- TelescopeResultsTitle = { fg = color.terminal_black, bg = color.none },
-    TelescopeTitle = { fg = color.fg, bg = color.bg_highlight },
+    TelescopeTitle = { fg = color.fg, bg = color.highlight },
 
     -- Alpha
     AlphaHeader = { fg = color.header },
@@ -510,9 +510,9 @@ function theme.setup()
     TerminalBorder = { link = "SagaBorder" },
     TerminalNormal = { link = "SagaNormal" },
 
-    LspReferenceText = { bg = color.fg_gutter },
-    LspReferenceRead = { bg = color.fg_gutter },
-    LspReferenceWrite = { bg = color.fg_gutter },
+    LspReferenceText = { bg = color.blue7 },
+    LspReferenceRead = { bg = color.blue7 },
+    LspReferenceWrite = { bg = color.blue7 },
     LspInfoBorder = { link = "FloatBorder" },
     LspFloatWinNormal = { link = "NormalFloat" },
 
@@ -541,9 +541,9 @@ function theme.setup()
     DiagnosticSignWarn = { link = "DiagnosticWarn" },
     DiagnosticSignHint = { link = "DiagnosticHint" },
 
-    CmpDocumentationBorder = { fg = color.terminal_black },
-    CmpCompletionBorder = { fg = color.terminal_black },
-    CmpCursorLine = { bg = color.bg_highlight },
+    CmpDocumentationBorder = { fg = color.blue6 },
+    CmpCompletionBorder = { fg = color.blue6 },
+    CmpCursorLine = { bg = color.highlight },
 
     CmpItemKindFolder = { fg = color.blue },
     CmpItemKindFile = { fg = color.green },
@@ -564,17 +564,17 @@ function theme.setup()
     CmpItemKindField = { fg = color.yellow },
     CmpItemKindEvent = { fg = color.yellow },
 
-    CmpItemKindTypeParameter = { fg = color.fg_dark },
-    CmpItemKindVariable = { fg = color.fg_dark },
+    CmpItemKindTypeParameter = { fg = color.gray4 },
+    CmpItemKindVariable = { fg = color.gray4 },
     CmpItemKindOperator = { fg = color.blue },
     CmpItemKindSnippet = { fg = color.blue },
     CmpItemKindKeyword = { fg = color.blue },
-    CmpItemKindText = { fg = color.fg_dark },
-    CmpItemKindUnit = { fg = color.fg_dark },
+    CmpItemKindText = { fg = color.gray4 },
+    CmpItemKindUnit = { fg = color.gray4 },
     CmpItemKindValue = { fg = color.blue },
 
     CmpItemAbbrMatch = { fg = color.sky, bg = color.none },
-    CmpItemAbbrDeprecated = { fg = color.fg_gutter, bg = color.none, strikethrough = true },
+    CmpItemAbbrDeprecated = { fg = color.blue7, bg = color.none, strikethrough = true },
     CmpItemAbbrMatchFuzzy = { fg = color.sky, bg = color.none },
     CmpItemAbbr = { fg = color.fg, bg = color.none },
 
@@ -599,35 +599,35 @@ function theme.setup()
     NavicIconsArray = { fg = color.blue, bg = color.none },
     NavicIconsObject = { fg = color.blue, bg = color.none },
     NavicIconsKey = { fg = color.purple, bg = color.none },
-    NavicIconsKeyword = { fg = color.cursor_bg, bg = color.none },
+    NavicIconsKeyword = { fg = color.gray3, bg = color.none },
     NavicIconsNull = { fg = color.blue, bg = color.none },
     NavicIconsEnumMember = { fg = color.yellow, bg = color.none },
     NavicIconsStruct = { fg = color.purple, bg = color.none },
     NavicIconsEvent = { fg = color.blue, bg = color.none },
     NavicIconsOperator = { fg = color.fg, bg = color.none },
-    NavicIconsTypeParameter = { fg = color.fg_dark, bg = color.none },
+    NavicIconsTypeParameter = { fg = color.gray4, bg = color.none },
     NavicText = { fg = color.violet, bg = color.none },
     NavicSeparator = { fg = color.blue4, bg = color.none },
 
     -- Scrollbar
-    ScrollbarHandle = { fg = color.none, bg = color.bg_highlight },
+    ScrollbarHandle = { fg = color.none, bg = color.highlight },
 
-    ScrollbarSearchHandle = { fg = color.light_orange, bg = color.bg_highlight },
+    ScrollbarSearchHandle = { fg = color.light_orange, bg = color.highlight },
     ScrollbarSearch = { fg = color.light_orange, bg = color.none },
 
-    ScrollbarErrorHandle = { fg = color.red, bg = color.bg_highlight },
+    ScrollbarErrorHandle = { fg = color.red, bg = color.highlight },
     ScrollbarError = { fg = color.red, bg = color.none },
 
-    ScrollbarWarnHandle = { fg = color.light_orange, bg = color.bg_highlight },
+    ScrollbarWarnHandle = { fg = color.light_orange, bg = color.highlight },
     ScrollbarWarn = { fg = color.light_orange, bg = color.none },
 
-    ScrollbarInfoHandle = { fg = color.blue, bg = color.bg_highlight },
+    ScrollbarInfoHandle = { fg = color.blue, bg = color.highlight },
     ScrollbarInfo = { fg = color.blue, bg = color.none },
 
-    ScrollbarHintHandle = { fg = color.yellow, bg = color.bg_highlight },
+    ScrollbarHintHandle = { fg = color.yellow, bg = color.highlight },
     ScrollbarHint = { fg = color.yellow, bg = color.none },
 
-    ScrollbarMiscHandle = { fg = color.purple, bg = color.bg_highlight },
+    ScrollbarMiscHandle = { fg = color.purple, bg = color.highlight },
     ScrollbarMisc = { fg = color.purple, bg = color.none },
 
     -- Yanky
@@ -662,8 +662,8 @@ function theme.setup()
 
     MiniCompletionActiveParameter = { underline = true },
 
-    MiniCursorword = { bg = color.fg_gutter },
-    MiniCursorwordCurrent = { bg = color.fg_gutter },
+    MiniCursorword = { bg = color.blue7 },
+    MiniCursorwordCurrent = { bg = color.blue7 },
 
     MiniIndentscopeSymbol = { fg = color.blue1 },
     MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
@@ -682,10 +682,10 @@ function theme.setup()
     MiniStarterSection = { fg = color.blue1 },
     MiniStarterQuery = { fg = color.blue },
 
-    MiniStatuslineDevinfo = { fg = color.fg_dark, bg = color.bg_highlight },
-    MiniStatuslineFileinfo = { fg = color.fg_dark, bg = color.bg_highlight },
-    MiniStatuslineFilename = { fg = color.fg_dark, bg = color.fg_gutter },
-    MiniStatuslineInactive = { fg = color.blue, bg = color.bg_statusline },
+    MiniStatuslineDevinfo = { fg = color.gray4, bg = color.highlight },
+    MiniStatuslineFileinfo = { fg = color.gray4, bg = color.highlight },
+    MiniStatuslineFilename = { fg = color.gray4, bg = color.blue7 },
+    MiniStatuslineInactive = { fg = color.blue, bg = color.dark5 },
     MiniStatuslineModeCommand = { fg = color.black, bg = color.yellow, bold = true },
     MiniStatuslineModeInsert = { fg = color.black, bg = color.green, bold = true },
     MiniStatuslineModeNormal = { fg = color.black, bg = color.blue, bold = true },
@@ -695,14 +695,14 @@ function theme.setup()
 
     MiniSurround = { bg = color.light_orange, fg = color.black },
 
-    MiniTablineCurrent = { fg = color.fg, bg = color.fg_gutter },
+    MiniTablineCurrent = { fg = color.fg, bg = color.blue7 },
     MiniTablineFill = { bg = color.black },
-    MiniTablineHidden = { fg = color.dark3, bg = color.bg_statusline },
-    MiniTablineModifiedCurrent = { fg = color.light_orange, bg = color.fg_gutter },
-    MiniTablineModifiedHidden = { bg = color.bg_statusline, fg = color.light_orange },
-    MiniTablineModifiedVisible = { fg = color.light_orange, bg = color.bg_statusline },
-    MiniTablineTabpagesection = { bg = color.bg_statusline, fg = color.none },
-    MiniTablineVisible = { fg = color.fg, bg = color.bg_statusline },
+    MiniTablineHidden = { fg = color.dark3, bg = color.dark5 },
+    MiniTablineModifiedCurrent = { fg = color.light_orange, bg = color.blue7 },
+    MiniTablineModifiedHidden = { bg = color.dark5, fg = color.light_orange },
+    MiniTablineModifiedVisible = { fg = color.light_orange, bg = color.dark5 },
+    MiniTablineTabpagesection = { bg = color.dark5, fg = color.none },
+    MiniTablineVisible = { fg = color.fg, bg = color.dark5 },
 
     MiniTestEmphasis = { bold = true },
     MiniTestFail = { fg = color.red, bold = true },
@@ -711,7 +711,7 @@ function theme.setup()
     MiniTrailspace = { bg = color.red },
 
     -- Noice
-    NoiceCompletionItemKindDefault = { fg = color.fg_dark, bg = color.none },
+    NoiceCompletionItemKindDefault = { fg = color.gray4, bg = color.none },
 
     NoiceCompletionItemKindKeyword = { fg = color.cyan, bg = color.none },
 
@@ -742,8 +742,8 @@ function theme.setup()
 
   theme.terminal_colors = {
     terminal_color_0 = color.black,
-    terminal_color_8 = color.terminal_black,
-    terminal_color_7 = color.fg_dark,
+    terminal_color_8 = color.blue6,
+    terminal_color_7 = color.gray4,
     terminal_color_15 = color.fg,
     terminal_color_1 = color.red1,
     terminal_color_9 = color.red1,
