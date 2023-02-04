@@ -2,7 +2,20 @@
 
 A colorscheme for my [nvim-config](https://github.com/Alexis12119/nvim-config).
 
-![Screenshot (1423)](https://user-images.githubusercontent.com/74944536/215335292-00649616-64d2-4a96-9ad5-d4c9aed5d176.png)
+<div align="center">
+
+### Transparent
+![Screenshot (1462)](https://user-images.githubusercontent.com/74944536/216761754-ee485ded-53ff-472b-b9fb-0e782c34a523.png)
+### Blue
+![Screenshot (1464)](https://user-images.githubusercontent.com/74944536/216761731-945f1493-2728-4dc4-a065-68ae17f3beb3.png)
+### Green
+![Screenshot (1484)](https://user-images.githubusercontent.com/74944536/216761734-73593990-2643-4d2a-a19f-84eec16b135a.png)
+### Gray
+![Screenshot (1486)](https://user-images.githubusercontent.com/74944536/216761750-582dff37-2706-48c5-b172-fc8600980eaa.png)
+### Red
+![Screenshot (1485)](https://user-images.githubusercontent.com/74944536/216761740-f709b93d-b787-434d-8cfa-23771654e1a6.png)
+
+</div>
 
 ## ⚡️ Requirements
 
