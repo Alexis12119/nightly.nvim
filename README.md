@@ -1,22 +1,7 @@
 # <img src="https://user-images.githubusercontent.com/74944536/214324244-9fc431df-73b3-4472-b90b-8c14a5cd17a5.png" alt="nightly" width="80"/> Nightly
 
-**Elevate your coding environment with this simple Neovim color scheme.**
-
-<div align="center">
-
-#### Transparent
-![Screenshot (1462)](https://user-images.githubusercontent.com/74944536/216761754-ee485ded-53ff-472b-b9fb-0e782c34a523.png)
-#### Blue
-![Screenshot (1464)](https://user-images.githubusercontent.com/74944536/216761731-945f1493-2728-4dc4-a065-68ae17f3beb3.png)
-#### Green
-![Screenshot (1484)](https://user-images.githubusercontent.com/74944536/216761734-73593990-2643-4d2a-a19f-84eec16b135a.png)
-#### Gray
-![Screenshot (1486)](https://user-images.githubusercontent.com/74944536/216761750-582dff37-2706-48c5-b172-fc8600980eaa.png)
-#### Red
-![Screenshot (1485)](https://user-images.githubusercontent.com/74944536/216761740-f709b93d-b787-434d-8cfa-23771654e1a6.png)
-
-</div>
-
+**Elevate your coding environment with this simple Neovim color scheme.** - ChatGPT
+ 
 ## ⚡️ Requirements
 
 - Neovim >= 0.6.0
@@ -73,3 +58,24 @@ require("nightly").setup({
     },
 })
 ```
+
+## 📷 Screenshots
+<div align="center">
+
+#### Transparent
+![Screenshot (1462)](https://user-images.githubusercontent.com/74944536/216761754-ee485ded-53ff-472b-b9fb-0e782c34a523.png)
+#### Blue
+![Screenshot (1464)](https://user-images.githubusercontent.com/74944536/216761731-945f1493-2728-4dc4-a065-68ae17f3beb3.png)
+#### Green
+![Screenshot (1484)](https://user-images.githubusercontent.com/74944536/216761734-73593990-2643-4d2a-a19f-84eec16b135a.png)
+#### Gray
+![Screenshot (1486)](https://user-images.githubusercontent.com/74944536/216761750-582dff37-2706-48c5-b172-fc8600980eaa.png)
+#### Red
+![Screenshot (1485)](https://user-images.githubusercontent.com/74944536/216761740-f709b93d-b787-434d-8cfa-23771654e1a6.png)
+
+</div>
+
+## Credits
+* [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+* [everforest](https://github.com/sainnhe/everforest)
+* [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
