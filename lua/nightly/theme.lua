@@ -22,7 +22,8 @@ function theme.setup()
     color.folder = "#81454C"
     color.root = "#AF8696"
     color.border = "#81454C"
-    color.fill = "#0F080F"
+    -- color.fill = "#0F080F"
+    color.fill = "#2F1F30"
     color.cursorline = "#322E32"
     -- #4D2B39
   end
