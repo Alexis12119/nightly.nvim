@@ -77,5 +77,4 @@ require("nightly").setup({
 
 ## Credits
 * [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-* [everforest](https://github.com/sainnhe/everforest)
 * [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
