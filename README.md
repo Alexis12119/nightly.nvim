@@ -76,5 +76,8 @@ require("nightly").setup({
 </div>
 
 ## Credits
+
 * [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 * [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
+* [Everblush](https://github.com/Everblush/nvim)
+* habamax
