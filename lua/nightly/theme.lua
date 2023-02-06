@@ -39,6 +39,18 @@ function theme.setup()
     color.cursorline = "#222222"
   end
 
+  if options.color == "white" then
+    color.bg = "#4C4F69"
+    color.sky = "#CCD0DA"
+    color.header = "#CCD0DA"
+    color.folder = "#CCD0DA"
+    color.root = "#CCD0DA"
+    color.border = "#CCD0DA"
+    color.fill = "#5C5F77"
+    color.cursorline = "#4C4F69"
+    color.dark1 = "#393B4E"
+  end
+
   if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
