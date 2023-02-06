@@ -93,4 +93,5 @@ Thanks for some colors in their palette.
 - [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
 - [Everblush](https://github.com/Everblush/nvim)
 - [catppuccin](https://github.com/catppuccin/nvim)
+- [onenord.nvim](https://github.com/rmehri01/onenord.nvim)
 - habamax

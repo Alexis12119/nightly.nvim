@@ -40,15 +40,16 @@ function theme.setup()
   end
 
   if options.color == "white" then
-    color.bg = "#4C4F69"
+    color.bg = "#2E3440"
     color.sky = "#CCD0DA"
     color.header = "#CCD0DA"
     color.folder = "#CCD0DA"
     color.root = "#CCD0DA"
     color.border = "#CCD0DA"
-    color.fill = "#5C5F77"
+    color.fill = "#393B4E"
     color.cursorline = "#4C4F69"
-    color.dark1 = "#393B4E"
+    color.dark1 = "#222730"
+    color.comment = "#ABABAF"
   end
 
   if options.transparent then
@@ -93,7 +94,7 @@ function theme.setup()
     WildMenu = { bg = color.blue9 },
     Identifier = { fg = color.magenta, italic = options.styles.variables.italic },
     Boolean = { fg = color.yellow },
-    Comment = { fg = color.dark4, italic = options.styles.comments.italic },
+    Comment = { fg = color.comment or color.dark4, italic = options.styles.comments.italic },
     Character = { fg = color.green },
     Conditional = { fg = color.purple },
     Constant = { fg = color.light_orange },
@@ -251,7 +252,7 @@ function theme.setup()
     ["@none"] = { fg = color.none },
     ["@boolean"] = { fg = color.magenta },
     ["@character"] = { fg = color.green },
-    ["@comment"] = { fg = color.dark4, italic = options.styles.comments.italic },
+    ["@comment"] = { fg = color.comment or color.dark4, italic = options.styles.comments.italic },
     ["@conceal"] = { fg = color.fg },
     ["@conditional"] = { fg = color.purple },
     ["@constant"] = { fg = color.light_orange },
