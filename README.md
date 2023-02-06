@@ -87,7 +87,7 @@ require("nightly").setup({
 
 ## Credits
 
-Thanks for some the colors in their palette.
+Thanks for some colors in their palette.
 
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
