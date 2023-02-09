@@ -28,14 +28,14 @@ function theme.setup()
     -- #4D2B39
   end
 
-  if options.color == "gray" then
-    color.bg = "#1C1C1C"
+  if options.color == "black" then
+    color.bg = "#121212"
     color.sky = "#6B7478"
     color.header = "#6B7478"
     color.folder = "#6B7478"
     color.root = "#6B7478"
     color.border = "#6B7478"
-    color.fill = "#252526"
+    color.fill = "#181818"
     color.cursorline = "#222222"
   end
 

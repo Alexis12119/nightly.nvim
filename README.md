@@ -44,7 +44,7 @@ vim.cmd "colorscheme nightly"
 
 ```lua
 require("nightly").setup({
-    color = "blue", -- white, gray, green or red
+    color = "blue", -- white, black, green or red
     transparent = false,
     styles = {
         comments = { italic = true },
@@ -75,9 +75,9 @@ require("nightly").setup({
 
 ![Screenshot (1484)](https://user-images.githubusercontent.com/74944536/216761734-73593990-2643-4d2a-a19f-84eec16b135a.png)
 
-#### Gray
+#### Black
 
-![Screenshot (1489)](https://user-images.githubusercontent.com/74944536/216777947-9dcc21df-1aa9-4861-9b91-765678187dc0.png)
+![Screenshot (1489)](https://user-images.githubusercontent.com/74944536/217789137-bb4fe16b-300d-480c-a90a-7a192195557a.png)
 
 #### Red
 
