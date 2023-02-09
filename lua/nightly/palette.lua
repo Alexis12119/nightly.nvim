@@ -11,6 +11,7 @@ M.colors = {
   root = "#7AA2F7",
   -- border = "#6290E7",
   border = "#6F87AF",
+  fg_border = "#0E0A14",
   cursorline = "#292E42",
   highlight = "#292E42",
   gray = "#6e6b6b",

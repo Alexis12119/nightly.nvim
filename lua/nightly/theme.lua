@@ -401,7 +401,7 @@ function theme.setup()
     -- TelescopePromptTitle = { fg = color.blue6, bg = color.none },
     -- TelescopePreviewTitle = { fg = color.blue6, bg = color.none },
     -- TelescopeResultsTitle = { fg = color.blue6, bg = color.none },
-    TelescopeTitle = { fg = color.dark1, bg = color.border },
+    TelescopeTitle = { fg = color.fg_border, bg = color.border },
 
     -- Alpha
     AlphaHeader = { fg = color.header },
