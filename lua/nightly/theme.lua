@@ -397,11 +397,11 @@ function theme.setup()
     -- TelescopePromptBorder = { fg = color.border, bg = color.none },
     -- TelescopePreviewBorder = { fg = color.border, bg = color.none },
     -- TelescopeResultsBorder = { fg = color.border, bg = color.none },
-    TelescopeBorder = { fg = color.blue7, bg = color.bg },
+    TelescopeBorder = { fg = color.border, bg = color.bg },
     -- TelescopePromptTitle = { fg = color.blue6, bg = color.none },
     -- TelescopePreviewTitle = { fg = color.blue6, bg = color.none },
     -- TelescopeResultsTitle = { fg = color.blue6, bg = color.none },
-    TelescopeTitle = { fg = color.fg, bg = color.highlight },
+    TelescopeTitle = { fg = color.highlight, bg = color.border },
 
     -- Alpha
     AlphaHeader = { fg = color.header },
