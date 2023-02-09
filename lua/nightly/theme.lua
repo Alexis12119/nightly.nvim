@@ -11,6 +11,7 @@ function theme.setup()
     color.folder = "#98BE65"
     color.root = "#98BE65"
     color.border = "#87AF87"
+    color.fg_border = "#0E0A14"
     color.fill = "#242E2F"
     color.cursorline = "#242E32"
   end
@@ -22,6 +23,7 @@ function theme.setup()
     color.folder = "#81454C"
     color.root = "#AF8696"
     color.border = "#81454C"
+    color.fg_border = "#0E0A14"
     -- color.fill = "#0F080F"
     color.fill = "#2F1F30"
     color.cursorline = "#322E32"
@@ -35,6 +37,7 @@ function theme.setup()
     color.folder = "#6B7478"
     color.root = "#6B7478"
     color.border = "#6B7478"
+    color.fg_border = "#0E0A14"
     color.fill = "#181818"
     color.cursorline = "#222222"
   end
@@ -46,6 +49,7 @@ function theme.setup()
     color.folder = "#CCD0DA"
     color.root = "#CCD0DA"
     color.border = "#CCD0DA"
+    color.fg_border = "#0E0A14"
     color.fill = "#393B4E"
     color.cursorline = "#4C4F69"
     color.dark1 = "#222730"
@@ -401,7 +405,7 @@ function theme.setup()
     -- TelescopePromptTitle = { fg = color.blue6, bg = color.none },
     -- TelescopePreviewTitle = { fg = color.blue6, bg = color.none },
     -- TelescopeResultsTitle = { fg = color.blue6, bg = color.none },
-    TelescopeTitle = { fg = color.highlight, bg = color.border },
+    TelescopeTitle = { fg = color.fg_border or color.highlight, bg = color.border },
 
     -- Alpha
     AlphaHeader = { fg = color.header },
