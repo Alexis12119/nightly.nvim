@@ -557,7 +557,7 @@ function theme.setup()
 
     CmpDocumentationBorder = { fg = color.blue6 },
     CmpCompletionBorder = { fg = color.blue6 },
-    CmpCursorLine = { bg = color.highlight },
+    CmpCursorLine = { bg = color.cursorline },
 
     CmpItemKindFolder = { fg = color.blue },
     CmpItemKindFile = { fg = color.green },
