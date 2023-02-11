@@ -26,18 +26,6 @@ Plug 'Alexis12119/nightly.nvim'
 { "Alexis12119/nightly.nvim" }
 ```
 
-## 🚀 Usage
-
-```vim
-" Vimscript
-colorscheme nightly
-```
-
-```lua
--- Lua
-vim.cmd "colorscheme nightly"
-```
-
 ## ⚙️ Configuration
 
 > ❗️ Configuration needs to be set **BEFORE** loading the colorscheme.
@@ -57,6 +45,50 @@ require("nightly").setup({
         -- Normal = { bg = "#000000" }
     },
 })
+```
+
+## 🚀 Usage
+
+```vim
+" Vimscript
+colorscheme nightly
+```
+
+```lua
+-- Lua
+vim.cmd "colorscheme nightly"
+```
+
+#### [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+
+```lua
+-- Lua
+require('lualine').setup({
+    options = { theme = 'nightly' }
+})
+```
+
+```vim
+" Vimscript
+lua << EOF
+require('lualine').setup({
+    options = { theme = 'nightly' }
+})
+EOF
+```
+
+#### [lightline.vim](https://github.com/itchyny/lightline.vim)
+
+```lua
+-- Lua
+vim.g.lightline = {
+    ["colorscheme"] = "nightly",
+}
+```
+
+```vim
+" Vimscript
+let g:lightline = { 'colorscheme': 'nightly' }
 ```
 
 ## 📷 Screenshots
