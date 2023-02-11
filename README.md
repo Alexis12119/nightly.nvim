@@ -88,9 +88,7 @@ vim.g.lightline = {
 
 ```vim
 " Vimscript
-vim.cmd [[
-  let g:lightline = { 'colorscheme': 'nightly' }
-]]
+let g:lightline = { 'colorscheme': 'nightly' }
 ```
 
 ## 📷 Screenshots
