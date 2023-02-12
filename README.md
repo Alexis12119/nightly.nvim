@@ -32,7 +32,7 @@ Plug 'Alexis12119/nightly.nvim'
 
 ```lua
 require("nightly").setup({
-    color = "blue", -- white, black, green or red
+    color = "black", -- white, blue, green or red
     transparent = false,
     styles = {
         comments = { italic = true },

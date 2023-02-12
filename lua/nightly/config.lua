@@ -1,7 +1,7 @@
 local M = {}
 
 local defaults = {
-  color = "blue",
+  color = "black",
   transparent = false,
   styles = {
     comments = { italic = true },
