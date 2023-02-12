@@ -39,7 +39,7 @@ function theme.setup()
     color.cursorline = "#222222"
   end
 
-  if options.color == "white" then
+  if options.color == "white" or vim.o.background == "light" then
     color.bg = "#2E3440"
     color.sky = "#CCD0DA"
     color.header = "#CCD0DA"
