@@ -97,23 +97,27 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 #### Transparent
 
-![Screenshot (1462)](https://user-images.githubusercontent.com/74944536/216761754-ee485ded-53ff-472b-b9fb-0e782c34a523.png)
+![Screenshot (1576)](https://user-images.githubusercontent.com/74944536/218347872-16a189bc-8dec-475f-a54f-0a6807f86ef6.png)
 
 #### Blue
 
-![Screenshot (1464)](https://user-images.githubusercontent.com/74944536/216761731-945f1493-2728-4dc4-a065-68ae17f3beb3.png)
+![Screenshot (1572)](https://user-images.githubusercontent.com/74944536/218347890-243e41d4-cd53-4b8e-9906-062c5ad299c2.png)
 
 #### Green
 
-![Screenshot (1484)](https://user-images.githubusercontent.com/74944536/216761734-73593990-2643-4d2a-a19f-84eec16b135a.png)
+![Screenshot (1573)](https://user-images.githubusercontent.com/74944536/218347910-9e8703dd-b4f5-4ed0-905d-d83d29390a2a.png)
 
 #### Black
 
-![Screenshot (1489)](https://user-images.githubusercontent.com/74944536/217789137-bb4fe16b-300d-480c-a90a-7a192195557a.png)
+![Screenshot (1571)](https://user-images.githubusercontent.com/74944536/218347923-8f3e7fb4-57e9-4e6f-8aca-613d0f742836.png)
 
 #### Red
 
-![Screenshot (1488)](https://user-images.githubusercontent.com/74944536/216777956-979ad236-0588-4ae7-b96f-06bd3c11fa66.png)
+![Screenshot (1575)](https://user-images.githubusercontent.com/74944536/218347943-743da274-cc70-47c5-9e5c-52ed21acf939.png)
+
+#### White
+
+![Screenshot (1574)](https://user-images.githubusercontent.com/74944536/218347955-55df6191-0db7-42a5-ab3c-73f9e577204e.png)
 
 </div>
 
