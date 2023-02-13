@@ -61,7 +61,7 @@ vim.cmd "colorscheme nightly"
 
 ### [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
-> ![lualine](https://user-images.githubusercontent.com/74944536/218363576-4e5ca32a-a22a-4bb6-81df-cfb1de866c6e.png)
+<img src="https://user-images.githubusercontent.com/74944536/218363576-4e5ca32a-a22a-4bb6-81df-cfb1de866c6e.png" height="18px">
 
 ```lua
 -- Lua
@@ -81,7 +81,7 @@ EOF
 
 ### [lightline.vim](https://github.com/itchyny/lightline.vim)
 
-> ![lightline](https://user-images.githubusercontent.com/74944536/218363590-ce9062ff-1573-463d-b7b8-efbd0aa68d6c.PNG)
+<img src="https://user-images.githubusercontent.com/74944536/218363590-ce9062ff-1573-463d-b7b8-efbd0aa68d6c.PNG" height="20px">
 
 ```lua
 -- Lua
