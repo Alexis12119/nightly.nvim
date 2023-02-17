@@ -1,55 +1,65 @@
 local theme = {}
 
 function theme.setup()
-  local color = require("nightly.palette").colors
   local options = require("nightly.config").options
+  local color = {}
 
-  if options.color == "green" then
-    color.bg = "#141B1E"
-    color.sky = "#98BE65"
-    color.header = "#98BE65"
-    color.folder = "#98BE65"
-    color.root = "#98BE65"
-    color.border = "#87AF87"
-    color.fill = "#242E2F"
-    color.cursorline = "#242E32"
-  end
-
-  if options.color == "red" then
-    color.bg = "#140B14"
-    color.sky = "#AF8696"
-    color.header = "#81454C"
-    color.folder = "#81454C"
-    color.root = "#AF8696"
-    color.border = "#81454C"
-    -- color.fill = "#0F080F"
-    color.fill = "#2F1F30"
-    color.cursorline = "#322E32"
-    -- #4D2B39
-  end
-
-  if options.color == "black" then
-    color.bg = "#121212"
-    color.sky = "#6B7478"
-    color.header = "#6B7478"
-    color.folder = "#6B7478"
-    color.root = "#6B7478"
-    color.border = "#6B7478"
-    color.fill = "#181818"
-    color.cursorline = "#222222"
-  end
-
-  if options.color == "white" or vim.o.background == "light" then
-    color.bg = "#2E3440"
-    color.sky = "#CCD0DA"
-    color.header = "#CCD0DA"
-    color.folder = "#CCD0DA"
-    color.root = "#CCD0DA"
-    color.border = "#CCD0DA"
-    color.fill = "#393B4E"
-    color.cursorline = "#4C4F69"
-    color.dark1 = "#222730"
-    color.comment = "#ABABAF"
+  if vim.o.background == "light" then
+    color = require("nightly.palette").light_colors
+    color.bg = "#EDEDED"
+    color.sky = "#949B87"
+    color.header = "#949B87"
+    color.folder = "#949B87"
+    color.root = "#949B87"
+    color.border = "#949B87"
+    color.fill = "#E7E7E7"
+    color.cursorline = "#DDDDDD"
+  else
+    color = require("nightly.palette").dark_colors
+    if options.color == "green" then
+      color.bg = "#141B1E"
+      color.sky = "#98BE65"
+      color.header = "#98BE65"
+      color.folder = "#98BE65"
+      color.root = "#98BE65"
+      color.border = "#87AF87"
+      color.fill = "#242E2F"
+      color.cursorline = "#242E32"
+    end
+    if options.color == "red" then
+      color.bg = "#140B14"
+      color.sky = "#AF8696"
+      color.header = "#81454C"
+      color.folder = "#81454C"
+      color.root = "#AF8696"
+      color.border = "#81454C"
+      -- color.fill = "#0F080F"
+      color.fill = "#2F1F30"
+      color.cursorline = "#322E32"
+      -- #4D2B39
+    end
+    if options.color == "black" then
+      color.bg = "#121212"
+      color.sky = "#6B7478"
+      color.header = "#6B7478"
+      color.folder = "#6B7478"
+      color.root = "#6B7478"
+      color.border = "#6B7478"
+      color.fill = "#181818"
+      color.cursorline = "#222222"
+    end
+    if options.color == "white" then
+      color.bg = "#2E3440"
+      color.sky = "#CCD0DA"
+      color.header = "#CCD0DA"
+      color.folder = "#CCD0DA"
+      color.root = "#CCD0DA"
+      color.border = "#CCD0DA"
+      color.fill = "#393B4E"
+      color.cursorline = "#4C4F69"
+      color.dark1 = "#222730"
+      color.comment = "#ABABAF"
+    end
   end
 
   if options.transparent then
@@ -128,7 +138,7 @@ function theme.setup()
     LazyHandlerTask = { fg = color.green },
     LazyKey = { fg = color.dark3 },
     LazyH1 = { link = "CursorLine" },
-    LazyButton = { fg = color.sky, bg = color.dark1},
+    LazyButton = { fg = color.sky, bg = color.dark1 },
 
     -- Font
     Bold = { bold = true },
