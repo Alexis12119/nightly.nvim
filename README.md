@@ -103,8 +103,7 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 #### `vim.o.background = "light"`
 
-![Screenshot (1676)](https://user-images.githubusercontent.com/74944536/219812379-5a923ff5-e58b-421a-ada4-31a48402fc21.png)
-
+![Screenshot (1678)](https://user-images.githubusercontent.com/74944536/219815500-23c1c7b5-841b-4648-88f1-a7d48e058f6d.png)
 
 ### Dark Background
 
