@@ -83,7 +83,7 @@ local colors = {
     "#BBC2CF",
     "#7AA2F7",
     "#BB9AF7",
-    "#6F87AF",
+    "#6E6B6B",
     "#BBC2CF",
   },
   -- Arbitrary colors of the palette in the range from 16 to 255

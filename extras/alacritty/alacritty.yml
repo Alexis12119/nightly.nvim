@@ -21,7 +21,7 @@ schemes:
       green: '#98BE65'
       blue: '#ECBE7B'
       magenta: '#7AA2F7'
-      yellow: '#BB9AF7'
+      yellow: '#A9B1D6'
       cyan: '#7DCFFF'
       white: '#A9B1D6'
 
@@ -33,7 +33,7 @@ schemes:
       yellow: '#BBC2CF'
       blue: '#7DCFFF'
       magenta: '#BB9AF7'
-      cyan: '#7AA2F7'
+      cyan: '#6E6B6B'
       white: '#A9B1D6'
 
 

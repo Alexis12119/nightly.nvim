@@ -8,7 +8,7 @@
       "blue": "#87AFD7",
       "brightBlack": "#9E9E9E",
       "brightBlue": "#87AFD7",
-      "brightCyan": "#5F87AF",
+      "brightCyan": "#6E6B6B",
       "brightGreen": "#87AF87",
       "brightPurple": "#C678DD",
       "brightRed": "#DB4B4B",
@@ -23,7 +23,7 @@
       "red": "#D75F5F",
       "selectionBackground": "#767676",
       "white": "#AAAAAA",
-      "yellow": "#A9A1E1"
+      "yellow": "#A9B1D6"
     }
   ]
 }

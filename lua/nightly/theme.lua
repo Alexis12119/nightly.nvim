@@ -5,7 +5,7 @@ function theme.setup()
   local options = require("nightly.config").options
 
   if options.color == "green" then
-    color.bg = "#141b1e"
+    color.bg = "#141B1E"
     color.sky = "#98BE65"
     color.header = "#98BE65"
     color.folder = "#98BE65"
