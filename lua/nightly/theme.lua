@@ -48,7 +48,7 @@ function theme.setup()
       color.fill = "#181818"
       color.cursorline = "#222222"
     end
-    if options.color == "white" then
+    if options.color == "light_blue" then
       color.bg = "#2E3440"
       color.sky = "#CCD0DA"
       color.header = "#CCD0DA"

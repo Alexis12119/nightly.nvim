@@ -32,7 +32,7 @@ Plug 'Alexis12119/nightly.nvim'
 
 ```lua
 require("nightly").setup({
-    color = "black", -- white, blue, green or red
+    color = "black", -- light_blue, blue, green or red
     transparent = false,
     styles = {
         comments = { italic = true },
@@ -99,6 +99,17 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 <div align="center">
 
+### Light Background
+
+#### `vim.o.background = "light"`
+
+![Screenshot (1676)](https://user-images.githubusercontent.com/74944536/219812379-5a923ff5-e58b-421a-ada4-31a48402fc21.png)
+
+
+### Dark Background
+
+#### `vim.o.background = "dark"`
+
 #### Black
 
 ![Screenshot (1654)](https://user-images.githubusercontent.com/74944536/218428764-ec919fb0-7923-408c-b05d-92f5b7b00436.png)
@@ -107,7 +118,7 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 ![Screenshot (1656)](https://user-images.githubusercontent.com/74944536/218428687-097d6339-8b89-4d47-8ba2-087c0cca051f.png)
 
-#### White
+#### Light Blue
 
 ![Screenshot (1658)](https://user-images.githubusercontent.com/74944536/218428876-c916153e-f841-47e8-a436-f61cff13411f.png)
 
