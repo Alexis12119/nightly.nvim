@@ -14,6 +14,7 @@ function theme.setup()
     color.border = "#949B87"
     color.fill = "#E7E7E7"
     color.cursorline = "#DDDDDD"
+    color.tabline_sep = "#D0D0D0"
   else
     color = require("nightly.palette").dark_colors
     if options.color == "green" then
@@ -25,6 +26,7 @@ function theme.setup()
       color.border = "#87AF87"
       color.fill = "#242E2F"
       color.cursorline = "#242E32"
+      color.tabline_sep = "#0F1416"
     end
     if options.color == "red" then
       color.bg = "#140B14"
@@ -36,7 +38,7 @@ function theme.setup()
       -- color.fill = "#0F080F"
       color.fill = "#2F1F30"
       color.cursorline = "#322E32"
-      -- #4D2B39
+      color.tabline_sep = "#0F080F"
     end
     if options.color == "black" then
       color.bg = "#121212"
@@ -47,6 +49,7 @@ function theme.setup()
       color.border = "#6B7478"
       color.fill = "#181818"
       color.cursorline = "#222222"
+      color.tabline_sep = "#0D0D0D"
     end
     if options.color == "light_blue" then
       color.bg = "#2E3440"
@@ -57,15 +60,16 @@ function theme.setup()
       color.border = "#CCD0DA"
       color.fill = "#393B4E"
       color.cursorline = "#4C4F69"
-      color.dark1 = "#222730"
       color.comment = "#ABABAF"
+      color.tabline_sep = "#222730"
     end
   end
 
   if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
-    color.sep = "#292E42"
+    color.tabline_sep = "#292E42"
+    color.win_sep = "#292E42"
     -- Fix black issue on autocompletion
     vim.opt.pumblend = 0
   end
@@ -192,14 +196,14 @@ function theme.setup()
     DiffText = { fg = color.blue9, bg = color.fg },
 
     -- Tabline
-    TabLine = { bg = color.dark5, fg = color.fg },
-    TabLineFill = { bg = color.blue9 },
+    TabLine = { bg = color.tabline_sep, fg = color.fg },
+    TabLineFill = { bg = color.fill },
     TabLineSel = { fg = color.fg, bg = color.bg },
 
     -- Bufferline
     BufferLineSeparator = {
       fg = color.highlight,
-      bg = color.dark1,
+      bg = color.tabline_sep,
     },
     BufferLineFill = { bg = color.fill },
     BufferLineIndicatorSelected = {
@@ -353,7 +357,7 @@ function theme.setup()
     -- NvimTree
     NvimTreeGitDeleted = { fg = color.red },
     NvimTreeWinSeparator = {
-      fg = color.sep or color.bg,
+      fg = color.win_sep or color.bg,
     },
     NvimTreeEndOfBuffer = { link = "EndOfBuffer" },
     NvimTreeSpecialFile = { underline = true, sp = color.gray2 },
