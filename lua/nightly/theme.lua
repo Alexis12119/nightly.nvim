@@ -338,6 +338,7 @@ function theme.setup()
 
     -- Indent Blankline
     IndentBlanklineContextChar = { fg = color.gray4 },
+    IndentBlanklineChar = { fg = color.fg_gutter, nocombine = true },
 
     -- HTML
     htmlH1 = { fg = color.magenta, bold = true },
