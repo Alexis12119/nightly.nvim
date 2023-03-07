@@ -1,0 +1,41 @@
+# Experimental Stage
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: false
+
+schemes:
+  ### Nightly ###
+  Nightly: &Nightly
+    primary:
+      background: '#121212'
+      foreground: '#BBC2CF'
+
+    # Selection colors
+    selection:
+      text: CellForeground
+      background: '#222222'
+
+    # Normal colors
+    normal:
+      black: '#121212'
+      red: '#DB4B4B'
+      green: '#98BE65'
+      blue: '#ECBE7B'
+      magenta: '#7AA2F7'
+      yellow: '#A9B1D6'
+      cyan: '#7DCFFF'
+      white: '#A9B1D6'
+
+    # Bright colors
+    bright:
+      black: '#6E6B6B'
+      red: '#DB4B4B'
+      green: '#98BE65'
+      yellow: '#BBC2CF'
+      blue: '#7DCFFF'
+      magenta: '#BB9AF7'
+      cyan: '#6E6B6B'
+      white: '#A9B1D6'
+
+
+colors: *Nightly
+
