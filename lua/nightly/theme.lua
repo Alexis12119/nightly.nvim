@@ -796,6 +796,12 @@ function theme.setup()
 
   theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.highlights)
 
+  -- Hide all semantic highlights
+  for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+    vim.api.nvim_set_hl(0, group, {})
+  end
+
+  -- Set the highlights
   for group, colors in pairs(theme.highlights) do
     if not vim.tbl_isempty(colors) then
       vim.api.nvim_set_hl(0, group, colors)
