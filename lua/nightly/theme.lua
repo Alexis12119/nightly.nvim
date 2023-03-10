@@ -138,6 +138,17 @@ function theme.setup()
     -- matchparen
     MatchParen = { bold = false, fg = color.yellow },
 
+    -- Lsp semantic tokens
+    ["@lsp.type.enum"] = { link = "@type" },
+    ["@lsp.type.keyword"] = { link = "@keyword" },
+    ["@lsp.type.interface"] = { link = "@interface" },
+    ["@lsp.type.namespace"] = { link = "@namespace" },
+    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.property"] = { link = "@property" },
+    ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+    ["@lsp.typemod.function.defaultLibrary"] = { link = "Special" },
+    ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+
     -- Lazy
     LazyHandlerTask = { fg = color.green },
     LazyKey = { fg = color.dark3 },
@@ -797,9 +808,9 @@ function theme.setup()
   theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.highlights)
 
   -- Hide all semantic highlights
-  for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-    vim.api.nvim_set_hl(0, group, {})
-  end
+  -- for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+  --   vim.api.nvim_set_hl(0, group, {})
+  -- end
 
   -- Set the highlights
   for group, colors in pairs(theme.highlights) do
