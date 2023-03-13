@@ -277,6 +277,7 @@ function theme.setup()
     ["@debug"] = { fg = color.red },
     ["@variable"] = { fg = color.fg, italic = options.styles.variables.italic },
     ["@variable.builtin"] = { fg = color.blue, italic = options.styles.variables.italic },
+    ["@variable.builtin.lua"] = { fg = color.fg, italic = options.styles.variables.italic },
     ["@none"] = { fg = color.none },
     ["@boolean"] = { fg = color.magenta },
     ["@character"] = { fg = color.green },
