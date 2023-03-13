@@ -138,6 +138,18 @@ function theme.setup()
     -- matchparen
     MatchParen = { bold = false, fg = color.yellow },
 
+    -- Lsp semantic tokens
+    ["@lsp.type.enum"] = { link = "@type" },
+    ["@lsp.type.keyword"] = { link = "@keyword" },
+    ["@lsp.type.interface"] = { link = "Identifier" },
+    ["@lsp.type.namespace"] = { link = "@namespace" },
+    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.property"] = { link = "@property" },
+    ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+    ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+
     -- Lazy
     LazyHandlerTask = { fg = color.green },
     LazyKey = { fg = color.dark3 },
@@ -265,6 +277,7 @@ function theme.setup()
     ["@debug"] = { fg = color.red },
     ["@variable"] = { fg = color.fg, italic = options.styles.variables.italic },
     ["@variable.builtin"] = { fg = color.blue, italic = options.styles.variables.italic },
+    ["@variable.builtin.lua"] = { fg = color.fg, italic = options.styles.variables.italic },
     ["@none"] = { fg = color.none },
     ["@boolean"] = { fg = color.magenta },
     ["@character"] = { fg = color.green },
@@ -797,9 +810,15 @@ function theme.setup()
   theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.highlights)
 
   -- Hide all semantic highlights
+<<<<<<< HEAD
   for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
     vim.api.nvim_set_hl(0, group, {})
   end
+=======
+  -- for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+  --   vim.api.nvim_set_hl(0, group, {})
+  -- end
+>>>>>>> origin/dev
 
   -- Set the highlights
   for group, colors in pairs(theme.highlights) do
