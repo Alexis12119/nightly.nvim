@@ -40,16 +40,16 @@ function theme.setup()
       color.cursorline = "#322E32"
       color.tabline_sep = "#0F080F"
     end
-    if options.color == "black" then
-      color.bg = "#121212"
-      color.sky = "#6B7478"
-      color.header = "#6B7478"
-      color.folder = "#6B7478"
-      color.root = "#6B7478"
-      color.border = "#6B7478"
-      color.fill = "#181818"
-      color.cursorline = "#222222"
-      color.tabline_sep = "#0D0D0D"
+    if options.color == "blue" then
+      color.bg = "#0E131B"
+      color.sky = "#7AA2f7"
+      color.header = "#545C7E"
+      color.folder = "#A9B1D6"
+      color.root = "#7AA2F7"
+      color.border = "#6F87AF"
+      color.fill = "#1A1B26"
+      color.cursorline = "#292E42"
+      color.tabline_sep = "#0A0E14"
     end
     if options.color == "light_blue" then
       color.bg = "#2E3440"
