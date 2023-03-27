@@ -565,10 +565,10 @@ function theme.setup()
     DiagnosticWarn = { fg = color.light_orange },
     DiagnosticHint = { fg = color.yellow },
 
-    DiagnosticUnderlineError = { underline = false },
-    DiagnosticUnderlineInfo = { underline = false },
-    DiagnosticUnderlineWarn = { underline = false },
-    DiagnosticUnderlineHint = { underline = false },
+    DiagnosticUnderlineError = { sp = color.red, undercurl = true },
+    DiagnosticUnderlineInfo = { sp = color.blue, undercurl = true },
+    DiagnosticUnderlineWarn = { sp = color.light_orange, undercurl = true },
+    DiagnosticUnderlineHint = { sp = color.yellow, undercurl = true },
 
     DiagnosticVirtualTextError = { fg = color.red, bg = color.virtual_err },
     DiagnosticVirtualTextInfo = { fg = color.blue, bg = color.virtual_info },
