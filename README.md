@@ -1,7 +1,5 @@
 # <img src="https://user-images.githubusercontent.com/74944536/214324244-9fc431df-73b3-4472-b90b-8c14a5cd17a5.png" alt="nightly" width="80"/> Nightly
 
-**Elevate your coding environment with this simple Neovim color scheme.**
-
 ## ⚡️ Requirements
 
 - Neovim >= 0.6.0
