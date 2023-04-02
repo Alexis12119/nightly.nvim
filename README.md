@@ -111,22 +111,6 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 ![Screenshot (1654)](https://user-images.githubusercontent.com/74944536/218428764-ec919fb0-7923-408c-b05d-92f5b7b00436.png)
 
-#### Blue
-
-![Screenshot (1656)](https://user-images.githubusercontent.com/74944536/218428687-097d6339-8b89-4d47-8ba2-087c0cca051f.png)
-
-#### Light Blue
-
-![Screenshot (1658)](https://user-images.githubusercontent.com/74944536/218428876-c916153e-f841-47e8-a436-f61cff13411f.png)
-
-#### Green
-
-![Screenshot (1653)](https://user-images.githubusercontent.com/74944536/218428953-4526cbf7-e45c-449e-ae3a-3f2062f10930.png)
-
-#### Red
-
-![Screenshot (1657)](https://user-images.githubusercontent.com/74944536/218428909-6ec94f83-bc3b-448c-90b4-5bc7452a18fd.png)
-
 </div>
 
 ## Credits
