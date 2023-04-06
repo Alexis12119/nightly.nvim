@@ -381,42 +381,22 @@ function theme.setup()
     WhichKeySeparator = { fg = color.dark4 },
     WhichKeyValue = { fg = color.dark3 },
 
-    -- Barbar
-    -- BufferCurrent = { bg = color.fill, fg = color.fg },
-    -- BufferCurrentIndex = { bg = color.fill, fg = color.blue },
-    -- BufferCurrentMod = { bg = color.fill, fg = color.yellow },
-    -- BufferCurrentSign = { bg = color.fill, fg = color.blue },
-    -- BufferCurrentTarget = { bg = color.blue7, fg = color.red },
-    -- BufferVisible = { bg = color.dark5, fg = color.fg },
-    -- BufferVisibleIndex = { bg = color.dark5, fg = color.blue },
-    -- BufferVisibleMod = { bg = color.dark5, fg = color.yellow },
-    -- BufferVisibleSign = { bg = color.dark5, fg = color.blue },
-    -- BufferVisibleTarget = { bg = color.dark5, fg = color.red },
-    -- BufferInactive = { bg = color.dark5, fg = color.dark5 },
-    -- BufferInactiveIndex = { bg = color.dark5, fg = color.dark5 },
-    -- BufferInactiveMod = { bg = color.dark5, fg = color.yellow },
-    -- BufferInactiveSign = { bg = color.dark5, fg = color.dark3 },
-    -- BufferInactiveTarget = { bg = color.dark5, fg = color.red },
-    -- BufferTabpages = { bg = color.dark5, fg = color.none },
-    -- BufferTabpage = { bg = color.dark5, fg = color.dark3 },
-    -- BufferTabpageFill = { bg = color.fill },
-
     -- Telescope
     TelescopeNormal = { fg = color.gray2, bg = color.bg },
-    TelescopeMatching = { fg = color.sky, bg = color.bg },
-    TelescopeSelection = { fg = color.sky, bg = color.bg },
-    TelescopeMultiSelection = { bg = color.bg },
+    TelescopeMatching = { fg = color.sky, bg = color.tabline_sep },
+    TelescopeSelection = { fg = color.sky, bg = color.tabline_sep },
+    TelescopeMultiSelection = { bg = color.tabline_sep },
+    TelescopePromptPrefix = { fg = color.sky, bg = color.cursorline },
+    TelescopePromptNormal = { fg = color.fg, bg = color.cursorline },
+    TelescopePromptBorder = { fg = color.cursorline, bg = color.cursorline },
+    TelescopePromptTitle = { fg = color.sky, bg = color.bg },
     TelescopePreviewLine = { bg = color.bg },
-    TelescopePromptPrefix = { fg = color.sky, bg = color.bg },
-    TelescopePromptNormal = { fg = color.fg, bg = color.bg },
-    -- TelescopePromptBorder = { fg = color.border, bg = color.none },
-    -- TelescopePreviewBorder = { fg = color.border, bg = color.none },
-    -- TelescopeResultsBorder = { fg = color.border, bg = color.none },
-    TelescopeBorder = { fg = color.border, bg = color.bg },
-    -- TelescopePromptTitle = { fg = color.blue6, bg = color.none },
-    -- TelescopePreviewTitle = { fg = color.blue6, bg = color.none },
-    -- TelescopeResultsTitle = { fg = color.blue6, bg = color.none },
-    TelescopeTitle = { fg = color.fg_border, bg = color.border },
+    TelescopePreviewTitle = { fg = color.sky, bg = color.cursorline },
+    TelescopePreviewNormal = { fg = color.gray2, bg = color.tabline_sep },
+    TelescopePreviewBorder = { fg = color.bg, bg = color.tabline_sep },
+    TelescopeResultsTitle = { fg = color.tabline_sep, bg = color.tabline_sep },
+    TelescopeResultsBorder = { fg = color.tabline_sep, bg = color.tabline_sep },
+    TelescopeResultsNormal = { fg = color.fg, bg = color.tabline_sep },
 
     -- Alpha
     AlphaHeader = { fg = color.header },
@@ -442,15 +422,6 @@ function theme.setup()
     diffFile = { fg = color.blue },
     diffLine = { fg = color.dark4 },
     diffIndexLine = { fg = color.magenta },
-
-    -- ts-rainbow
-    rainbowcol1 = { fg = color.red },
-    rainbowcol2 = { fg = color.yellow },
-    rainbowcol3 = { fg = color.green },
-    rainbowcol4 = { fg = color.teal },
-    rainbowcol5 = { fg = color.blue },
-    rainbowcol6 = { fg = color.magenta },
-    rainbowcol7 = { fg = color.purple },
 
     -- LSP
     DiagnosticWarning = { link = "DiagnosticWarn" },
@@ -607,37 +578,6 @@ function theme.setup()
     CmpItemAbbrMatchFuzzy = { fg = color.sky, bg = color.none },
     CmpItemAbbr = { fg = color.fg, bg = color.none },
 
-    -- Navic
-    NavicIconsFile = { fg = color.green, bg = color.none },
-    NavicIconsModule = { fg = color.yellow, bg = color.none },
-    NavicIconsNamespace = { fg = color.yellow, bg = color.none },
-    NavicIconsPackage = { fg = color.fg, bg = color.none },
-    NavicIconsClass = { fg = color.light_orange, bg = color.none },
-    NavicIconsMethod = { fg = color.blue, bg = color.none },
-    NavicIconsProperty = { fg = color.yellow, bg = color.none },
-    NavicIconsField = { fg = color.yellow, bg = color.none },
-    NavicIconsConstructor = { fg = color.light_orange, bg = color.none },
-    NavicIconsEnum = { fg = color.purple, bg = color.none },
-    NavicIconsInterface = { fg = color.light_orange, bg = color.none },
-    NavicIconsFunction = { fg = color.purple, bg = color.none },
-    NavicIconsVariable = { fg = color.blue, bg = color.none },
-    NavicIconsConstant = { fg = color.light_orange, bg = color.none },
-    NavicIconsString = { fg = color.green, bg = color.none },
-    NavicIconsNumber = { fg = color.yellow, bg = color.none },
-    NavicIconsBoolean = { fg = color.light_orange, bg = color.none },
-    NavicIconsArray = { fg = color.blue, bg = color.none },
-    NavicIconsObject = { fg = color.blue, bg = color.none },
-    NavicIconsKey = { fg = color.purple, bg = color.none },
-    NavicIconsKeyword = { fg = color.gray3, bg = color.none },
-    NavicIconsNull = { fg = color.blue, bg = color.none },
-    NavicIconsEnumMember = { fg = color.yellow, bg = color.none },
-    NavicIconsStruct = { fg = color.purple, bg = color.none },
-    NavicIconsEvent = { fg = color.blue, bg = color.none },
-    NavicIconsOperator = { fg = color.fg, bg = color.none },
-    NavicIconsTypeParameter = { fg = color.gray4, bg = color.none },
-    NavicText = { fg = color.violet, bg = color.none },
-    NavicSeparator = { fg = color.blue4, bg = color.none },
-
     -- Scrollbar
     ScrollbarHandle = { fg = color.none, bg = color.highlight },
 
@@ -688,85 +628,6 @@ function theme.setup()
     NotifyINFOBody = { fg = color.fg, bg = color.bg },
     NotifyDEBUGBody = { fg = color.fg, bg = color.bg },
     NotifyTRACEBody = { fg = color.fg, bg = color.bg },
-
-    MiniCompletionActiveParameter = { underline = true },
-
-    MiniCursorword = { bg = color.blue7 },
-    MiniCursorwordCurrent = { bg = color.blue7 },
-
-    MiniIndentscopeSymbol = { fg = color.blue1 },
-    MiniIndentscopePrefix = { nocombine = true }, -- Make it invisible
-
-    MiniJump = { bg = color.magenta2, fg = "#ffffff" },
-
-    MiniJump2dSpot = { fg = color.magenta2, bold = true, nocombine = true },
-
-    MiniStarterCurrent = { nocombine = true },
-    MiniStarterFooter = { fg = color.yellow, italic = true },
-    MiniStarterHeader = { fg = color.blue },
-    MiniStarterInactive = { fg = color.dark4 },
-    MiniStarterItem = { fg = color.fg, bg = color.bg },
-    MiniStarterItemBullet = { fg = color.dark2 },
-    MiniStarterItemPrefix = { fg = color.light_orange },
-    MiniStarterSection = { fg = color.blue1 },
-    MiniStarterQuery = { fg = color.blue },
-
-    MiniStatuslineDevinfo = { fg = color.gray4, bg = color.highlight },
-    MiniStatuslineFileinfo = { fg = color.gray4, bg = color.highlight },
-    MiniStatuslineFilename = { fg = color.gray4, bg = color.blue7 },
-    MiniStatuslineInactive = { fg = color.blue, bg = color.dark5 },
-    MiniStatuslineModeCommand = { fg = color.black, bg = color.yellow, bold = true },
-    MiniStatuslineModeInsert = { fg = color.black, bg = color.green, bold = true },
-    MiniStatuslineModeNormal = { fg = color.black, bg = color.blue, bold = true },
-    MiniStatuslineModeOther = { fg = color.black, bg = color.teal, bold = true },
-    MiniStatuslineModeReplace = { fg = color.black, bg = color.red, bold = true },
-    MiniStatuslineModeVisual = { fg = color.black, bg = color.magenta, bold = true },
-
-    MiniSurround = { bg = color.light_orange, fg = color.black },
-
-    MiniTablineCurrent = { fg = color.fg, bg = color.blue7 },
-    MiniTablineFill = { bg = color.black },
-    MiniTablineHidden = { fg = color.dark3, bg = color.dark5 },
-    MiniTablineModifiedCurrent = { fg = color.light_orange, bg = color.blue7 },
-    MiniTablineModifiedHidden = { bg = color.dark5, fg = color.light_orange },
-    MiniTablineModifiedVisible = { fg = color.light_orange, bg = color.dark5 },
-    MiniTablineTabpagesection = { bg = color.dark5, fg = color.none },
-    MiniTablineVisible = { fg = color.fg, bg = color.dark5 },
-
-    MiniTestEmphasis = { bold = true },
-    MiniTestFail = { fg = color.red, bold = true },
-    MiniTestPass = { fg = color.green, bold = true },
-
-    MiniTrailspace = { bg = color.red },
-
-    -- Noice
-    NoiceCompletionItemKindDefault = { fg = color.gray4, bg = color.none },
-
-    NoiceCompletionItemKindKeyword = { fg = color.cyan, bg = color.none },
-
-    NoiceCompletionItemKindVariable = { fg = color.magenta, bg = color.none },
-    NoiceCompletionItemKindConstant = { fg = color.magenta, bg = color.none },
-    NoiceCompletionItemKindReference = { fg = color.magenta, bg = color.none },
-    NoiceCompletionItemKindValue = { fg = color.magenta, bg = color.none },
-
-    NoiceCompletionItemKindFunction = { fg = color.blue, bg = color.none },
-    NoiceCompletionItemKindMethod = { fg = color.blue, bg = color.none },
-    NoiceCompletionItemKindConstructor = { fg = color.blue, bg = color.none },
-
-    NoiceCompletionItemKindClass = { fg = color.light_orange, bg = color.none },
-    NoiceCompletionItemKindStruct = { fg = color.light_orange, bg = color.none },
-    NoiceCompletionItemKindEvent = { fg = color.light_orange, bg = color.none },
-    NoiceCompletionItemKindEnum = { fg = color.light_orange, bg = color.none },
-    NoiceCompletionItemKindUnit = { fg = color.light_orange, bg = color.none },
-
-    NoiceCompletionItemKindModule = { fg = color.yellow, bg = color.none },
-
-    NoiceCompletionItemKindProperty = { fg = color.green1, bg = color.none },
-    NoiceCompletionItemKindField = { fg = color.green1, bg = color.none },
-    NoiceCompletionItemKindTypeParameter = { fg = color.green1, bg = color.none },
-    NoiceCompletionItemKindEnumMember = { fg = color.green1, bg = color.none },
-    NoiceCompletionItemKindOperator = { fg = color.green1, bg = color.none },
-    NoiceCompletionItemKindSnippet = { fg = color.dark3, bg = color.none },
   }
 
   theme.terminal_colors = {
