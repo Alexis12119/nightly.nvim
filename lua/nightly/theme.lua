@@ -12,7 +12,7 @@ function theme.setup()
     color.folder = "#949B87"
     color.root = "#949B87"
     color.border = "#949B87"
-    color.fill = "#E7E7E7"
+    -- color.fill = "#E7E7E7"
     color.cursorline = "#DDDDDD"
     color.tabline_sep = "#D0D0D0"
   else
@@ -24,7 +24,7 @@ function theme.setup()
       color.folder = "#98BE65"
       color.root = "#98BE65"
       color.border = "#87AF87"
-      color.fill = "#242E2F"
+      -- color.fill = "#242E2F"
       color.cursorline = "#242E32"
       color.tabline_sep = "#0F1416"
     end
@@ -35,8 +35,7 @@ function theme.setup()
       color.folder = "#81454C"
       color.root = "#AF8696"
       color.border = "#81454C"
-      -- color.fill = "#0F080F"
-      color.fill = "#2F1F30"
+      -- color.fill = "#2F1F30"
       color.cursorline = "#322E32"
       color.tabline_sep = "#0F080F"
     end
@@ -44,12 +43,11 @@ function theme.setup()
       color.bg = "#171922"
       color.sky = "#6F87AF"
       color.header = "#545C7E"
-      color.folder = "#CCD0DA"
-      color.root = "#CCD0DA"
+      color.folder = "#545C7E"
+      color.root = "#6183BB"
       color.border = "#6F87AF"
-      color.fill = "#1B1E28"
+      -- color.fill = "#1B1E28"
       color.cursorline = "#292E42"
-      color.comment = "#ABABAF"
       color.tabline_sep = "#111219"
     end
   end
