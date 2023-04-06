@@ -30,7 +30,7 @@ Plug 'Alexis12119/nightly.nvim'
 
 ```lua
 require("nightly").setup({
-    color = "black", -- light_blue, blue, green or red
+    color = "black", -- blue, green or red
     transparent = false,
     styles = {
         comments = { italic = true },
@@ -117,9 +117,9 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 Thanks for some colors in their palette.
 
+- [poimandres](https://github.com/olivercederborg/poimandres.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
 - [Everblush](https://github.com/Everblush/nvim)
 - [catppuccin](https://github.com/catppuccin/nvim)
-- [onenord.nvim](https://github.com/rmehri01/onenord.nvim)
 - habamax

@@ -41,27 +41,16 @@ function theme.setup()
       color.tabline_sep = "#0F080F"
     end
     if options.color == "blue" then
-      color.bg = "#0E131B"
-      color.sky = "#7AA2f7"
+      color.bg = "#171922"
+      color.sky = "#6F87AF"
       color.header = "#545C7E"
-      color.folder = "#A9B1D6"
-      color.root = "#7AA2F7"
-      color.border = "#6F87AF"
-      color.fill = "#1A1B26"
-      color.cursorline = "#292E42"
-      color.tabline_sep = "#0A0E14"
-    end
-    if options.color == "light_blue" then
-      color.bg = "#2E3440"
-      color.sky = "#CCD0DA"
-      color.header = "#CCD0DA"
       color.folder = "#CCD0DA"
       color.root = "#CCD0DA"
-      color.border = "#CCD0DA"
-      color.fill = "#393B4E"
-      color.cursorline = "#4C4F69"
+      color.border = "#6F87AF"
+      color.fill = "#1B1E28"
+      color.cursorline = "#292E42"
       color.comment = "#ABABAF"
-      color.tabline_sep = "#222730"
+      color.tabline_sep = "#111219"
     end
   end
 
