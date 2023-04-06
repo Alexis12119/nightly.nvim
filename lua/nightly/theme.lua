@@ -521,10 +521,10 @@ function theme.setup()
     DiagnosticWarn = { fg = color.light_orange },
     DiagnosticHint = { fg = color.yellow },
 
-    DiagnosticUnderlineError = { sp = color.red, undercurl = true },
-    DiagnosticUnderlineInfo = { sp = color.blue, undercurl = true },
-    DiagnosticUnderlineWarn = { sp = color.light_orange, undercurl = true },
-    DiagnosticUnderlineHint = { sp = color.yellow, undercurl = true },
+    DiagnosticUnderlineError = { underline = false },
+    DiagnosticUnderlineInfo = { underline = false },
+    DiagnosticUnderlineWarn = { underline = false },
+    DiagnosticUnderlineHint = { underline = false },
 
     DiagnosticVirtualTextError = { fg = color.red, bg = color.virtual_err },
     DiagnosticVirtualTextInfo = { fg = color.blue, bg = color.virtual_info },
@@ -543,7 +543,7 @@ function theme.setup()
 
     CmpDocumentationBorder = { fg = color.blue6 },
     CmpCompletionBorder = { fg = color.blue6 },
-    CmpCursorLine = { bg = color.cursorline },
+    CmpCursorLine = { fg = color.dark1, bg = color.sky },
 
     CmpItemKindFolder = { fg = color.blue },
     CmpItemKindFile = { fg = color.green },
