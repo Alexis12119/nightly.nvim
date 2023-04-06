@@ -54,7 +54,6 @@ M.dark_colors = {
   root = "#6B7478",
   border = "#6B7478",
   fg_border = "#0E0A14",
-  fill = "#181818",
   cursorline = "#222222",
   tabline_sep = "#0D0D0D",
   highlight = "#292E42",
