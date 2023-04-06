@@ -38,7 +38,7 @@ function theme.setup()
     end
     if options.color == "blue" then
       color.bg = "#171922"
-      color.sky = "#6F87AF"
+      color.sky = "#7AA2F7"
       color.header = "#545C7E"
       color.folder = "#545C7E"
       color.root = "#6183BB"
