@@ -1,5 +1,6 @@
 # <img src="https://user-images.githubusercontent.com/74944536/214324244-9fc431df-73b3-4472-b90b-8c14a5cd17a5.png" alt="nightly" width="80"/> Nightly
 
+
 ## ⚡️ Requirements
 
 - Neovim >= 0.6.0
@@ -99,17 +100,32 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 ### Light Background
 
-#### `vim.o.background = "light"`
-
-![Screenshot (1678)](https://user-images.githubusercontent.com/74944536/219815500-23c1c7b5-841b-4648-88f1-a7d48e058f6d.png)
-
-### Dark Background
-
 #### `vim.o.background = "dark"`
 
 #### Black
 
-![Screenshot (1654)](https://user-images.githubusercontent.com/74944536/218428764-ec919fb0-7923-408c-b05d-92f5b7b00436.png)
+![Screenshot (31)](https://user-images.githubusercontent.com/74944536/230517696-8f646d4b-5ce9-439a-97f2-bf1c3f7802ef.png)
+
+![Screenshot (30)](https://user-images.githubusercontent.com/74944536/230517708-a49570eb-b36e-4c6e-8eb3-de2c01c7389c.png)
+
+#### Blue
+
+![Screenshot (35)](https://user-images.githubusercontent.com/74944536/230517737-fc3ca533-9c0c-49e2-87ce-3b65fd5bfb0b.png)
+
+![Screenshot (34)](https://user-images.githubusercontent.com/74944536/230517744-593d1e0a-6db4-446d-9a30-f1cff2b39cb9.png)
+
+#### Green
+
+![Screenshot (36)](https://user-images.githubusercontent.com/74944536/230517764-8699359c-ebcb-4d3e-ad60-74292fd89058.png)
+
+![Screenshot (37)](https://user-images.githubusercontent.com/74944536/230517845-55bffd62-eaac-4e13-a876-36c13509d97e.png)
+
+
+#### Red
+
+![Screenshot (42)](https://user-images.githubusercontent.com/74944536/230517927-0c5564e3-ed2e-43a4-86e0-b3cbf3af06ad.png)
+
+![Screenshot (38)](https://user-images.githubusercontent.com/74944536/230517949-1b4bae42-326c-4162-8edc-5b5d04783372.png)
 
 </div>
 
