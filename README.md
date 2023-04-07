@@ -98,10 +98,6 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 <div align="center">
 
-### Light Background
-
-#### `vim.o.background = "dark"`
-
 #### Black
 
 ![Screenshot (31)](https://user-images.githubusercontent.com/74944536/230517696-8f646d4b-5ce9-439a-97f2-bf1c3f7802ef.png)
