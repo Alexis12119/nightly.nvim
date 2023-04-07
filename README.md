@@ -3,7 +3,7 @@
 
 ## ⚡️ Requirements
 
-- Neovim >= 0.6.0
+- Neovim >= 0.8
 
 ## 💻 Installation
 
