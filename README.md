@@ -100,28 +100,27 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 #### Black
 
-![Screenshot (31)](https://user-images.githubusercontent.com/74944536/230517696-8f646d4b-5ce9-439a-97f2-bf1c3f7802ef.png)
+![Screenshot (70)](https://user-images.githubusercontent.com/74944536/230716882-45e135e7-316a-4b53-8d75-fb78f287cc35.png)
 
-![Screenshot (30)](https://user-images.githubusercontent.com/74944536/230517708-a49570eb-b36e-4c6e-8eb3-de2c01c7389c.png)
+![Screenshot (71)](https://user-images.githubusercontent.com/74944536/230716888-d441f7f1-bf93-4cfc-a25b-2d1a2abe71e9.png)
 
 #### Blue
 
-![Screenshot (35)](https://user-images.githubusercontent.com/74944536/230517737-fc3ca533-9c0c-49e2-87ce-3b65fd5bfb0b.png)
+![Screenshot (64)](https://user-images.githubusercontent.com/74944536/230716900-4b39b276-eee7-42ca-9723-11b13ba89173.png)
 
-![Screenshot (34)](https://user-images.githubusercontent.com/74944536/230517744-593d1e0a-6db4-446d-9a30-f1cff2b39cb9.png)
+![Screenshot (65)](https://user-images.githubusercontent.com/74944536/230716907-d1c65a16-e5c0-4f9b-ac79-f41eb175a0fc.png)
 
 #### Green
 
-![Screenshot (36)](https://user-images.githubusercontent.com/74944536/230517764-8699359c-ebcb-4d3e-ad60-74292fd89058.png)
+![Screenshot (66)](https://user-images.githubusercontent.com/74944536/230716921-582f3255-67cc-4dc9-8487-9863486b75fe.png)
 
-![Screenshot (37)](https://user-images.githubusercontent.com/74944536/230517845-55bffd62-eaac-4e13-a876-36c13509d97e.png)
-
+![Screenshot (67)](https://user-images.githubusercontent.com/74944536/230716933-96b12c7b-fb1c-41a8-b409-b6106788c198.png)
 
 #### Red
 
-![Screenshot (42)](https://user-images.githubusercontent.com/74944536/230517927-0c5564e3-ed2e-43a4-86e0-b3cbf3af06ad.png)
+![Screenshot (68)](https://user-images.githubusercontent.com/74944536/230716938-f4cf46f0-e332-4ed8-b430-549e53b221d0.png)
 
-![Screenshot (38)](https://user-images.githubusercontent.com/74944536/230517949-1b4bae42-326c-4162-8edc-5b5d04783372.png)
+![Screenshot (69)](https://user-images.githubusercontent.com/74944536/230716944-30d0c1af-3fc5-4c57-8373-43716da62b68.png)
 
 </div>
 
