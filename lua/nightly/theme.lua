@@ -9,7 +9,6 @@ function theme.setup()
     color.bg = "#EDEDED"
     color.sky = "#949B87"
     color.header = "#949B87"
-    color.folder = "#949B87"
     color.root = "#949B87"
     color.border = "#949B87"
     color.cursorline = "#DDDDDD"
@@ -20,7 +19,6 @@ function theme.setup()
       color.bg = "#141B1E"
       color.sky = "#98BE65"
       color.header = "#98BE65"
-      color.folder = "#98BE65"
       color.root = "#98BE65"
       color.border = "#87AF87"
       color.cursorline = "#242E32"
@@ -30,7 +28,6 @@ function theme.setup()
       color.bg = "#140B14"
       color.sky = "#AF8696"
       color.header = "#81454C"
-      color.folder = "#81454C"
       color.root = "#AF8696"
       color.border = "#81454C"
       color.cursorline = "#322E32"
@@ -40,15 +37,12 @@ function theme.setup()
       color.bg = "#171922"
       color.sky = "#7AA2F7"
       color.header = "#545C7E"
-      color.folder = "#545C7E"
-      color.root = "#6183BB"
+      color.root = "#7AA2F7"
       color.border = "#6F87AF"
       color.cursorline = "#292E42"
       color.tabline_sep = "#111219"
     end
   end
-
-  color.fill = color.bg
 
   if options.transparent then
     color.bg = "NONE"
@@ -163,7 +157,7 @@ function theme.setup()
 
     -- Statusline
     StatusLineNC = { bg = color.bg },
-    StatusLine = { fg = color.fg, bg = color.fill },
+    StatusLine = { fg = color.fg, bg = color.bg },
 
     -- Float
     NormalFloat = {
@@ -194,7 +188,7 @@ function theme.setup()
 
     -- Tabline
     TabLine = { bg = color.tabline_sep, fg = color.fg },
-    TabLineFill = { bg = color.fill },
+    TabLineFill = { bg = color.bg },
     TabLineSel = { fg = color.fg, bg = color.bg },
 
     -- Bufferline
@@ -202,7 +196,7 @@ function theme.setup()
       fg = color.highlight,
       bg = color.tabline_sep,
     },
-    BufferLineFill = { bg = color.fill },
+    BufferLineFill = { bg = color.bg },
     BufferLineIndicatorSelected = {
       fg = color.sky,
     },
@@ -364,7 +358,7 @@ function theme.setup()
     NvimTreeSymlink = { fg = color.yellow },
     NvimTreeNormal = { link = "Normal" },
     NvimTreeNormalNC = { link = "NormalNC" },
-    NvimTreeFolderIcon = { fg = color.folder },
+    NvimTreeFolderIcon = { fg = color.sky },
     NvimTreeRootFolder = { fg = color.root, bold = false },
     NvimTreeFolderName = { fg = color.fg },
     NvimTreeOpenedFolderName = { fg = color.gray4 },
@@ -541,8 +535,8 @@ function theme.setup()
     DiagnosticSignWarn = { link = "DiagnosticWarn" },
     DiagnosticSignHint = { link = "DiagnosticHint" },
 
-    CmpDocumentationBorder = { fg = color.blue6 },
-    CmpCompletionBorder = { fg = color.blue6 },
+    CmpDocumentationBorder = { fg = color.gray4 },
+    CmpCompletionBorder = { fg = color.gray4 },
     CmpCursorLine = { fg = color.dark1, bg = color.sky },
 
     CmpItemKindFolder = { fg = color.blue },
@@ -554,15 +548,15 @@ function theme.setup()
     CmpItemKindStruct = { fg = color.purple },
     CmpItemKindEnum = { fg = color.purple },
 
-    CmpItemKindConstructor = { fg = color.yellow },
-    CmpItemKindInterface = { fg = color.yellow },
-    CmpItemKindReference = { fg = color.yellow },
-    CmpItemKindConstant = { fg = color.yellow },
-    CmpItemKindProperty = { fg = color.yellow },
-    CmpItemKindModule = { fg = color.yellow },
-    CmpItemKindClass = { fg = color.yellow },
-    CmpItemKindField = { fg = color.yellow },
-    CmpItemKindEvent = { fg = color.yellow },
+    CmpItemKindConstructor = { fg = color.cyan },
+    CmpItemKindInterface = { fg = color.cyan },
+    CmpItemKindReference = { fg = color.cyan },
+    CmpItemKindConstant = { fg = color.cyan },
+    CmpItemKindProperty = { fg = color.cyan },
+    CmpItemKindModule = { fg = color.cyan },
+    CmpItemKindClass = { fg = color.cyan },
+    CmpItemKindField = { fg = color.cyan },
+    CmpItemKindEvent = { fg = color.cyan },
 
     CmpItemKindTypeParameter = { fg = color.gray4 },
     CmpItemKindVariable = { fg = color.gray4 },

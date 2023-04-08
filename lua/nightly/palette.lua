@@ -50,7 +50,6 @@ M.dark_colors = {
   bg = "#121212",
   sky = "#6B7478",
   header = "#6B7478",
-  folder = "#6B7478",
   root = "#6B7478",
   border = "#6B7478",
   fg_border = "#0E0A14",
