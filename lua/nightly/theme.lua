@@ -387,7 +387,7 @@ function theme.setup()
     TelescopePreviewLine = { bg = color.bg },
     TelescopePreviewTitle = { fg = color.sky, bg = color.cursorline },
     TelescopePreviewNormal = { fg = color.gray2, bg = color.dark },
-    TelescopePreviewBorder = { fg = color.bg, bg = color.dark },
+    TelescopePreviewBorder = { fg = color.dark, bg = color.dark },
     TelescopeResultsTitle = { fg = color.dark, bg = color.dark },
     TelescopeResultsBorder = { fg = color.dark, bg = color.dark },
     TelescopeResultsNormal = { fg = color.fg, bg = color.dark },
