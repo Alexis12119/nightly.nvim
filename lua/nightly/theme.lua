@@ -196,7 +196,7 @@ function theme.setup()
       fg = color.highlight,
       bg = color.dark,
     },
-    BufferLineFill = { bg = color.bg },
+    BufferLineFill = { bg = color.dark },
     BufferLineIndicatorSelected = {
       fg = color.sky,
     },
