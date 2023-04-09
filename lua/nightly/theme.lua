@@ -12,7 +12,7 @@ function theme.setup()
     color.root = "#949B87"
     color.border = "#949B87"
     color.cursorline = "#DDDDDD"
-    color.tabline_sep = "#D0D0D0"
+    color.dark = "#D0D0D0"
   else
     color = require("nightly.palette").dark_colors
     if options.color == "green" then
@@ -22,7 +22,7 @@ function theme.setup()
       color.root = "#98BE65"
       color.border = "#87AF87"
       color.cursorline = "#242E32"
-      color.tabline_sep = "#0F1416"
+      color.dark = "#0F1416"
     end
     if options.color == "red" then
       color.bg = "#140B14"
@@ -31,7 +31,7 @@ function theme.setup()
       color.root = "#AF8696"
       color.border = "#81454C"
       color.cursorline = "#322E32"
-      color.tabline_sep = "#0F080F"
+      color.dark = "#0F080F"
     end
     if options.color == "blue" then
       color.bg = "#171922"
@@ -40,14 +40,14 @@ function theme.setup()
       color.root = "#7AA2F7"
       color.border = "#6F87AF"
       color.cursorline = "#292E42"
-      color.tabline_sep = "#111219"
+      color.dark = "#111219"
     end
   end
 
   if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
-    color.tabline_sep = "#292E42"
+    color.dark = "#292E42"
     color.win_sep = "#292E42"
     -- Fix black issue on autocompletion
     vim.opt.pumblend = 0
@@ -187,14 +187,14 @@ function theme.setup()
     DiffText = { fg = color.blue9, bg = color.fg },
 
     -- Tabline
-    TabLine = { bg = color.tabline_sep, fg = color.fg },
+    TabLine = { bg = color.dark, fg = color.fg },
     TabLineFill = { bg = color.bg },
     TabLineSel = { fg = color.fg, bg = color.bg },
 
     -- Bufferline
     BufferLineSeparator = {
       fg = color.highlight,
-      bg = color.tabline_sep,
+      bg = color.dark,
     },
     BufferLineFill = { bg = color.bg },
     BufferLineIndicatorSelected = {
@@ -377,20 +377,20 @@ function theme.setup()
 
     -- Telescope
     TelescopeNormal = { fg = color.gray2, bg = color.bg },
-    TelescopeMatching = { fg = color.sky, bg = color.tabline_sep },
-    TelescopeSelection = { fg = color.sky, bg = color.tabline_sep },
-    TelescopeMultiSelection = { bg = color.tabline_sep },
+    TelescopeMatching = { fg = color.sky, bg = color.dark },
+    TelescopeSelection = { fg = color.sky, bg = color.dark },
+    TelescopeMultiSelection = { bg = color.dark },
     TelescopePromptPrefix = { fg = color.sky, bg = color.cursorline },
     TelescopePromptNormal = { fg = color.fg, bg = color.cursorline },
     TelescopePromptBorder = { fg = color.cursorline, bg = color.cursorline },
     TelescopePromptTitle = { fg = color.sky, bg = color.bg },
     TelescopePreviewLine = { bg = color.bg },
     TelescopePreviewTitle = { fg = color.sky, bg = color.cursorline },
-    TelescopePreviewNormal = { fg = color.gray2, bg = color.tabline_sep },
-    TelescopePreviewBorder = { fg = color.bg, bg = color.tabline_sep },
-    TelescopeResultsTitle = { fg = color.tabline_sep, bg = color.tabline_sep },
-    TelescopeResultsBorder = { fg = color.tabline_sep, bg = color.tabline_sep },
-    TelescopeResultsNormal = { fg = color.fg, bg = color.tabline_sep },
+    TelescopePreviewNormal = { fg = color.gray2, bg = color.dark },
+    TelescopePreviewBorder = { fg = color.bg, bg = color.dark },
+    TelescopeResultsTitle = { fg = color.dark, bg = color.dark },
+    TelescopeResultsBorder = { fg = color.dark, bg = color.dark },
+    TelescopeResultsNormal = { fg = color.fg, bg = color.dark },
 
     -- Alpha
     AlphaHeader = { fg = color.header },
