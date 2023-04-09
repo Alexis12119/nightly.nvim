@@ -6,13 +6,13 @@ function theme.setup()
 
   if vim.o.background == "light" then
     color = require("nightly.palette").light_colors
-    color.bg = "#EDEDED"
-    color.sky = "#949B87"
+    color.bg = "#D0D0D0"
+    color.sky = "#000000"
     color.header = "#949B87"
     color.root = "#949B87"
     color.border = "#949B87"
     color.cursorline = "#DDDDDD"
-    color.dark = "#D0D0D0"
+    color.dark = "#B7B7B8"
   else
     color = require("nightly.palette").dark_colors
     if options.color == "green" then
@@ -369,7 +369,7 @@ function theme.setup()
     -- Which-Key
     WhichKeyBorder = { fg = color.border, bg = color.none },
     WhichKeyFloat = { link = "NormalFloat" },
-    WhichKey = { fg = color.blue5 },
+    WhichKey = { fg = color.gray },
     WhichKeyGroup = { fg = color.sky },
     WhichKeyDesc = { fg = color.magenta },
     WhichKeySeparator = { fg = color.dark4 },
