@@ -514,6 +514,7 @@ function theme.setup()
     DiagnosticInfo = { fg = color.blue },
     DiagnosticWarn = { fg = color.light_orange },
     DiagnosticHint = { fg = color.yellow },
+    DiagnosticUnnecessary = { bg = color.bg },
 
     DiagnosticUnderlineError = { underline = false },
     DiagnosticUnderlineInfo = { underline = false },
