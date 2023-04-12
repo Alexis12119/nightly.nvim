@@ -47,8 +47,6 @@ function theme.setup()
   if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
-    color.dark = "#292E42"
-    color.win_sep = "#292E42"
     -- Fix black issue on autocompletion
     vim.opt.pumblend = 0
   end
