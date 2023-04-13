@@ -47,6 +47,7 @@ function theme.setup()
   if options.transparent then
     color.bg = "NONE"
     color.dark1 = "NONE"
+    color.tab = "NONE"
     -- Fix black issue on autocompletion
     vim.opt.pumblend = 0
   end
@@ -192,7 +193,7 @@ function theme.setup()
     -- Bufferline
     BufferLineSeparator = {
       fg = color.highlight,
-      bg = color.dark,
+      bg = color.tab or color.dark,
     },
     BufferLineRightCustomAreaText1 = { fg = color.fg, bg = color.dark },
     BufferLineFill = { bg = color.dark },
@@ -537,7 +538,7 @@ function theme.setup()
 
     CmpDocumentationBorder = { fg = color.gray4 },
     CmpCompletionBorder = { fg = color.gray4 },
-    CmpCursorLine = { fg = color.dark1, bg = color.sky },
+    CmpCursorLine = { fg = color.black, bg = color.sky },
 
     CmpItemKindFolder = { fg = color.blue },
     CmpItemKindFile = { fg = color.green },
