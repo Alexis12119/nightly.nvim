@@ -396,11 +396,13 @@ function theme.setup()
     AlphaHeader = { fg = color.header },
     AlphaButton = { fg = color.fg },
     AlphaFooter = { fg = color.fg },
+    AlphaShortcut = { fg = color.header },
 
     -- Dashboard
     DashboardHeader = { fg = color.header },
     DashboardCenter = { fg = color.fg },
     DashboardFooter = { fg = color.fg },
+    DashboardShortcut = { fg = color.header },
 
     -- Git
     GitSignsChange = { fg = color.blue, bg = color.bg },
