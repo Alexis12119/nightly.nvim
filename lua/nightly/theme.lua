@@ -538,8 +538,8 @@ function theme.setup()
     DiagnosticSignWarn = { link = "DiagnosticWarn" },
     DiagnosticSignHint = { link = "DiagnosticHint" },
 
-    CmpDocumentationBorder = { fg = color.gray4 },
-    CmpCompletionBorder = { fg = color.gray4 },
+    CmpDocumentationBorder = { fg = color.border },
+    CmpCompletionBorder = { fg = color.border },
     CmpCursorLine = { fg = color.black, bg = color.sky },
 
     CmpItemKindFolder = { fg = color.blue },
