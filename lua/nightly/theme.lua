@@ -8,8 +8,8 @@ function theme.setup()
     color = require("nightly.palette").light_colors
     color.bg = "#D0D0D0"
     color.sky = "#000000"
-    color.header = "#949B87"
-    color.root = "#949B87"
+    color.header = "#000000"
+    color.root = "#000000"
     color.border = "#949B87"
     color.cursorline = "#DDDDDD"
     color.dark = "#B7B7B8"
