@@ -377,7 +377,7 @@ function theme.setup()
 
     -- Telescope
     TelescopeNormal = { fg = color.gray2, bg = color.bg },
-    TelescopeMatching = { fg = color.sky, bg = color.dark },
+    TelescopeMatching = { fg = color.dark3, bg = color.dark },
     TelescopeSelection = { fg = color.sky, bg = color.dark },
     TelescopeMultiSelection = { bg = color.dark },
     TelescopePromptPrefix = { fg = color.sky, bg = color.cursorline },

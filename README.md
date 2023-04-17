@@ -143,7 +143,4 @@ Thanks for some colors in their palette.
 
 - [poimandres](https://github.com/olivercederborg/poimandres.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-- [vscode.nvim](https://github.com/Mofiqul/vscode.nvim)
 - [Everblush](https://github.com/Everblush/nvim)
-- [catppuccin](https://github.com/catppuccin/nvim)
-- habamax
