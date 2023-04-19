@@ -102,10 +102,9 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 ### `vim.o.background = "light"`
 
-![Screenshot (110)](https://user-images.githubusercontent.com/74944536/230778913-7ea91365-3078-4bf2-8d4a-f6173a516190.png)
+![Screenshot (216)](https://user-images.githubusercontent.com/74944536/233062445-4182829e-86dd-4817-a9ed-3fb8d6737612.png)
 
-![Screenshot (111)](https://user-images.githubusercontent.com/74944536/230778921-113bc046-e89a-4af0-a3f9-0a40ff517641.png)
-
+![Screenshot (217)](https://user-images.githubusercontent.com/74944536/233062452-7aef844a-43d3-4b71-b2a6-0dcfa3832d84.png)
 
 ## Dark
 
@@ -113,27 +112,27 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 #### Black
 
-![Screenshot (88)](https://user-images.githubusercontent.com/74944536/230719552-9101c47a-4dc0-4482-89cf-5458644bd5ea.png)
+![Screenshot (207)](https://user-images.githubusercontent.com/74944536/233062292-f2d83381-c755-4e97-88fe-185905cb9a78.png)
 
-![Screenshot (89)](https://user-images.githubusercontent.com/74944536/230719560-9367f7bd-a095-4f15-929c-68634714ba1d.png)
+![Screenshot (206)](https://user-images.githubusercontent.com/74944536/233062330-13945cb5-3aec-4982-9641-c71a3fa64398.png)
 
 #### Blue
 
-![Screenshot (84)](https://user-images.githubusercontent.com/74944536/230719574-8aef555b-858f-458f-92ed-a37f5356a68a.png)
+![Screenshot (212)](https://user-images.githubusercontent.com/74944536/233062498-93d61d69-e6ee-48b6-acbc-42c621739aee.png)
 
-![Screenshot (85)](https://user-images.githubusercontent.com/74944536/230719580-8425c5d4-5243-434d-a2a3-51ea31aa772d.png)
+![Screenshot (213)](https://user-images.githubusercontent.com/74944536/233062511-96dcaf45-79d1-4b8e-8b77-5cd8c78fa80a.png)
 
 #### Green
 
-![Screenshot (90)](https://user-images.githubusercontent.com/74944536/230719587-3d02b443-7f66-4126-8bd7-d5a8a27c0a06.png)
+![Screenshot (210)](https://user-images.githubusercontent.com/74944536/233062543-e015a7cc-3669-4fa3-bc2f-27918c737afd.png)
 
-![Screenshot (91)](https://user-images.githubusercontent.com/74944536/230719591-e7006ace-9a98-4ba7-9b70-e10746e1d573.png)
+![Screenshot (211)](https://user-images.githubusercontent.com/74944536/233062551-08840661-0644-4959-9639-d9c5069dccf4.png)
 
 #### Red
 
-![Screenshot (92)](https://user-images.githubusercontent.com/74944536/230719602-bf95612b-8a90-4013-9c95-fa465ef071ec.png)
+![Screenshot (214)](https://user-images.githubusercontent.com/74944536/233062580-d20a9649-8488-4482-b2d5-726bce8a62aa.png)
 
-![Screenshot (93)](https://user-images.githubusercontent.com/74944536/230719607-3f16e56d-bfda-4262-9225-4f73b0a4f4a5.png)
+![Screenshot (215)](https://user-images.githubusercontent.com/74944536/233062589-6ee1a830-a121-49da-8dc5-8db954c44a25.png)
 
 </div>
 
