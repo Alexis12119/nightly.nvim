@@ -371,9 +371,9 @@ function theme.setup()
     -- Which-Key
     WhichKeyBorder = { fg = color.border, bg = color.none },
     WhichKeyFloat = { link = "NormalFloat" },
-    WhichKey = { fg = color.gray },
+    WhichKey = { fg = color.dark4 },
     WhichKeyGroup = { fg = color.sky },
-    WhichKeyDesc = { fg = color.magenta },
+    WhichKeyDesc = { fg = color.fg },
     WhichKeySeparator = { fg = color.dark4 },
     WhichKeyValue = { fg = color.dark3 },
 
