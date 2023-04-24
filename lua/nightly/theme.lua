@@ -131,8 +131,10 @@ function theme.setup()
     -- Lazy
     LazyHandlerTask = { fg = color.green },
     LazyKey = { fg = color.dark3 },
-    LazyH1 = { link = "CursorLine" },
+    LazyH1 = { link = "CmpCursorLine" },
+    LazyButtonActive = { link = "CmpCursorLine" },
     LazyButton = { fg = color.fg_gutter, bg = color.bg },
+    LazySpecial = { fg = color.gray, bg = color.none },
 
     -- Font
     Bold = { bold = true },
