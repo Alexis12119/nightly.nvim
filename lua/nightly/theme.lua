@@ -15,15 +15,6 @@ function theme.setup()
     color.dark = "#B7B7B8"
   else
     color = require("nightly.palette").dark_colors
-    if options.color == "gray" then
-      color.bg = "#1f2329"
-      color.sky = "#A9B1D6"
-      color.header = "#A9B1D6"
-      color.root = "#A9B1D6"
-      color.border = "#A9B1D6"
-      color.cursorline = "#282C34"
-      color.dark = "#171A1E"
-    end
     if options.color == "green" then
       color.bg = "#141B1E"
       color.sky = "#98BE65"
