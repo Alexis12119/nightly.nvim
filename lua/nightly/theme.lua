@@ -52,6 +52,14 @@ function theme.setup()
     vim.opt.pumblend = 0
   end
 
+  color.add = "#98BE65"
+  color.delete = "#DB4B4B"
+  color.change = "#7AA2F7"
+  color.error = "#DB4B4B"
+  color.warn = "#D19A66"
+  color.info = "#7AA2F7"
+  color.hint = "#ECBE7B"
+
   theme.highlights = {
     MsgArea = { fg = color.fg, bg = color.bg },
     Normal = { fg = color.fg, bg = color.bg },
@@ -209,9 +217,9 @@ function theme.setup()
     TroubleNormal = { fg = color.fg, bg = color.none },
 
     -- GitGutter
-    GitGutterAdd = { fg = color.green, bg = color.bg },
-    GitGutterChange = { fg = color.blue, bg = color.bg },
-    GitGutterDelete = { fg = color.red, bg = color.bg },
+    GitGutterAdd = { fg = color.add, bg = color.bg },
+    GitGutterChange = { fg = color.change, bg = color.bg },
+    GitGutterDelete = { fg = color.delete, bg = color.bg },
 
     -- Markdown
     mkdCodeDelimiter = { bg = color.blue6, fg = color.fg },
@@ -407,9 +415,36 @@ function theme.setup()
     DashboardShortcut = { fg = color.header },
 
     -- Git
-    GitSignsChange = { fg = color.blue, bg = color.bg },
-    GitSignsDelete = { fg = color.red, bg = color.bg },
-    GitSignsAdd = { fg = color.green, bg = color.bg },
+    GitSignsChange = { fg = color.change, bg = color.bg },
+    GitSignsDelete = { fg = color.delete, bg = color.bg },
+    GitSignsAdd = { fg = color.add, bg = color.bg },
+
+    -- Diagnostics
+    DiagnosticError = { fg = color.error },
+    DiagnosticInfo = { fg = color.info },
+    DiagnosticWarn = { fg = color.warn },
+    DiagnosticHint = { fg = color.hint },
+    DiagnosticUnnecessary = { bg = color.bg },
+
+    DiagnosticUnderlineError = { underline = false },
+    DiagnosticUnderlineInfo = { underline = false },
+    DiagnosticUnderlineWarn = { underline = false },
+    DiagnosticUnderlineHint = { underline = false },
+
+    DiagnosticVirtualTextError = { fg = color.error, bg = color.virtual_err },
+    DiagnosticVirtualTextInfo = { fg = color.info, bg = color.virtual_info },
+    DiagnosticVirtualTextWarn = { fg = color.warn, bg = color.virtual_warn },
+    DiagnosticVirtualTextHint = { fg = color.hint, bg = color.virtual_hint },
+
+    DiagnosticFloatingError = { link = "DiagnosticError" },
+    DiagnosticFloatingInfo = { link = "DiagnosticInfo" },
+    DiagnosticFloatingWarn = { link = "DiagnosticWarn" },
+    DiagnosticFloatingHint = { link = "DiagnosticHint" },
+
+    DiagnosticSignError = { link = "DiagnosticError" },
+    DiagnosticSignInfo = { link = "DiagnosticInfo" },
+    DiagnosticSignWarn = { link = "DiagnosticWarn" },
+    DiagnosticSignHint = { link = "DiagnosticHint" },
 
     -- diff
     diffAdded = { fg = color.green },
@@ -513,32 +548,6 @@ function theme.setup()
     LspReferenceWrite = { bg = color.blue7 },
     LspInfoBorder = { link = "FloatBorder" },
     LspFloatWinNormal = { link = "NormalFloat" },
-
-    DiagnosticError = { fg = color.red },
-    DiagnosticInfo = { fg = color.blue },
-    DiagnosticWarn = { fg = color.light_orange },
-    DiagnosticHint = { fg = color.yellow },
-    DiagnosticUnnecessary = { bg = color.bg },
-
-    DiagnosticUnderlineError = { underline = false },
-    DiagnosticUnderlineInfo = { underline = false },
-    DiagnosticUnderlineWarn = { underline = false },
-    DiagnosticUnderlineHint = { underline = false },
-
-    DiagnosticVirtualTextError = { fg = color.red, bg = color.virtual_err },
-    DiagnosticVirtualTextInfo = { fg = color.blue, bg = color.virtual_info },
-    DiagnosticVirtualTextWarn = { fg = color.light_orange, bg = color.virtual_warn },
-    DiagnosticVirtualTextHint = { fg = color.yellow, bg = color.virtual_hint },
-
-    DiagnosticFloatingError = { link = "DiagnosticError" },
-    DiagnosticFloatingInfo = { link = "DiagnosticInfo" },
-    DiagnosticFloatingWarn = { link = "DiagnosticWarn" },
-    DiagnosticFloatingHint = { link = "DiagnosticHint" },
-
-    DiagnosticSignError = { link = "DiagnosticError" },
-    DiagnosticSignInfo = { link = "DiagnosticInfo" },
-    DiagnosticSignWarn = { link = "DiagnosticWarn" },
-    DiagnosticSignHint = { link = "DiagnosticHint" },
 
     CmpDocumentationBorder = { fg = color.border },
     CmpCompletionBorder = { fg = color.border },

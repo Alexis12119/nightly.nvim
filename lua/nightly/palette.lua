@@ -1,6 +1,5 @@
 local M = {}
 
--- gray = "#919494",
 M.light_colors = {
   none = "NONE",
   fg = "#443D30",
