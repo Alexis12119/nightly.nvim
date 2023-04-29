@@ -1,5 +1,7 @@
 # <img src="https://user-images.githubusercontent.com/74944536/214324244-9fc431df-73b3-4472-b90b-8c14a5cd17a5.png" alt="nightly" width="80"/> Nightly
 
+![Preview](https://user-images.githubusercontent.com/74944536/235325547-da3ef421-0916-4452-9aa0-e323067e5806.png)
+
 ## ⚡️ Requirements
 
 - Neovim >= 0.8

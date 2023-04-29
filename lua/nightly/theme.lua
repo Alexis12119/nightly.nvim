@@ -6,6 +6,11 @@ function theme.setup()
 
   if vim.o.background == "light" then
     color = require("nightly.palette").light_colors
+    color.add = "#67519B"
+    color.delete = "#DB4B4B"
+    color.change = "#855D08"
+    color.hint = "#137E84"
+
     color.bg = "#D0D0D0"
     color.sky = "#000000"
     color.header = "#000000"
@@ -15,7 +20,15 @@ function theme.setup()
     color.dark = "#B7B7B8"
   else
     color = require("nightly.palette").dark_colors
+    color.add = "#98BE65"
+    color.delete = "#DB4B4B"
+    color.change = "#7AA2F7"
+    color.hint = "#ECBE7B"
+
     if options.color == "green" then
+      color.add = "#98BE65"
+      color.delete = "#DB4B4B"
+      color.change = "#7AA2F7"
       color.bg = "#141B1E"
       color.sky = "#98BE65"
       color.header = "#98BE65"
@@ -24,6 +37,7 @@ function theme.setup()
       color.cursorline = "#242E32"
       color.dark = "#0F1416"
     end
+
     if options.color == "red" then
       color.bg = "#140B14"
       color.sky = "#AF8696"
@@ -33,6 +47,7 @@ function theme.setup()
       color.cursorline = "#322E32"
       color.dark = "#0F080F"
     end
+
     if options.color == "blue" then
       color.bg = "#171922"
       color.sky = "#7AA2F7"
@@ -52,13 +67,9 @@ function theme.setup()
     vim.opt.pumblend = 0
   end
 
-  color.add = "#98BE65"
-  color.delete = "#DB4B4B"
-  color.change = "#7AA2F7"
   color.error = "#DB4B4B"
   color.warn = "#D19A66"
   color.info = "#7AA2F7"
-  color.hint = "#ECBE7B"
 
   theme.highlights = {
     MsgArea = { fg = color.fg, bg = color.bg },
