@@ -26,9 +26,6 @@ function theme.setup()
     color.hint = "#ECBE7B"
 
     if options.color == "green" then
-      color.add = "#98BE65"
-      color.delete = "#DB4B4B"
-      color.change = "#7AA2F7"
       color.bg = "#141B1E"
       color.sky = "#98BE65"
       color.header = "#98BE65"
@@ -332,6 +329,7 @@ function theme.setup()
     ["@text.note"] = { fg = color.blue9, bg = color.gray4 },
     ["@text.warning"] = { fg = color.bg, bg = color.light_orange },
     ["@text.error"] = { fg = color.bg, bg = color.red },
+    ["@text.danger"] = { fg = "Black", bg = color.red },
     ["@text.strike"] = { fg = color.fg },
     ["@text.strong"] = { link = "Bold" },
     ["@text.emphasis"] = { link = "Italic" },
