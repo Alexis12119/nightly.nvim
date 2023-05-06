@@ -147,8 +147,8 @@ function theme.setup()
     -- Lazy
     LazyHandlerTask = { fg = color.green },
     LazyKey = { fg = color.dark3 },
-    LazyH1 = { link = "CmpCursorLine" },
-    LazyButtonActive = { link = "CmpCursorLine" },
+    LazyH1 = { link = "PmenuSel" },
+    LazyButtonActive = { link = "PmenuSel" },
     LazyButton = { fg = color.fg_gutter, bg = color.bg },
     LazySpecial = { fg = color.gray, bg = color.none },
 
@@ -184,8 +184,8 @@ function theme.setup()
     FloatBorder = { fg = color.border, bg = color.none },
 
     -- Pmenu
-    Pmenu = { fg = "#C0CAF5", bg = color.bg },
-    PmenuSel = { bg = "#343A55" },
+    Pmenu = { fg = color.black, bg = color.sky },
+    PmenuSel = { bg = color.border },
     PmenuSBar = { bg = "#222229" },
     PmenuThumb = { bg = color.blue7 },
 
@@ -601,10 +601,6 @@ function theme.setup()
     LspReferenceWrite = { bg = color.blue7 },
     LspInfoBorder = { link = "FloatBorder" },
     LspFloatWinNormal = { link = "NormalFloat" },
-
-    CmpDocumentationBorder = { fg = color.border },
-    CmpCompletionBorder = { fg = color.border },
-    CmpCursorLine = { fg = color.black, bg = color.sky },
 
     CmpItemKindFolder = { fg = color.blue },
     CmpItemKindFile = { fg = color.green },
