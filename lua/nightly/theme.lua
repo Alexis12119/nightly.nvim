@@ -148,9 +148,9 @@ function theme.setup()
     LazyHandlerTask = { fg = color.green },
     LazyKey = { fg = color.dark3 },
     LazyH1 = { link = "PmenuSel" },
-    LazyButtonActive = { link = "PmenuSel" },
+    LazyButtonActive = { link = "CursorLine" },
     LazyButton = { fg = color.fg_gutter, bg = color.bg },
-    LazySpecial = { fg = color.gray, bg = color.none },
+    LazySpecial = { fg = color.sky, bg = color.none },
 
     -- Font
     Bold = { bold = true },
@@ -184,8 +184,8 @@ function theme.setup()
     FloatBorder = { fg = color.border, bg = color.none },
 
     -- Pmenu
-    Pmenu = { fg = color.black, bg = color.sky },
-    PmenuSel = { bg = color.border },
+    Pmenu = { bg = color.bg },
+    PmenuSel = { fg = color.black, bg = color.sky },
     PmenuSBar = { bg = "#222229" },
     PmenuThumb = { bg = color.blue7 },
 
