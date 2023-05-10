@@ -21,7 +21,6 @@ M.dark_colors = {
   color17 = "#545C7E",
   color18 = "#292E42",
   comment = "#404749",
-  contrast = "#161D1F",
   background = "#141B1E",
   foreground = "#DADADA",
   cursorline = "#242e32",

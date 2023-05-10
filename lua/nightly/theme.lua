@@ -367,6 +367,7 @@ function theme.setup()
   end
 
   theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.highlights)
+  theme.highlights = vim.tbl_extend("force", {}, theme.highlights, options.styles)
 
   -- Hide all semantic highlights
   for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do

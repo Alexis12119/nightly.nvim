@@ -1,6 +1,6 @@
 # <img src="https://user-images.githubusercontent.com/74944536/214324244-9fc431df-73b3-4472-b90b-8c14a5cd17a5.png" alt="nightly" width="80"/> Nightly
 
-![Preview](https://user-images.githubusercontent.com/74944536/235325547-da3ef421-0916-4452-9aa0-e323067e5806.png)
+![Preview](https://user-images.githubusercontent.com/74944536/236874823-0a136b05-9db1-4e7b-81e7-4403d12aa084.png)
 
 ## ⚡️ Requirements
 
@@ -32,7 +32,6 @@ Plug 'Alexis12119/nightly.nvim'
 
 ```lua
 require("nightly").setup({
-    color = "black", -- blue, green, or red
     transparent = false,
     styles = {
         comments = { italic = true },
@@ -97,8 +96,4 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 ## Credits
 
-Thanks for some colors in their palette.
-
-- [poimandres](https://github.com/olivercederborg/poimandres.nvim)
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [Everblush](https://github.com/Everblush/nvim)
