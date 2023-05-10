@@ -1,14 +1,7 @@
 local M = {}
 
 local defaults = {
-  color = "black",
   transparent = false,
-  styles = {
-    comments = { italic = true },
-    functions = { italic = false },
-    keywords = { italic = false },
-    variables = { italic = false },
-  },
   highlights = {},
 }
 

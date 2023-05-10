@@ -2,708 +2,364 @@ local theme = {}
 
 function theme.setup()
   local options = require("nightly.config").options
-  local color = {}
 
-  if vim.o.background == "light" then
-    color = require("nightly.palette").light_colors
-    color.add = "#67519B"
-    color.delete = "#DB4B4B"
-    color.change = "#855D08"
-    color.hint = "#137E84"
-
-    color.bg = "#D0D0D0"
-    color.sky = "#000000"
-    color.header = "#000000"
-    color.root = "#000000"
-    color.border = "#949B87"
-    color.cursorline = "#DDDDDD"
-    color.dark = "#B7B7B8"
-  else
-    color = require("nightly.palette").dark_colors
-    color.add = "#98BE65"
-    color.delete = "#DB4B4B"
-    color.change = "#7AA2F7"
-    color.hint = "#ECBE7B"
-
-    if options.color == "green" then
-      color.bg = "#141B1E"
-      color.sky = "#98BE65"
-      color.header = "#98BE65"
-      color.root = "#98BE65"
-      color.border = "#87AF87"
-      color.cursorline = "#242E32"
-      color.dark = "#0F1416"
-    end
-
-    if options.color == "red" then
-      color.bg = "#140B14"
-      color.sky = "#AF8696"
-      color.header = "#81454C"
-      color.root = "#AF8696"
-      color.border = "#81454C"
-      color.cursorline = "#322E32"
-      color.dark = "#0F080F"
-    end
-
-    if options.color == "blue" then
-      color.bg = "#171922"
-      color.sky = "#7AA2F7"
-      color.header = "#545C7E"
-      color.root = "#7AA2F7"
-      color.border = "#6F87AF"
-      color.cursorline = "#292E42"
-      color.dark = "#111219"
-    end
-  end
-
-  if options.transparent then
-    color.bg = "NONE"
-    color.dark1 = "NONE"
-    color.tab = "NONE"
-    -- Fix black issue on autocompletion
-    vim.opt.pumblend = 0
-  end
-
-  color.error = "#DB4B4B"
-  color.warn = "#D19A66"
-  color.info = "#7AA2F7"
+  local p = require("nightly.palette").dark_colors
 
   theme.highlights = {
-    MsgArea = { fg = color.fg, bg = color.bg },
-    Normal = { fg = color.fg, bg = color.bg },
-    NormalNC = { fg = color.fg, bg = color.bg },
-    SignColumn = { fg = color.fg, bg = color.bg },
-    SignColumnSB = { fg = color.fg, bg = color.bg },
-    Conceal = { fg = color.dark3 },
-    ColorColumn = { fg = color.none, bg = color.highlight },
-    CursorColumn = { fg = color.none, bg = color.highlight },
-    LineNr = { fg = color.dark2, bg = color.bg },
-    CursorLineNr = { fg = color.gray2, bg = color.bg },
-    Directory = { fg = color.sky },
-    EndOfBuffer = { fg = color.bg },
-    Substitute = { fg = color.fg, bg = color.blue6 },
-    FocusedSymbol = { fg = color.blue, bg = color.none },
-    Folded = { fg = color.blue, bg = color.blue7 },
-    FoldColumn = { fg = color.dark4, bg = color.none },
-    Keyword = { fg = color.gray3, italic = options.styles.keywords.italic },
-    ModeMsg = { fg = color.gray4, bold = true },
-    NonText = { fg = color.gray4 },
-    Question = { fg = color.blue },
-    Special = { fg = color.blue },
-    SpecialChar = { fg = color.fg },
-    SpecialKey = { fg = color.fg },
-    CursorLine = { bg = color.cursorline },
-    Visual = { bg = color.highlight },
-    VisualNOS = { bg = color.highlight },
-    Title = { fg = color.blue, bold = true },
-    ErrorMsg = { fg = color.red },
-    WarningMsg = { fg = color.light_orange },
-    Whitespace = { fg = color.blue7 },
-    WildMenu = { bg = color.blue9 },
-    Identifier = { fg = color.magenta, italic = options.styles.variables.italic },
-    Boolean = { fg = color.yellow },
-    Comment = { fg = color.comment or color.dark4, italic = options.styles.comments.italic },
-    Character = { fg = color.green },
-    Conditional = { fg = color.purple },
-    Constant = { fg = color.light_orange },
-    Define = { fg = color.purple },
-    Delimiter = { fg = color.fg },
-    Exception = { fg = color.yellow },
-    Float = { fg = color.blue },
-    Function = { fg = color.blue, italic = options.styles.functions.italic },
-    Include = { fg = color.blue },
-    Label = { fg = color.blue },
-    Macro = { fg = color.light_orange },
-    Number = { fg = color.yellow },
-    Operator = { fg = color.fg },
-    PreProc = { fg = color.cyan },
-    PreCondit = { fg = color.cyan },
-    Repeat = { fg = color.blue },
-    Statement = { fg = color.blue },
-    StorageClass = { fg = color.cyan },
-    String = { fg = color.green },
-    Structure = { fg = color.yellow },
-    Tag = { fg = color.blue },
-    Todo = { fg = color.dark3, bg = color.highlight },
-    Type = { fg = color.cyan },
-    Typedef = { fg = color.purple },
-    Error = { fg = color.red },
+    -- Base highlights
+    Boolean = { fg = p.color5 },
+    Character = { fg = p.color12 },
+    ColorColumn = { bg = p.none },
+    Comment = { fg = p.comment, italic = true },
+    Conceal = { fg = p.color4, bg = p.background },
+    Conditional = { fg = p.color6 },
+    Constant = { fg = p.color5 },
+    Cursor = { fg = p.foreground, bg = p.foreground },
+    CurSearch = { link = "IncSearch" },
+    CursorColumn = { bg = p.background },
+    CursorIM = { fg = p.foreground, bg = p.foreground },
+    CursorLine = { bg = p.cursorline },
+    CursorLineNr = { fg = p.cursorline },
+    Debug = { fg = p.color1 },
+    Define = { fg = p.color6 },
+    Delimiter = { fg = p.foreground },
+    DiffAdd = { fg = p.color4, bg = p.background },
+    DiffChange = { fg = p.color5, bg = p.background },
+    DiffDelete = { fg = p.color1, bg = p.background },
+    DiffText = { fg = p.color1, bg = p.background },
+    Directory = { fg = p.color4 },
+    EndOfBuffer = { fg = p.background },
+    Error = { fg = p.color1, bg = p.background },
+    ErrorMsg = { fg = p.color1, bg = p.background },
+    Exception = { fg = p.color6 },
+    Float = { fg = p.color5 },
+    FloatBorder = { fg = p.color8 },
+    FoldColumn = { fg = p.color4, bg = p.background },
+    Folded = { fg = p.color4, bg = p.background },
+    Function = { fg = p.color6 },
+    Identifier = { fg = p.color5 },
+    Ignore = { fg = p.color7, bg = p.background },
+    IncSearch = { fg = p.background, bg = p.color10 },
+    Include = { fg = p.color6 },
+    Keyword = { fg = p.color6 },
+    Label = { fg = p.color4 },
+    LineNr = { fg = p.color8 },
+    Macro = { fg = p.color6 },
+    MatchParen = { fg = p.color4, bg = p.background },
+    ModeMsg = { fg = p.foreground, bg = p.background },
+    MoreMsg = { fg = p.color5 },
+    MsgArea = { fg = p.foreground, bg = p.background },
+    MsgSeparator = { fg = p.foreground, bg = p.background },
+    NonText = { fg = p.color1 },
+    Normal = { fg = p.foreground, bg = p.background },
+    NormalFloat = { bg = p.background },
+    NormalNC = { fg = p.foreground, bg = p.background },
+    Number = { fg = p.color3 },
+    Operator = { fg = p.color6 },
+    Pmenu = { fg = p.color17, bg = p.background },
+    PmenuSbar = { bg = p.background },
+    PmenuSel = { fg = p.background, bg = p.color4 },
+    PmenuThumb = { bg = p.color2 },
+    PreCondit = { fg = p.color6 },
+    PreProc = { fg = p.color6 },
+    Question = { fg = p.color5 },
+    QuickFixLine = { bg = p.color2 },
+    Repeat = { fg = p.color6 },
+    Search = { fg = p.background, bg = p.color4 },
+    SignColumn = { fg = p.background, bg = p.background },
+    Special = { fg = p.color6 },
+    SpecialChar = { fg = p.foreground },
+    SpecialComment = { fg = p.color2 },
+    SpecialKey = { fg = p.color4 },
+    SpellBad = { fg = p.color2 },
+    SpellCap = { fg = p.color6 },
+    SpellLocal = { fg = p.color4 },
+    SpellRare = { fg = p.color6 },
+    Statement = { fg = p.color6 },
+    StatusLine = { fg = p.foreground, bg = p.background },
+    StatusLineNC = { bg = p.background, fg = p.background },
+    Storage = { fg = p.color9 },
+    StorageClass = { fg = p.color7 },
+    String = { fg = p.color2 },
+    Structure = { fg = p.color6 },
+    Substitute = { fg = p.background, bg = p.color9 },
+    TabLine = { fg = p.color2, bg = p.background },
+    TabLineFill = { fg = p.foreground, bg = p.background },
+    TabLineSel = { fg = p.foreground, bg = p.background },
+    Tag = { fg = p.color4 },
+    TermCursor = { fg = p.foreground, bg = p.foreground },
+    TermCursorNC = { fg = p.foreground, bg = p.foreground },
+    Title = { fg = p.color4, bold = true },
+    Todo = { fg = p.color1, bg = p.background },
+    Type = { fg = p.color5 },
+    Typedef = { fg = p.color6 },
+    Underlined = { fg = p.color2, underline = true },
+    Variable = { fg = p.color5 },
+    VertSplit = { fg = p.background },
+    Visual = { bg = p.cursorline },
+    VisualNOS = { bg = p.background },
+    WarningMsg = { fg = p.color3, bg = p.background },
+    Whitespace = { fg = p.color1 },
+    WildMenu = { fg = p.color7, bg = p.color4 },
+    lCursor = { fg = p.foreground, bg = p.foreground },
 
-    -- matchparen
-    MatchParen = { bold = false, fg = color.yellow },
+    -- bufferline.nvim: https://github.com/akinsho/bufferline.nvim
+    BufferLineFill = { fg = p.background, bg = p.background },
+    BufferLineIndicatorSelected = { fg = p.color2 },
 
-    -- Lsp semantic tokens
+    -- Diagnostic
+    DiagnosticError = { fg = p.color1 },
+    DiagnosticHint = { fg = p.color2 },
+    DiagnosticInfo = { fg = p.color4 },
+    DiagnosticWarn = { fg = p.color3 },
+    DiagnosticUnnecessary = { fg = p.none },
+
+    -- diff
+    diffAdded = { fg = p.color4 },
+    diffChanged = { fg = p.color5 },
+    diffFile = { fg = p.color7 },
+    diffIndexLine = { fg = p.color6 },
+    diffLine = { fg = p.color1 },
+    diffNewFile = { fg = p.color5 },
+    diffOldFile = { fg = p.color5 },
+    diffRemoved = { fg = p.color1 },
+
+    -- gitsigns: https://github.com/lewis6991/gitsigns.nvim
+    GitSignsAdd = { fg = p.color4 },
+    GitSignsChange = { fg = p.color5 },
+    GitSignsDelete = { fg = p.color1 },
+
+    -- indent-blankline.nvim: https://github.com/lukas-reineke/indent-blankline.nvim
+    IndentBlanklineChar = { fg = p.color0 },
+
+    -- LSP
+    LspInfoFiletype = { fg = p.color15 },
+    LspReferenceText = { bg = p.color18 },
+    LspReferenceRead = { bg = p.color18 },
+    LspReferenceWrite = { bg = p.color18 },
+    LspInfoBorder = { link = "FloatBorder" },
+
+    -- lspsaga.nvim: https://github.com/glepnir/lspsaga.nvim
+    DefinitionCount = { fg = p.color6 },
+    DefinitionIcon = { fg = p.color7 },
+    LspFloatWinBorder = { fg = p.background },
+    LspFloatWinNormal = { bg = p.background },
+    LspSagaBorderTitle = { fg = p.color7 },
+    LspSagaCodeActionBorder = { fg = p.color7 },
+    LspSagaCodeActionContent = { fg = p.color6 },
+    LspSagaCodeActionTitle = { fg = p.color7 },
+    LspSagaDefPreviewBorder = { fg = p.color4 },
+    LspSagaFinderSelection = { fg = p.color1 },
+    LspSagaHoverBorder = { fg = p.color7 },
+    LspSagaRenameBorder = { fg = p.color4 },
+    LspSagaSignatureHelpBorder = { fg = p.color1 },
+    ReferencesCount = { fg = p.color6 },
+    ReferencesIcon = { fg = p.color7 },
+    TargetWord = { fg = p.color7 },
+
+    -- Neogit: https://github.com/TimUntersberger/neogit
+    NeogitBranch = { fg = p.color6 },
+    NeogitDiffAddHighlight = { fg = p.color4, bg = p.background },
+    NeogitDiffContextHighlight = { bg = p.background, fg = p.foreground },
+    NeogitDiffDeleteHighlight = { fg = p.color1, bg = p.background },
+    NeogitHunkHeader = { bg = p.background, fg = p.foreground },
+    NeogitHunkHeaderHighlight = { bg = p.comment, fg = p.color7 },
+    NeogitRemote = { fg = p.color6 },
+
+    -- Neovim
+    healthError = { fg = p.color1 },
+    healthSuccess = { fg = p.color4 },
+    healthWarning = { fg = p.color5 },
+
+    -- nvim-cmp: https://github.com/hrsh7th/nvim-cmp
+    CmpDocumentationBorder = { fg = p.foreground, bg = p.background },
+    CmpItemAbbr = { fg = p.foreground, bg = p.background },
+    CmpItemAbbrDeprecated = { fg = p.color2, bg = p.background },
+    CmpItemAbbrMatch = { fg = p.color7, bg = p.background },
+    CmpItemAbbrMatchFuzzy = { fg = p.color7, bg = p.background },
+    CmpItemKind = { fg = p.color4, bg = p.background },
+    CmpItemMenu = { fg = p.color2, bg = p.background },
+    CmpItemKindFolder = { fg = p.color4 },
+    CmpItemKindFile = { fg = p.color2 },
+    CmpItemKindConstructor = { fg = p.color5 },
+    CmpItemKindInterface = { fg = p.color5 },
+    CmpItemKindReference = { fg = p.color5 },
+    CmpItemKindConstant = { fg = p.color5 },
+    CmpItemKindProperty = { fg = p.color5 },
+    CmpItemKindModule = { fg = p.color5 },
+    CmpItemKindClass = { fg = p.color5 },
+    CmpItemKindField = { fg = p.color5 },
+    CmpItemKindEvent = { fg = p.color5 },
+    CmpItemKindSnippet = { fg = p.color4 },
+    CmpItemKindKeyword = { fg = p.color4 },
+    CmpItemKindValue = { fg = p.color4 },
+    CmpItemKindOperator = { fg = p.color4 },
+    CmpItemKindTypeParameter = { fg = p.foreground },
+    CmpItemKindVariable = { fg = p.foreground },
+    CmpItemKindText = { fg = p.foreground },
+    CmpItemKindUnit = { fg = p.foreground },
+
+    YankyPut = { link = "Visual" },
+    YankyYanked = { link = "Visual" },
+    YankHighlight = { bg = p.cursorline },
+
+    -- Markdown
+    markdownCodeBlock = { fg = p.color7 },
+    markdownCodeDelimeter = { fg = p.color7 },
+    markdownUrl = { fg = p.color15 },
+    markdownLink = { fg = p.foreground, underline = true },
+
+    -- nvim-tree.lua: https://github.com/nvim-tree/nvim-tree.lua
+    NvimTreeEmptyFolderName = { fg = p.foreground },
+    NvimTreeEndOfBuffer = { fg = p.foreground, bg = p.background },
+    NvimTreeEndOfBufferNC = { fg = p.foreground, bg = p.background },
+    NvimTreeFolderIcon = { fg = p.color4, bg = p.background },
+    NvimTreeFolderName = { fg = p.foreground },
+    NvimTreeGitDeleted = { fg = p.color1 },
+    NvimTreeGitDirty = { fg = p.color5 },
+    NvimTreeGitNew = { fg = p.color4 },
+    NvimTreeImageFile = { fg = p.foreground },
+    NvimTreeIndentMarker = { fg = p.color0 },
+    NvimTreeNormal = { fg = p.foreground, bg = p.background },
+    NvimTreeNormalNC = { fg = p.foreground, bg = p.background },
+    NvimTreeOpenedFolderName = { fg = p.foreground },
+    NvimTreeRootFolder = { fg = p.color12 },
+    NvimTreeSpecialFile = { fg = p.color1 },
+    NvimTreeStatusLineNC = { bg = p.background, fg = p.background },
+    NvimTreeSymlink = { fg = p.color3 },
+    NvimTreeVertSplit = { fg = p.background },
+
+    -- nvim-treesitter: https://github.com/nvim-treesitter/nvim-treesitter
+    ["@attribute"] = { fg = p.color4 },
+    ["@boolean"] = { fg = p.color6 },
+    ["@character"] = { fg = p.color4 },
+    ["@comment"] = { fg = p.comment, italic = true },
+    ["@conditional"] = { fg = p.color1 },
+    ["@constant"] = { fg = p.color6 },
+    ["@constant.builtin"] = { fg = p.color4 },
+    ["@constant.macro"] = { fg = p.color3 },
+    ["@constructor"] = { fg = p.color4 },
+    ["@exception"] = { fg = p.color8 },
+    ["@field"] = { fg = p.color1 },
+    ["@float"] = { fg = p.color8 },
+    ["@function"] = { fg = p.color1 },
+    ["@function.builtin"] = { fg = p.color14 },
+    ["@function.macro"] = { fg = p.color2 },
+    ["@include"] = { fg = p.color9 },
+    ["@keyword"] = { fg = p.color5 },
+    ["@keyword.function"] = { fg = p.color4 },
+    ["@keyword.operator"] = { fg = p.color12 },
+    ["@keyword.return"] = { fg = p.color4 },
+    ["@label"] = { fg = p.color4 },
+    ["@method"] = { fg = p.color12 },
+    ["@namespace"] = { fg = p.color9 },
+    ["@number"] = { fg = p.color15 },
+    ["@operator"] = { fg = p.color7 },
+    ["@parameter"] = { fg = p.color1 },
+    ["@parameter.reference"] = { fg = p.color9 },
+    ["@property"] = { fg = p.color1 },
+    ["@punctuation.bracket"] = { fg = p.color7 },
+    ["@punctuation.delimiter"] = { fg = p.color7 },
+    ["@punctuation.special"] = { fg = p.color7 },
+    ["@repeat"] = { fg = p.color11 },
+    ["@string"] = { fg = p.color2 },
+    ["@string.escape"] = { fg = p.color4 },
+    ["@string.regex"] = { fg = p.color2 },
+    ["@string.special"] = { fg = p.color4 },
+    ["@symbol"] = { fg = p.color1 },
+    ["@tag"] = { fg = p.color4 },
+    ["@tag.attribute"] = { fg = p.color1 },
+    ["@tag.delimiter"] = { fg = p.color7 },
+    ["@text"] = { fg = p.color7 },
+    ["@text.danger"] = { fg = p.color8 },
+    ["@text.emphasis"] = { fg = p.color7, italic = true },
+    ["@text.environment.name"] = { fg = p.color3 },
+    ["@text.environtment"] = { fg = p.color5 },
+    ["@text.literal"] = { fg = p.color2, italic = true },
+    ["@text.math"] = { fg = p.color6 },
+    ["@text.note"] = { fg = p.color8 },
+    ["@text.reference"] = { fg = p.color6 },
+    ["@text.strike"] = { fg = p.color7, strikethrough = true },
+    ["@text.strong"] = { fg = p.color7, bold = true },
+    ["@text.title"] = { fg = p.color3, bold = true },
+    ["@text.underline"] = { fg = p.color5, underline = true },
+    ["@text.uri"] = { fg = p.color3, underline = true },
+    ["@text.warning"] = { fg = p.color0, bg = p.color1 },
+    ["@type"] = { fg = p.color3 },
+    ["@type.builtin"] = { fg = p.color3 },
+    ["@variable"] = { fg = p.color7 },
+    ["@variable.builtin"] = { fg = p.color4 },
+
+    -- LSP semantic tokens
+    -- ["@lsp.type.comment"] = { link = "@comment" },
     -- ["@lsp.type.enum"] = { link = "@type" },
-    -- ["@lsp.type.keyword"] = { link = "@keyword" },
     -- ["@lsp.type.interface"] = { link = "Identifier" },
+    -- ["@lsp.type.keyword"] = { link = "@keyword" },
     -- ["@lsp.type.namespace"] = { link = "@namespace" },
     -- ["@lsp.type.parameter"] = { link = "@parameter" },
     -- ["@lsp.type.property"] = { link = "@property" },
     -- ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
     -- ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     -- ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+    -- ["@lsp.typemod.operator.injected"] = { link = "@operator" },
+    -- ["@lsp.typemod.string.injected"] = { link = "@string" },
     -- ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+    -- ["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
-    -- Lazy
-    LazyHandlerTask = { fg = color.green },
-    LazyKey = { fg = color.dark3 },
-    LazyH1 = { link = "PmenuSel" },
-    LazyButtonActive = { link = "CursorLine" },
-    LazyButton = { fg = color.fg_gutter, bg = color.bg },
-    LazySpecial = { fg = color.sky, bg = color.none },
+    -- alpha.nvim: https://github.com/goolord/alpha-nvim
+    AlphaHeader = { fg = p.color2 },
+    AlphaButton = { fg = p.color4 },
+    AlphaFooter = { fg = p.color3 },
+    AlphaShortcut = { fg = p.color1 },
 
-    -- Font
-    Bold = { bold = true },
-    Italic = { italic = true },
-    Underlined = { underline = true, sp = color.dark3 },
+    -- telescope.nvim: https://github.com/nvim-telescope/telescope.nvim
+    TelescopeMatching = { fg = p.color2 },
+    TelescopeSelection = { fg = p.color2, bg = p.bg },
+    TelescopeMultiSelection = { bg = p.color16 },
+    TelescopePromptTitle = { fg = p.background, bg = p.color5 },
+    TelescopePreviewLine = { bg = p.background },
+    TelescopePromptPrefix = { fg = p.color2, bg = p.cursorline },
+    TelescopePromptBorder = { fg = p.cursorline, bg = p.cursorline },
+    TelescopePromptNormal = { fg = p.fg, bg = p.cursorline },
+    TelescopeResultsTitle = { fg = p.color16, bg = p.color16 },
+    TelescopeResultsBorder = { fg = p.color16, bg = p.color16 },
+    TelescopeResultsNormal = { fg = p.foreground, bg = p.color16 },
+    TelescopePreviewTitle = { fg = p.background, bg = p.color3 },
+    TelescopePreviewBorder = { fg = p.color16, bg = p.color16 },
+    TelescopePreviewNormal = { fg = p.foreground, bg = p.color16 },
 
-    -- Cursor
-    TermCursor = { fg = color.blue9, bg = color.gray3 },
-    Cursor = { fg = color.bg, bg = color.fg },
-    lCursor = { fg = color.bg, bg = color.fg },
-    CursorIM = { fg = color.bg, bg = color.fg },
+    -- trouble.nvim: https://github.com/folke/trouble.nvim
+    LspTroubleCount = { fg = p.color6, bg = p.foreground },
+    LspTroubleNormal = { fg = p.foreground, bg = p.background },
+    LspTroubleText = { fg = p.foreground },
 
-    -- Separator
-    WinSeparator = { fg = color.border, bg = color.none },
+    -- vim-gitgutter: https://github.com/airblade/vim-gitgutter
+    GitGutterAdd = { fg = p.color4 },
+    GitGutterChange = { fg = p.color5 },
+    GitGutterDelete = { fg = p.color1 },
 
-    -- Spell
-    SpellBad = { sp = color.red, undercurl = true },
-    SpellCap = { sp = color.light_orange, undercurl = true },
-    SpellLocal = { sp = color.blue, undercurl = true },
-    SpellRare = { sp = color.yellow, undercurl = true },
-
-    -- Statusline
-    StatusLineNC = { bg = color.bg },
-    StatusLine = { fg = color.fg, bg = color.bg },
-
-    -- Float
-    NormalFloat = {
-      fg = color.fg,
-      bg = color.bg,
-    },
-    FloatBorder = { fg = color.border, bg = color.none },
-
-    -- Pmenu
-    Pmenu = { bg = color.bg },
-    PmenuSel = { fg = color.black, bg = color.sky },
-    PmenuSBar = { bg = "#222229" },
-    PmenuThumb = { bg = color.blue7 },
-
-    -- Search
-    CurSearch = { link = "IncSearch" },
-    Search = { fg = color.black, bg = color.blue },
-    IncSearch = { fg = color.black, bg = "#87AF87" },
-
-    qfLineNr = { link = "CursorLineNr" },
-    qfFileName = { fg = color.none },
-
-    -- Diff
-    DiffAdd = { fg = color.blue9, bg = color.blue },
-    DiffChange = { fg = color.blue9, bg = color.green },
-    DiffDelete = { fg = color.blue9, bg = color.red },
-    DiffText = { fg = color.blue9, bg = color.fg },
-
-    -- Tabline
-    TabLine = { bg = color.dark, fg = color.fg },
-    TabLineFill = { bg = color.bg },
-    TabLineSel = { fg = color.fg, bg = color.bg },
-
-    -- Bufferline
-    BufferLineSeparator = {
-      fg = color.highlight,
-      bg = color.tab or color.dark,
-    },
-    BufferLineRightCustomAreaText1 = { fg = color.fg, bg = color.dark },
-    BufferLineFill = { bg = color.dark },
-    BufferLineIndicatorSelected = {
-      fg = color.sky,
-    },
-
-    -- Trouble
-    TroubleText = { fg = color.fg },
-    TroubleCount = { fg = color.magenta, bg = color.blue7 },
-    TroubleNormal = { fg = color.fg, bg = color.none },
-
-    -- GitGutter
-    GitGutterAdd = { fg = color.add, bg = color.bg },
-    GitGutterChange = { fg = color.change, bg = color.bg },
-    GitGutterDelete = { fg = color.delete, bg = color.bg },
-
-    -- Markdown
-    mkdCodeDelimiter = { bg = color.blue6, fg = color.fg },
-    mkdCodeStart = { fg = color.red, bold = true },
-    mkdCodeEnd = { fg = color.fg, bold = true },
-
-    markdownHeadingDelimiter = { fg = color.light_orange, bold = true },
-    markdownCode = { fg = color.blue },
-    markdownCodeBlock = { fg = color.green },
-    markdownH1 = { fg = color.fg, bold = true },
-    markdownH2 = { fg = color.fg, bold = true },
-    markdownH3 = { fg = color.fg, bold = true },
-    markdownH4 = { fg = color.fg, bold = true },
-    markdownH5 = { fg = color.fg, bold = true },
-    markdownH6 = { fg = color.fg, bold = true },
-    markdownLinkText = { fg = color.blue, underline = true, sp = color.blue6 },
-    markdownLink = { fg = color.fg, underline = true, sp = color.blue8 },
-    markdownUrl = { fg = color.fg, underline = true, sp = color.blue8 },
-
-    -- Glyph Palette
-    GlyphPalette1 = { fg = color.red },
-    GlyphPalette2 = { fg = color.green },
-    GlyphPalette3 = { fg = color.yellow },
-    GlyphPalette4 = { fg = color.blue },
-    GlyphPalette6 = { fg = color.green1 },
-    GlyphPalette7 = { fg = color.fg },
-    GlyphPalette9 = { fg = color.red },
-
-    -- Neovim
-    healthError = { fg = color.red },
-    healthSuccess = { fg = color.green1 },
-    healthWarning = { fg = color.light_orange },
-
-    -- Illuminate
-    IlluminatedWord = { bg = color.blue7 },
-    IlluminatedCurWord = { bg = color.blue7 },
-    IlluminatedWordText = { bg = color.blue7 },
-    IlluminatedWordRead = { bg = color.blue7 },
-    IlluminatedWordWrite = { bg = color.blue7 },
-
-    -- Treesitter
-    ["@annotation"] = { link = "PreProc" },
-    ["@preproc"] = { link = "PreProc" },
-    ["@debug"] = { fg = color.red },
-    ["@variable"] = { fg = color.fg, italic = options.styles.variables.italic },
-    ["@variable.builtin"] = { fg = color.blue, italic = options.styles.variables.italic },
-    ["@variable.builtin.lua"] = { fg = color.fg, italic = options.styles.variables.italic },
-    ["@none"] = { fg = color.none },
-    ["@boolean"] = { fg = color.magenta },
-    ["@character"] = { fg = color.green },
-    ["@comment"] = { fg = color.comment or color.dark4, italic = options.styles.comments.italic },
-    ["@conceal"] = { fg = color.fg },
-    ["@conditional"] = { fg = color.purple },
-    ["@constant"] = { fg = color.light_orange },
-    ["@constant.builtin"] = { fg = color.light_orange },
-    ["@constant.macro"] = { fg = color.light_orange },
-    ["@constructor"] = { fg = color.blue },
-    ["@exception"] = { fg = color.yellow },
-    ["@field"] = { fg = color.green1 },
-    ["@float"] = { fg = color.fg },
-    ["@function.builtin"] = { fg = color.blue, italic = options.styles.functions.italic },
-    ["@function"] = { fg = color.blue, italic = options.styles.functions.italic },
-    ["@function.macro"] = { fg = color.blue, italic = options.styles.functions.italic },
-    ["@include"] = { fg = color.blue },
-    ["@keyword"] = { fg = color.purple, italic = options.styles.keywords.italic },
-    ["@keyword.function"] = { fg = color.purple, italic = options.styles.keywords.italic },
-    ["@keyword.operator"] = { fg = color.cyan },
-    ["@operator"] = { fg = color.fg },
-    ["@label"] = { fg = color.magenta },
-    ["@method"] = { fg = color.blue },
-    ["@method.call"] = { fg = color.blue },
-    ["@namespace"] = { fg = color.yellow },
-    ["@number"] = { fg = color.yellow },
-    ["@parameter"] = { fg = color.fg },
-    ["@parameter.reference"] = { fg = color.fg },
-    ["@property"] = { fg = color.cyan },
-    ["@punctuation"] = { fg = color.dark3 },
-    ["@punctuation.delimiter"] = { fg = color.fg },
-    ["@punctuation.bracket"] = { fg = color.dark3 },
-    ["@punctuation.special"] = { fg = color.blue2 },
-    ["@punctuation.special.markdown"] = { fg = color.light_orange, bold = true },
-    ["@repeat"] = { fg = color.purple },
-    ["@string"] = { fg = color.green },
-    ["@string.regex"] = { fg = color.blue3 },
-    ["@string.special"] = { fg = color.green },
-    ["@string.escape"] = { fg = color.green },
-    ["@symbol"] = { fg = color.gray4 },
-    ["@tag"] = { link = "Tag" },
-    ["@tag.delimiter"] = { link = "Tag" },
-    ["@tag.attribute"] = { fg = color.cyan },
-    ["@text"] = { fg = color.fg },
-    ["@text.uri"] = { fg = color.gray4, underline = true, sp = color.dark3 },
-    ["@text.literal"] = { fg = color.green },
-    ["@text.math"] = { fg = color.blue },
-    ["@text.environment"] = { fg = color.blue7 },
-    ["@text.environment.name"] = { fg = color.fg },
-    ["@text.reference"] = { fg = color.blue },
-    ["@text.title"] = { fg = color.fg },
-    ["@text.note"] = { fg = color.blue9, bg = color.gray4 },
-    ["@text.warning"] = { fg = color.bg, bg = color.light_orange },
-    ["@text.error"] = { fg = color.bg, bg = color.red },
-    ["@text.danger"] = { fg = "Black", bg = color.red },
-    ["@text.strike"] = { fg = color.fg },
-    ["@text.strong"] = { link = "Bold" },
-    ["@text.emphasis"] = { link = "Italic" },
-    ["@text.underline"] = { link = "Underlined" },
-    ["@text.literal.markdown_inline"] = { bg = color.blue6, fg = color.blue },
-    ["@text.todo"] = { link = "Todo" },
-    ["@text.todo.checked"] = { link = "Directory" },
-    ["@text.todo.unchecked"] = { link = "PreProc" },
-    ["@type"] = { fg = color.blue },
-    ["@type.builtin"] = { fg = color.cyan },
-    ["@type.qualifier"] = { link = "Special" },
-    ["@type.definition"] = { link = "Typedef" },
-    ["@storageclass"] = { link = "StorageClass" },
-
-    TSNodeKey = { fg = color.magenta2, bold = true },
-    TSNodeUnmatched = { fg = color.dark2 },
-
-    -- Indent Blankline
-    IndentBlanklineContextChar = { fg = color.gray4 },
-    IndentBlanklineChar = { fg = color.fg_gutter, nocombine = true },
-
-    -- HTML
-    htmlH1 = { fg = color.magenta, bold = true },
-    htmlH2 = { fg = color.blue, bold = true },
-    htmlUnderline = { underline = true, sp = color.dark3 },
-    htmlBoldUnderline = { bold = true, underline = true, sp = color.dark3 },
-    htmlItalicUnderline = { italic = true, underline = true, sp = color.dark3 },
-    htmlUnderlineBold = { bold = true, underline = true, sp = color.dark3 },
-    htmlUnderlineBoldItalic = { underline = true, sp = color.dark3 },
-    htmlUnderlineItalic = { underline = true, sp = color.dark3 },
-    htmlUnderlineItalicBold = { underline = true, sp = color.dark3 },
-    htmlItalicUnderlineBold = { italic = true, underline = true, sp = color.dark3 },
-    htmlBoldItalicUnderline = { bold = true, italic = true, underline = true, sp = color.dark3 },
-    htmlBoldUnderlineItalic = { bold = true, underline = true, sp = color.dark3 },
-    htmlItalicBoldUnderline = { italic = true, bold = true, underline = true, sp = color.dark3 },
-
-    -- Neorg
-    ["@spell.norg"] = { fg = color.none },
-    ["@neorg.headings.1.prefix.norg"] = { fg = color.blue },
-    ["@neorg.headings.3.prefix.norg"] = { fg = color.light_orange },
-    ["@neorg.headings.4.prefix.norg"] = { fg = color.green },
-    ["@neorg.headings.5.prefix.norg"] = { fg = color.purple },
-    ["@neorg.headings.6.prefix.norg"] = { fg = color.yellow },
-    ["@neorg.headings.1.title.norg"] = { fg = color.blue },
-    ["@neorg.headings.2.title.norg"] = { fg = color.magenta },
-    ["@neorg.headings.3.title.norg"] = { fg = color.light_orange },
-    ["@neorg.headings.4.title.norg"] = { fg = color.green },
-    ["@neorg.headings.5.title.norg"] = { fg = color.magenta },
-    ["@neorg.headings.6.title.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.1.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.2.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.3.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.4.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.5.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.6.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.unordered.1.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.unordered.2.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.unordered.3.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.unordered.4.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.unordered.5.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.unordered.6.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.ordered.1.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.ordered.2.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.ordered.3.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.ordered.4.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.ordered.5.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.ordered.6.prefix.norg"] = { fg = color.blue },
-    ["@neorg.lists.ordered.1.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.ordered.2.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.ordered.3.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.ordered.4.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.ordered.5.content.norg"] = { fg = color.gray4 },
-    ["@neorg.lists.ordered.6.content.norg"] = { fg = color.gray4 },
-    ["@neorg.qoutes.1.prefix.norg"] = { fg = color.green },
-    ["@neorg.qoutes.2.prefix.norg"] = { fg = color.green },
-    ["@neorg.qoutes.3.prefix.norg"] = { fg = color.green },
-    ["@neorg.qoutes.4.prefix.norg"] = { fg = color.green },
-    ["@neorg.qoutes.5.prefix.norg"] = { fg = color.green },
-    ["@neorg.qoutes.6.prefix.norg"] = { fg = color.green },
-
-    -- NvimTree
-    NvimTreeGitDeleted = { fg = color.red },
-    NvimTreeWinSeparator = {
-      fg = color.win_sep or color.bg,
-    },
-    NvimTreeEndOfBuffer = { link = "EndOfBuffer" },
-    NvimTreeSpecialFile = { underline = true, sp = color.gray2 },
-    NvimTreeIndentMarker = { fg = color.blue6 },
-    NvimTreeSymlink = { fg = color.yellow },
-    NvimTreeNormal = { link = "Normal" },
-    NvimTreeNormalNC = { link = "NormalNC" },
-    NvimTreeFolderIcon = { fg = color.sky },
-    NvimTreeRootFolder = { fg = color.root, bold = false },
-    NvimTreeFolderName = { fg = color.fg },
-    NvimTreeOpenedFolderName = { fg = color.gray4 },
-    NvimTreeEmptyFolderName = { fg = color.gray4 },
-    NvimTreeGitDirty = { fg = color.blue4 },
-    NvimTreeGitNew = { fg = color.green2 },
-
-    -- Which-Key
-    WhichKeyBorder = { fg = color.border, bg = color.none },
-    WhichKeyFloat = { link = "NormalFloat" },
-    WhichKey = { fg = color.dark4 },
-    WhichKeyGroup = { fg = color.sky },
-    WhichKeyDesc = { fg = color.fg },
-    WhichKeySeparator = { fg = color.dark4 },
-    WhichKeyValue = { fg = color.dark3 },
-
-    -- Telescope
-    TelescopeNormal = { fg = color.gray2, bg = color.bg },
-    TelescopeMatching = { fg = color.dark3, bg = color.dark },
-    TelescopeSelection = { fg = color.sky, bg = color.dark },
-    TelescopeMultiSelection = { bg = color.dark },
-    TelescopePromptPrefix = { fg = color.sky, bg = color.cursorline },
-    TelescopePromptNormal = { fg = color.fg, bg = color.cursorline },
-    TelescopePromptBorder = { fg = color.cursorline, bg = color.cursorline },
-    TelescopePromptTitle = { fg = color.sky, bg = color.bg },
-    TelescopePreviewLine = { bg = color.bg },
-    TelescopePreviewTitle = { fg = color.sky, bg = color.cursorline },
-    TelescopePreviewNormal = { fg = color.gray2, bg = color.dark },
-    TelescopePreviewBorder = { fg = color.dark, bg = color.dark },
-    TelescopeResultsTitle = { fg = color.dark, bg = color.dark },
-    TelescopeResultsBorder = { fg = color.dark, bg = color.dark },
-    TelescopeResultsNormal = { fg = color.fg, bg = color.dark },
-
-    -- Alpha
-    AlphaHeader = { fg = color.header },
-    AlphaButton = { fg = color.fg },
-    AlphaFooter = { fg = color.fg },
-    AlphaShortcut = { fg = color.header },
-
-    -- Dashboard
-    DashboardHeader = { fg = color.header },
-    DashboardCenter = { fg = color.fg },
-    DashboardFooter = { fg = color.fg },
-    DashboardShortcut = { fg = color.header },
-
-    -- Git
-    GitSignsChange = { fg = color.change, bg = color.bg },
-    GitSignsDelete = { fg = color.delete, bg = color.bg },
-    GitSignsAdd = { fg = color.add, bg = color.bg },
-
-    -- Diagnostics
-    DiagnosticError = { fg = color.error },
-    DiagnosticInfo = { fg = color.info },
-    DiagnosticWarn = { fg = color.warn },
-    DiagnosticHint = { fg = color.hint },
-    DiagnosticUnnecessary = { bg = color.bg },
-
-    DiagnosticUnderlineError = { underline = false },
-    DiagnosticUnderlineInfo = { underline = false },
-    DiagnosticUnderlineWarn = { underline = false },
-    DiagnosticUnderlineHint = { underline = false },
-
-    DiagnosticVirtualTextError = { fg = color.error, bg = color.virtual_err },
-    DiagnosticVirtualTextInfo = { fg = color.info, bg = color.virtual_info },
-    DiagnosticVirtualTextWarn = { fg = color.warn, bg = color.virtual_warn },
-    DiagnosticVirtualTextHint = { fg = color.hint, bg = color.virtual_hint },
-
-    DiagnosticFloatingError = { link = "DiagnosticError" },
-    DiagnosticFloatingInfo = { link = "DiagnosticInfo" },
-    DiagnosticFloatingWarn = { link = "DiagnosticWarn" },
-    DiagnosticFloatingHint = { link = "DiagnosticHint" },
-
-    DiagnosticSignError = { link = "DiagnosticError" },
-    DiagnosticSignInfo = { link = "DiagnosticInfo" },
-    DiagnosticSignWarn = { link = "DiagnosticWarn" },
-    DiagnosticSignHint = { link = "DiagnosticHint" },
-
-    -- diff
-    diffAdded = { fg = color.green },
-    diffRemoved = { fg = color.red },
-    diffChanged = { fg = color.blue },
-    diffOldFile = { fg = color.yellow },
-    diffNewFile = { fg = color.light_orange },
-    diffFile = { fg = color.blue },
-    diffLine = { fg = color.dark4 },
-    diffIndexLine = { fg = color.magenta },
-
-    -- LSP
-    DiagnosticWarning = { link = "DiagnosticWarn" },
-    DiagnosticInformation = { link = "DiagnosticInfo" },
-    LspSagaSignatureHelpBorder = { fg = color.border, bg = color.none },
-    LspSagaDefPreviewBorder = { fg = color.border, bg = color.none },
-    LspSagaRenameBorder = { fg = color.border, bg = color.none },
-    LspFloatWinBorder = { fg = color.border, bg = color.none },
-    LspSagaBorderTitle = { fg = color.border, bg = color.none },
-    LspSagaHoverBorder = { fg = color.border, bg = color.none },
-    LspSagaCodeActionBorder = { fg = color.border, bg = color.none },
-    LspSagaFinderSelection = { fg = color.bg_visual },
-    LspSagaCodeActionTitle = { fg = color.blue1 },
-    LspSagaCodeActionContent = { fg = color.purple },
-    ReferencesCount = { fg = color.purple },
-    DefinitionCount = { fg = color.purple },
-    DefinitionIcon = { fg = color.blue },
-    ReferencesIcon = { fg = color.blue },
-    TargetWord = { fg = color.cyan },
-
-    -- general
-    TitleString = { fg = color.fg },
-    TitleIcon = { fg = color.red },
-    SagaBorder = { bg = color.bg, fg = color.border },
-    SagaNormal = { bg = color.bg },
-    SagaExpand = { fg = color.red },
-    SagaCollapse = { fg = color.red },
-    SagaBeacon = { bg = color.magenta },
-    -- code action
-    ActionPreviewNormal = { link = "SagaNormal" },
-    ActionPreviewBorder = { link = "SagaBorder" },
-    ActionPreviewTitle = { fg = color.violet, bg = color.bg },
-    CodeActionNormal = { link = "SagaNormal" },
-    CodeActionBorder = { link = "SagaBorder" },
-    CodeActionText = { fg = color.light_orange },
-    CodeActionNumber = { fg = color.green },
-    -- finder
-    FinderSelection = { fg = color.cyan, bold = true },
-    FinderFileName = { fg = color.fg },
-    FinderCount = { link = "Label" },
-    FinderIcon = { fg = color.cyan },
-    FinderType = { fg = color.violet },
-    --finder spinner
-    FinderSpinnerTitle = { fg = color.magenta, bold = true },
-    FinderSpinner = { fg = color.magenta, bold = true },
-    FinderPreviewSearch = { link = "Search" },
-    FinderVirtText = { fg = color.red },
-    FinderNormal = { link = "SagaNormal" },
-    FinderBorder = { link = "SagaBorder" },
-    FinderPreviewBorder = { link = "SagaBorder" },
-    -- definition
-    DefinitionBorder = { link = "SagaBorder" },
-    DefinitionNormal = { link = "SagaNormal" },
-    DefinitionSearch = { link = "Search" },
-    -- hover
-    HoverNormal = { link = "SagaNormal" },
-    HoverBorder = { link = "SagaBorder" },
-    -- rename
-    RenameBorder = { link = "SagaBorder" },
-    RenameNormal = { fg = color.light_orange, bg = color.bg },
-    RenameMatch = { link = "Search" },
-    -- diagnostic
-    DiagnosticBorder = { link = "SagaBorder" },
-    DiagnosticSource = { fg = "gray" },
-    DiagnosticNormal = { link = "SagaNormal" },
-    DiagnosticErrorBorder = { link = "DiagnosticError" },
-    DiagnosticWarnBorder = { link = "DiagnosticWarn" },
-    DiagnosticHintBorder = { link = "DiagnosticHint" },
-    DiagnosticInfoBorder = { link = "DiagnosticInfo" },
-    DiagnosticPos = { fg = color.gray },
-    DiagnosticWord = { fg = color.fg },
-    -- Call Hierachry
-    CallHierarchyNormal = { link = "SagaNormal" },
-    CallHierarchyBorder = { link = "SagaBorder" },
-    CallHierarchyIcon = { fg = color.violet },
-    CallHierarchyTitle = { fg = color.red },
-    -- lightbulb
-    LspSagaLightBulb = { link = "DiagnosticSignHint" },
-    -- shadow
-    SagaShadow = { bg = color.black },
-    -- Outline
-    OutlineIndent = { fg = color.magenta },
-    OutlinePreviewBorder = { link = "SagaNormal" },
-    OutlinePreviewNormal = { link = "SagaBorder" },
-    -- Float term
-    TerminalBorder = { link = "SagaBorder" },
-    TerminalNormal = { link = "SagaNormal" },
-
-    LspReferenceText = { bg = color.blue7 },
-    LspReferenceRead = { bg = color.blue7 },
-    LspReferenceWrite = { bg = color.blue7 },
-    LspInfoBorder = { link = "FloatBorder" },
-    LspFloatWinNormal = { link = "NormalFloat" },
-
-    CmpItemKindFolder = { fg = color.blue },
-    CmpItemKindFile = { fg = color.green },
-
-    CmpItemKindEnumMember = { fg = color.purple },
-    CmpItemKindFunction = { fg = color.purple },
-    CmpItemKindMethod = { fg = color.purple },
-    CmpItemKindStruct = { fg = color.purple },
-    CmpItemKindEnum = { fg = color.purple },
-
-    CmpItemKindConstructor = { fg = color.cyan },
-    CmpItemKindInterface = { fg = color.cyan },
-    CmpItemKindReference = { fg = color.cyan },
-    CmpItemKindConstant = { fg = color.cyan },
-    CmpItemKindProperty = { fg = color.cyan },
-    CmpItemKindModule = { fg = color.cyan },
-    CmpItemKindClass = { fg = color.cyan },
-    CmpItemKindField = { fg = color.cyan },
-    CmpItemKindEvent = { fg = color.cyan },
-
-    CmpItemKindTypeParameter = { fg = color.gray4 },
-    CmpItemKindVariable = { fg = color.gray4 },
-    CmpItemKindOperator = { fg = color.blue },
-    CmpItemKindSnippet = { fg = color.blue },
-    CmpItemKindKeyword = { fg = color.blue },
-    CmpItemKindText = { fg = color.gray4 },
-    CmpItemKindUnit = { fg = color.gray4 },
-    CmpItemKindValue = { fg = color.blue },
-
-    CmpItemAbbrMatch = { fg = color.sky, bg = color.none },
-    CmpItemAbbrDeprecated = { fg = color.blue7, bg = color.none, strikethrough = true },
-    CmpItemAbbrMatchFuzzy = { fg = color.sky, bg = color.none },
-    CmpItemAbbr = { fg = color.fg, bg = color.none },
-
-    -- Scrollbar
-    ScrollbarHandle = { fg = color.none, bg = color.highlight },
-
-    ScrollbarSearchHandle = { fg = color.light_orange, bg = color.highlight },
-    ScrollbarSearch = { fg = color.light_orange, bg = color.none },
-
-    ScrollbarErrorHandle = { fg = color.red, bg = color.highlight },
-    ScrollbarError = { fg = color.red, bg = color.none },
-
-    ScrollbarWarnHandle = { fg = color.light_orange, bg = color.highlight },
-    ScrollbarWarn = { fg = color.light_orange, bg = color.none },
-
-    ScrollbarInfoHandle = { fg = color.blue, bg = color.highlight },
-    ScrollbarInfo = { fg = color.blue, bg = color.none },
-
-    ScrollbarHintHandle = { fg = color.yellow, bg = color.highlight },
-    ScrollbarHint = { fg = color.yellow, bg = color.none },
-
-    ScrollbarMiscHandle = { fg = color.purple, bg = color.highlight },
-    ScrollbarMisc = { fg = color.purple, bg = color.none },
-
-    -- Yanky
-    YankyPut = { link = "Visual" },
-    YankyYanked = { link = "Visual" },
-    YankHighlight = { bg = color.dark2 },
-
-    -- Notify
-    NotifyERRORBorder = { fg = color.red, bg = color.bg },
-    NotifyWARNBorder = { fg = color.light_orange, bg = color.bg },
-    NotifyINFOBorder = { fg = color.blue, bg = color.bg },
-    NotifyDEBUGBorder = { fg = color.dark4, bg = color.bg },
-    NotifyTRACEBorder = { fg = color.purple, bg = color.bg },
-    --- Icons
-    NotifyERRORIcon = { fg = color.red },
-    NotifyWARNIcon = { fg = color.light_orange },
-    NotifyINFOIcon = { fg = color.blue },
-    NotifyDEBUGIcon = { fg = color.dark4 },
-    NotifyTRACEIcon = { fg = color.purple },
-    --- Title
-    NotifyERRORTitle = { fg = color.red },
-    NotifyWARNTitle = { fg = color.light_orange },
-    NotifyINFOTitle = { fg = color.blue },
-    NotifyDEBUGTitle = { fg = color.dark4 },
-    NotifyTRACETitle = { fg = color.purple },
-    --- Body
-    NotifyERRORBody = { fg = color.fg, bg = color.bg },
-    NotifyWARNBody = { fg = color.fg, bg = color.bg },
-    NotifyINFOBody = { fg = color.fg, bg = color.bg },
-    NotifyDEBUGBody = { fg = color.fg, bg = color.bg },
-    NotifyTRACEBody = { fg = color.fg, bg = color.bg },
+    -- vim-illuminate: https://github.com/RRethy/vim-illuminate
+    illuminatedCurWord = { bg = p.foreground },
+    illuminatedWord = { bg = p.foreground },
   }
 
   theme.terminal_colors = {
-    terminal_color_0 = color.black,
-    terminal_color_8 = color.blue6,
-    terminal_color_7 = color.gray4,
-    terminal_color_15 = color.fg,
-    terminal_color_1 = color.red1,
-    terminal_color_9 = color.red1,
-    terminal_color_2 = color.green3,
-    terminal_color_10 = color.green3,
-    terminal_color_3 = color.yellow,
-    terminal_color_11 = color.yellow,
-    terminal_color_4 = color.blue,
-    terminal_color_12 = color.blue,
-    terminal_color_5 = color.magenta,
-    terminal_color_13 = color.magenta,
-    terminal_color_6 = color.cyan,
-    terminal_color_14 = color.cyan,
+    terminal_color_0 = p.color0,
+    terminal_color_1 = p.color1,
+    terminal_color_2 = p.color2,
+    terminal_color_3 = p.color3,
+    terminal_color_4 = p.color4,
+    terminal_color_5 = p.color5,
+    terminal_color_6 = p.color6,
+    terminal_color_7 = p.color7,
+    terminal_color_8 = p.color8,
+    terminal_color_9 = p.color9,
+    terminal_color_10 = p.color10,
+    terminal_color_11 = p.color11,
+    terminal_color_12 = p.color12,
+    terminal_color_13 = p.color13,
+    terminal_color_14 = p.color14,
+    terminal_color_15 = p.color15,
   }
 
   for option, value in pairs(theme.terminal_colors) do
