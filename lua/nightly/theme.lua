@@ -95,7 +95,7 @@ function theme.setup()
     Typedef = { fg = p.color6 },
     Underlined = { fg = p.color2, underline = true },
     Variable = { fg = p.color5 },
-    VertSplit = { fg = p.background },
+    VertSplit = { fg = p.color0 },
     Visual = { bg = p.cursorline },
     VisualNOS = { bg = p.background },
     WarningMsg = { fg = p.color3, bg = p.background },
@@ -227,7 +227,7 @@ function theme.setup()
     NvimTreeSpecialFile = { fg = p.color1 },
     NvimTreeStatusLineNC = { bg = p.background, fg = p.background },
     NvimTreeSymlink = { fg = p.color3 },
-    NvimTreeVertSplit = { fg = p.background },
+    NvimTreeWinSeparator = { fg = p.background },
 
     -- nvim-treesitter: https://github.com/nvim-treesitter/nvim-treesitter
     ["@attribute"] = { fg = p.color4 },
