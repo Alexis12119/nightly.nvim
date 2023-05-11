@@ -199,6 +199,7 @@ function theme.setup()
     CmpItemKindText = { fg = p.foreground },
     CmpItemKindUnit = { fg = p.foreground },
 
+    -- Yank
     YankyPut = { link = "Visual" },
     YankyYanked = { link = "Visual" },
     YankHighlight = { bg = p.cursorline },
@@ -337,10 +338,6 @@ function theme.setup()
     GitGutterAdd = { fg = p.color4 },
     GitGutterChange = { fg = p.color5 },
     GitGutterDelete = { fg = p.color1 },
-
-    -- vim-illuminate: https://github.com/RRethy/vim-illuminate
-    illuminatedCurWord = { bg = p.foreground },
-    illuminatedWord = { bg = p.foreground },
   }
 
   theme.terminal_colors = {
