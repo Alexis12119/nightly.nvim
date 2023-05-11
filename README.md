@@ -105,6 +105,6 @@ let g:lightline = { 'colorscheme': 'nightly' }
 
 ## Credits
 
-I just customized it according to my liking. Thanks to Everblush team and people who made it possible. It was a wonderful theme. I really like the color palette.
+I would like to express my appreciation to the Everblush team and the contributors who created this wonderful theme. I customized the theme according to my liking, but the foundation of the design was built by their hard work and creativity. The color palette of Everblush is truly captivating, and I'm grateful for the opportunity to build upon their work. Thank you for your inspiring contribution to the design community.
 
 - [Everblush](https://github.com/Everblush/nvim)
