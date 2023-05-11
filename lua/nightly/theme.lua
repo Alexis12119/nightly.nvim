@@ -5,6 +5,11 @@ function theme.setup()
 
   local p = require("nightly.palette").dark_colors
 
+  if options.transparent then
+    p.background = "NONE"
+    vim.o.pumblend = 0
+  end
+
   theme.highlights = {
     -- Base highlights
     Boolean = { fg = p.color5 },
@@ -39,7 +44,7 @@ function theme.setup()
     Function = { fg = p.color6 },
     Identifier = { fg = p.color5 },
     Ignore = { fg = p.color7, bg = p.background },
-    IncSearch = { fg = p.background, bg = p.color10 },
+    IncSearch = { fg = "#000000", bg = p.color10 },
     Include = { fg = p.color6 },
     Keyword = { fg = p.color6 },
     Label = { fg = p.color4 },
@@ -58,14 +63,14 @@ function theme.setup()
     Operator = { fg = p.color6 },
     Pmenu = { fg = p.color17, bg = p.background },
     PmenuSbar = { bg = p.background },
-    PmenuSel = { fg = p.background, bg = p.color4 },
+    PmenuSel = { fg = "#000000", bg = p.color4 },
     PmenuThumb = { bg = p.color2 },
     PreCondit = { fg = p.color6 },
     PreProc = { fg = p.color6 },
     Question = { fg = p.color5 },
     QuickFixLine = { bg = p.color2 },
     Repeat = { fg = p.color6 },
-    Search = { fg = p.background, bg = p.color4 },
+    Search = { fg = "#000000", bg = p.color4 },
     SignColumn = { fg = p.background, bg = p.background },
     Special = { fg = p.color6 },
     SpecialChar = { fg = p.foreground },
@@ -82,7 +87,7 @@ function theme.setup()
     StorageClass = { fg = p.color7 },
     String = { fg = p.color2 },
     Structure = { fg = p.color6 },
-    Substitute = { fg = p.background, bg = p.color9 },
+    Substitute = { fg = "#000000", bg = p.color9 },
     TabLine = { fg = p.color2, bg = p.background },
     TabLineFill = { fg = p.foreground, bg = p.background },
     TabLineSel = { fg = p.foreground, bg = p.background },
@@ -142,17 +147,17 @@ function theme.setup()
     -- lspsaga.nvim: https://github.com/glepnir/lspsaga.nvim
     DefinitionCount = { fg = p.color6 },
     DefinitionIcon = { fg = p.color7 },
-    LspFloatWinBorder = { fg = p.background },
+    LspFloatWinBorder = { fg = p.color8 },
     LspFloatWinNormal = { bg = p.background },
     LspSagaBorderTitle = { fg = p.color7 },
-    LspSagaCodeActionBorder = { fg = p.color7 },
+    LspSagaCodeActionBorder = { fg = p.color8 },
     LspSagaCodeActionContent = { fg = p.color6 },
     LspSagaCodeActionTitle = { fg = p.color7 },
-    LspSagaDefPreviewBorder = { fg = p.color4 },
+    LspSagaDefPreviewBorder = { fg = p.color8 },
     LspSagaFinderSelection = { fg = p.color1 },
-    LspSagaHoverBorder = { fg = p.color7 },
-    LspSagaRenameBorder = { fg = p.color4 },
-    LspSagaSignatureHelpBorder = { fg = p.color1 },
+    LspSagaHoverBorder = { fg = p.color8 },
+    LspSagaRenameBorder = { fg = p.color8 },
+    LspSagaSignatureHelpBorder = { fg = p.color8 },
     ReferencesCount = { fg = p.color6 },
     ReferencesIcon = { fg = p.color7 },
     TargetWord = { fg = p.color7 },
@@ -162,7 +167,7 @@ function theme.setup()
     NeogitDiffAddHighlight = { fg = p.color4, bg = p.background },
     NeogitDiffContextHighlight = { bg = p.background, fg = p.foreground },
     NeogitDiffDeleteHighlight = { fg = p.color1, bg = p.background },
-    NeogitHunkHeader = { bg = p.background, fg = p.foreground },
+    NeogitHunkHeader = { bg = "#000000", fg = p.foreground },
     NeogitHunkHeaderHighlight = { bg = p.comment, fg = p.color7 },
     NeogitRemote = { fg = p.color6 },
 
@@ -172,7 +177,7 @@ function theme.setup()
     healthWarning = { fg = p.color5 },
 
     -- nvim-cmp: https://github.com/hrsh7th/nvim-cmp
-    CmpDocumentationBorder = { fg = p.foreground, bg = p.background },
+    CmpDocumentationBorder = { fg = p.color8, bg = p.background },
     CmpItemAbbr = { fg = p.foreground, bg = p.background },
     CmpItemAbbrDeprecated = { fg = p.color2, bg = p.background },
     CmpItemAbbrMatch = { fg = p.color7, bg = p.background },
