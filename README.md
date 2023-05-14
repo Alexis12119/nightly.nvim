@@ -91,6 +91,7 @@ let g:lightline = { 'colorscheme': 'nightly' }
 # Integrations
 
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
+- [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)

@@ -318,6 +318,12 @@ function theme.setup()
     AlphaFooter = { fg = p.color3 },
     AlphaShortcut = { fg = p.color1 },
 
+    -- dashboard.nvim: https://github.com/nvimdev/dashboard-nvim
+    DashboardHeader = { fg = p.color2 },
+    DashboardButton = { fg = p.color4 },
+    DashboardFooter = { fg = p.color3 },
+    DashboardShortcut = { fg = p.color1 },
+
     -- telescope.nvim: https://github.com/nvim-telescope/telescope.nvim
     TelescopeMatching = { fg = p.color2 },
     TelescopeSelection = { fg = p.color2, bg = p.bg },
