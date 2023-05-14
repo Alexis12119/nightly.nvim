@@ -320,7 +320,7 @@ function theme.setup()
 
     -- dashboard.nvim: https://github.com/nvimdev/dashboard-nvim
     DashboardHeader = { fg = p.color2 },
-    DashboardButton = { fg = p.color4 },
+    DashboardCenter = { fg = p.color4 },
     DashboardFooter = { fg = p.color3 },
     DashboardShortcut = { fg = p.color1 },
 
