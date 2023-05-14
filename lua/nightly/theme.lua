@@ -24,7 +24,7 @@ function theme.setup()
     CursorColumn = { bg = p.background },
     CursorIM = { fg = p.foreground, bg = p.foreground },
     CursorLine = { bg = p.cursorline },
-    CursorLineNr = { fg = p.cursorline },
+    CursorLineNr = { fg = p.foreground },
     Debug = { fg = p.color1 },
     Define = { fg = p.color6 },
     Delimiter = { fg = p.foreground },
