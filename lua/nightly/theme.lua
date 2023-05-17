@@ -15,7 +15,7 @@ function theme.setup()
     Boolean = { fg = p.color5 },
     Character = { fg = p.color12 },
     ColorColumn = { bg = p.none },
-    Comment = { fg = p.comment, italic = true },
+    Comment = { fg = p.comment, style = options.styles.comments },
     Conceal = { fg = p.color4, bg = p.background },
     Conditional = { fg = p.color6 },
     Constant = { fg = p.color5 },
@@ -41,12 +41,12 @@ function theme.setup()
     FloatBorder = { fg = p.color17 },
     FoldColumn = { fg = p.color4, bg = p.background },
     Folded = { fg = p.color4, bg = p.background },
-    Function = { fg = p.color6 },
+    Function = { fg = p.color6, style = options.styles.functions },
     Identifier = { fg = p.color5 },
     Ignore = { fg = p.color7, bg = p.background },
     IncSearch = { fg = p.black, bg = p.color10 },
     Include = { fg = p.color6 },
-    Keyword = { fg = p.color6 },
+    Keyword = { fg = p.color6, style = options.styles.keywords },
     Label = { fg = p.color4 },
     LineNr = { fg = p.color8 },
     Macro = { fg = p.color6 },
@@ -239,7 +239,7 @@ function theme.setup()
     ["@attribute"] = { fg = p.color4 },
     ["@boolean"] = { fg = p.color6 },
     ["@character"] = { fg = p.color4 },
-    ["@comment"] = { fg = p.comment, italic = true },
+    ["@comment"] = { fg = p.comment, style = options.styles.comments },
     ["@conditional"] = { fg = p.color1 },
     ["@constant"] = { fg = p.color6 },
     ["@constant.builtin"] = { fg = p.color4 },
@@ -248,12 +248,12 @@ function theme.setup()
     ["@exception"] = { fg = p.color8 },
     ["@field"] = { fg = p.color1 },
     ["@float"] = { link = "@number" },
-    ["@function"] = { fg = p.color1 },
+    ["@function"] = { fg = p.color1, style = options.styles.functions },
     ["@function.builtin"] = { fg = p.color14 },
     ["@function.macro"] = { fg = p.color2 },
     ["@include"] = { fg = p.color4 },
-    ["@keyword"] = { fg = p.color5 },
-    ["@keyword.function"] = { fg = p.color5 },
+    ["@keyword"] = { fg = p.color5, style = options.styles.keywords },
+    ["@keyword.function"] = { fg = p.color5, style = options.styles.functions },
     ["@keyword.operator"] = { fg = p.color12 },
     ["@keyword.return"] = { fg = p.color4 },
     ["@label"] = { fg = p.color4 },
@@ -293,7 +293,7 @@ function theme.setup()
     ["@text.warning"] = { fg = p.color0, bg = p.color1 },
     ["@type"] = { fg = p.color3 },
     ["@type.builtin"] = { fg = p.color3 },
-    ["@variable"] = { fg = p.color7 },
+    ["@variable"] = { fg = p.color7, style = options.styles.variables },
     ["@variable.builtin"] = { fg = p.color4 },
 
     -- LSP semantic tokens
@@ -383,9 +383,14 @@ function theme.setup()
 
   -- Set the highlights
   for group, colors in pairs(theme.highlights) do
-    if not vim.tbl_isempty(colors) then
-      vim.api.nvim_set_hl(0, group, colors)
+    if colors.style then
+      if type(colors.style) == "table" then
+        print(group)
+        colors = vim.tbl_extend("force", colors, colors.style)
+      end
+      colors.style = nil
     end
+    vim.api.nvim_set_hl(0, group, colors)
   end
 end
 

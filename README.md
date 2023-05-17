@@ -32,11 +32,14 @@ Plug 'Alexis12119/nightly.nvim'
 
 ```lua
 require("nightly").setup({
-    transparent = false,
-    highlights = {
-        -- add or override highlights
-        -- Normal = { bg = "#000000" }
-    },
+  transparent = false,
+  styles = {
+    comments = { italic = true },
+    functions = { italic = false },
+    variables = { italic = false },
+    keywords = { italic = false },
+  },
+  highlights = {},
 })
 ```
 
