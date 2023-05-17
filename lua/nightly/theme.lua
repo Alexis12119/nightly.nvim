@@ -385,7 +385,6 @@ function theme.setup()
   for group, colors in pairs(theme.highlights) do
     if colors.style then
       if type(colors.style) == "table" then
-        print(group)
         colors = vim.tbl_extend("force", colors, colors.style)
       end
       colors.style = nil
