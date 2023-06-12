@@ -199,10 +199,10 @@ function theme.setup()
     CmpItemKindKeyword = { fg = p.color4 },
     CmpItemKindValue = { fg = p.color4 },
     CmpItemKindOperator = { fg = p.color4 },
-    CmpItemKindTypeParameter = { fg = p.foreground },
-    CmpItemKindVariable = { fg = p.foreground },
-    CmpItemKindText = { fg = p.foreground },
-    CmpItemKindUnit = { fg = p.foreground },
+    CmpItemKindTypeParameter = { fg = p.color7 },
+    CmpItemKindVariable = { fg = p.color7 },
+    CmpItemKindText = { fg = p.color7 },
+    CmpItemKindUnit = { fg = p.color7 },
 
     -- Yank
     YankyPut = { link = "Visual" },
@@ -339,6 +339,15 @@ function theme.setup()
     TelescopePreviewTitle = { fg = p.background, bg = p.color3 },
     TelescopePreviewBorder = { fg = p.color16, bg = p.color16 },
     TelescopePreviewNormal = { fg = p.foreground, bg = p.color16 },
+
+    -- mason.nvim: https://github.com/williamboman/mason.nvim
+    MasonHeader = { bg = p.color9, fg = p.black },
+    MasonHighlight = { fg = p.color12 },
+    MasonHighlightBlock = { fg = p.black, bg = p.color10 },
+    MasonHighlightBlockBold = { link = "MasonHighlightBlock" },
+    MasonHeaderSecondary = { link = "MasonHighlightBlock" },
+    MasonMuted = { fg = p.color7 },
+    MasonMutedBlock = { fg = p.color7, bg = p.color8 },
 
     -- trouble.nvim: https://github.com/folke/trouble.nvim
     LspTroubleCount = { fg = p.color6, bg = p.foreground },
