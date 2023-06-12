@@ -57,8 +57,6 @@ vim.cmd "colorscheme nightly"
 
 ### [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
-![lualine](https://user-images.githubusercontent.com/74944536/218365052-40bdb345-cc26-4720-aa0f-e9f8c6b45fce.png)
-
 ```lua
 -- Lua
 require('lualine').setup({
@@ -73,22 +71,6 @@ require('lualine').setup({
     options = { theme = 'nightly' }
 })
 EOF
-```
-
-### [lightline.vim](https://github.com/itchyny/lightline.vim)
-
-![lightline](https://user-images.githubusercontent.com/74944536/218365089-5d5205a9-884e-4968-ba19-756d3be5c85d.PNG)
-
-```lua
--- Lua
-vim.g.lightline = {
-    ["colorscheme"] = "nightly",
-}
-```
-
-```vim
-" Vimscript
-let g:lightline = { 'colorscheme': 'nightly' }
 ```
 
 # Integrations
