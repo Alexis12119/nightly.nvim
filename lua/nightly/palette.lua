@@ -23,7 +23,7 @@ M.dark_colors = {
   comment = "#404749",
   black = "#000000",
   background = "#141B1E",
-  foreground = "#DADADA",
+  foreground = "#ABB2BF",
   cursorline = "#242e32",
   none = "NONE",
 }
