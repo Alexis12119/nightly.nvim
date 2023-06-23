@@ -245,7 +245,7 @@ function theme.setup()
     ["@constant.builtin"] = { fg = p.color4 },
     ["@constant.macro"] = { fg = p.color3 },
     ["@constructor"] = { fg = p.color4 },
-    ["@exception"] = { fg = p.color8 },
+    ["@exception"] = { fg = p.color1 },
     ["@field"] = { fg = p.color1 },
     ["@float"] = { link = "@number" },
     ["@function"] = { fg = p.color1, style = options.styles.functions },
