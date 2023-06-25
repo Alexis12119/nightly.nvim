@@ -315,6 +315,7 @@ function theme.setup()
     -- alpha.nvim: https://github.com/goolord/alpha-nvim
     AlphaHeader = { fg = p.color2 },
     AlphaButton = { fg = p.color4 },
+    AlphaButtons = { fg = p.color4 },
     AlphaFooter = { fg = p.color3 },
     AlphaShortcut = { fg = p.color1 },
 
