@@ -1,6 +1,6 @@
-![Screenshot (156)](https://github.com/Alexis12119/nightly.nvim/assets/74944536/7cc87a19-106e-4d99-8c77-6ab94e4ea14b)
-![Screenshot (157)](https://github.com/Alexis12119/nightly.nvim/assets/74944536/e819ab1f-d944-4e97-ba31-7525a367f3d2)
-![Screenshot (158)](https://github.com/Alexis12119/nightly.nvim/assets/74944536/fe86170c-683e-4be7-9a46-20d5cb1aa528)
+![Split](https://github.com/Alexis12119/nightly.nvim/assets/74944536/5645cbbb-2182-43fa-977d-6d81f1d68bb7)
+![Telescope](https://github.com/Alexis12119/nightly.nvim/assets/74944536/dcbfa4e3-d3d5-4b09-b205-154cde98cc92)
+![which-key](https://github.com/Alexis12119/nightly.nvim/assets/74944536/56eb49d8-ac84-4ed8-b714-b66bb0faf538)
 
 ## ⚡️ Requirements
 

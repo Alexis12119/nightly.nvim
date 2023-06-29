@@ -32,7 +32,7 @@ function theme.setup()
     DiffChange = { fg = p.color5, bg = p.background },
     DiffDelete = { fg = p.color1, bg = p.background },
     DiffText = { fg = p.color1, bg = p.background },
-    Directory = { fg = p.color4 },
+    Directory = { fg = p.color17, bg = p.color16 },
     EndOfBuffer = { fg = p.background },
     Error = { fg = p.color1, bg = p.background },
     ErrorMsg = { fg = p.color1, bg = p.background },
@@ -109,7 +109,7 @@ function theme.setup()
     lCursor = { fg = p.foreground, bg = p.foreground },
 
     -- bufferline.nvim: https://github.com/akinsho/bufferline.nvim
-    BufferLineFill = { fg = p.background, bg = p.background },
+    BufferLineFill = { fg = p.background, bg = p.color16 },
     BufferLineIndicatorSelected = { fg = p.color2 },
 
     -- Diagnostic
@@ -219,7 +219,7 @@ function theme.setup()
     NvimTreeEmptyFolderName = { fg = p.foreground },
     NvimTreeEndOfBuffer = { fg = p.foreground, bg = p.background },
     NvimTreeEndOfBufferNC = { fg = p.foreground, bg = p.background },
-    NvimTreeFolderIcon = { fg = p.color4, bg = p.background },
+    NvimTreeFolderIcon = { fg = p.color17, bg = p.background },
     NvimTreeFolderName = { fg = p.foreground },
     NvimTreeGitDeleted = { fg = p.color1 },
     NvimTreeGitDirty = { fg = p.color5 },
@@ -229,7 +229,7 @@ function theme.setup()
     NvimTreeNormal = { fg = p.foreground, bg = p.background },
     NvimTreeNormalNC = { fg = p.foreground, bg = p.background },
     NvimTreeOpenedFolderName = { fg = p.foreground },
-    NvimTreeRootFolder = { fg = p.color12 },
+    NvimTreeRootFolder = { fg = p.color17 },
     NvimTreeSpecialFile = { fg = p.color1 },
     NvimTreeStatusLineNC = { bg = p.background, fg = p.background },
     NvimTreeSymlink = { fg = p.color3 },
@@ -404,3 +404,5 @@ function theme.setup()
 end
 
 return theme
+
+
