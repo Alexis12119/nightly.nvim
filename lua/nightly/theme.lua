@@ -32,7 +32,7 @@ function theme.setup()
     DiffChange = { fg = p.color5, bg = p.background },
     DiffDelete = { fg = p.color1, bg = p.background },
     DiffText = { fg = p.color1, bg = p.background },
-    Directory = { fg = p.color17, bg = p.color16 },
+    Directory = { fg = p.color17 },
     EndOfBuffer = { fg = p.background },
     Error = { fg = p.color1, bg = p.background },
     ErrorMsg = { fg = p.color1, bg = p.background },
@@ -109,7 +109,7 @@ function theme.setup()
     lCursor = { fg = p.foreground, bg = p.foreground },
 
     -- bufferline.nvim: https://github.com/akinsho/bufferline.nvim
-    BufferLineFill = { fg = p.background, bg = p.color16 },
+    BufferLineFill = { fg = p.background },
     BufferLineIndicatorSelected = { fg = p.color2 },
 
     -- Diagnostic
@@ -404,5 +404,4 @@ function theme.setup()
 end
 
 return theme
-
 
