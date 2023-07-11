@@ -23,7 +23,7 @@ function theme.setup()
     CurSearch = { link = "IncSearch" },
     CursorColumn = { bg = p.background },
     CursorIM = { fg = p.foreground, bg = p.foreground },
-    CursorLine = { bg = p.cursorline },
+    CursorLine = { bg = p.none },
     CursorLineNr = { fg = p.foreground },
     Debug = { fg = p.color1 },
     Define = { fg = p.color6 },
