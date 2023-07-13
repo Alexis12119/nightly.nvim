@@ -359,6 +359,9 @@ function theme.setup()
     GitGutterAdd = { fg = p.color4 },
     GitGutterChange = { fg = p.color5 },
     GitGutterDelete = { fg = p.color1 },
+
+    -- nvim-ufo:https://github.com/kevinhwang91/nvim-ufo
+    UfoFoldedBg = { bg = p.cursorline },
   }
 
   theme.terminal_colors = {

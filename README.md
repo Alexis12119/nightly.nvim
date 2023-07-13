@@ -89,6 +89,7 @@ EOF
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 
 ## Credits
 
