@@ -161,6 +161,9 @@ function theme.setup()
     ReferencesCount = { fg = p.color6 },
     ReferencesIcon = { fg = p.color7 },
     TargetWord = { fg = p.color7 },
+    SagaText = { fg = p.color7 },
+    SagaFileName = { fg = p.color7 },
+    SagaFolderName = { fg = p.color7 },
 
     -- Neogit: https://github.com/TimUntersberger/neogit
     NeogitBranch = { fg = p.color6 },
@@ -407,4 +410,3 @@ function theme.setup()
 end
 
 return theme
-
