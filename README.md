@@ -1,6 +1,6 @@
-![Preview](https://github.com/Alexis12119/nvim-config/assets/74944536/9ef030b7-f30b-4d80-9fb6-7d35edca8f66)
-
+![Screenshot (188)](https://github.com/Alexis12119/nightly.nvim/assets/74944536/6472f836-a820-4ee8-9ee7-f0803791ed50)
 ## ⚡️ Requirements
+
 
 - Neovim >= 0.8
 
