@@ -1,4 +1,4 @@
-![Preview](https://github.com/Alexis12119/nvim-config/assets/74944536/1d3b10cc-93ea-4a16-bc7b-8845df73dc62)
+![Preview](https://github.com/Alexis12119/nvim-config/assets/74944536/226f3443-5bfc-487e-9d7d-0425f0b51246)
 
 ## ⚡️ Requirements
 
