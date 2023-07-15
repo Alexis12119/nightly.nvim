@@ -167,9 +167,9 @@ function theme.setup()
 
     -- Neogit: https://github.com/TimUntersberger/neogit
     NeogitBranch = { fg = p.color6 },
-    NeogitDiffAddHighlight = { fg = p.black, bg = p.color4},
+    NeogitDiffAddHighlight = { fg = p.black, bg = p.color4 },
     NeogitDiffContextHighlight = { bg = p.background, fg = p.foreground },
-    NeogitDiffDeleteHighlight = { fg = p.black, bg = p.color1},
+    NeogitDiffDeleteHighlight = { fg = p.black, bg = p.color1 },
     NeogitHunkHeader = { bg = p.black, fg = p.foreground },
     NeogitHunkHeaderHighlight = { bg = p.comment, fg = p.color7 },
     NeogitRemote = { fg = p.color6 },
@@ -363,8 +363,38 @@ function theme.setup()
     GitGutterChange = { fg = p.color5 },
     GitGutterDelete = { fg = p.color1 },
 
-    -- nvim-ufo:https://github.com/kevinhwang91/nvim-ufo
+    -- nvim-ufo: https://github.com/kevinhwang91/nvim-ufo
     UfoFoldedBg = { bg = p.cursorline },
+
+    -- nvim-navic: https://github.com/SmiteshP/nvim-navic
+    NavicIconsFile = { link = "Tag" },
+    NavicIconsModule = { link = "Exception" },
+    NavicIconsNamespace = { link = "Include" },
+    NavicIconsPackage = { link = "Label" },
+    NavicIconsClass = { link = "Include" },
+    NavicIconsMethod = { link = "Function" },
+    NavicIconsProperty = { link = "@property" },
+    NavicIconsField = { link = "@field" },
+    NavicIconsConstructor = { link = "@constructor" },
+    NavicIconsEnum = { link = "@number" },
+    NavicIconsInterface = { link = "Type" },
+    NavicIconsFunction = { link = "Function" },
+    NavicIconsVariable = { link = "@variable" },
+    NavicIconsConstant = { link = "Constant" },
+    NavicIconsString = { link = "String" },
+    NavicIconsNumber = { link = "Number" },
+    NavicIconsBoolean = { link = "Boolean" },
+    NavicIconsArray = { link = "Type" },
+    NavicIconsObject = { link = "Type" },
+    NavicIconsKey = { link = "Constant" },
+    NavicIconsNull = { link = "Constant" },
+    NavicIconsEnumMember = { link = "Number" },
+    NavicIconsStruct = { link = "Type" },
+    NavicIconsEvent = { link = "Constant" },
+    NavicIconsOperator = { link = "Operator" },
+    NavicIconsTypeParameter = { link = "Type" },
+    NavicText = { link = "SagaText" },
+    NavicSeparator = { link = "Operator" },
   }
 
   theme.terminal_colors = {

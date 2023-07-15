@@ -1,4 +1,4 @@
-![Screenshot (188)](https://github.com/Alexis12119/nightly.nvim/assets/74944536/6472f836-a820-4ee8-9ee7-f0803791ed50)
+![Preview](https://github.com/Alexis12119/nightly.nvim/assets/74944536/6472f836-a820-4ee8-9ee7-f0803791ed50)
 ## ⚡️ Requirements
 
 
@@ -88,6 +88,7 @@ EOF
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
+- [nvim-navic](https://github.com/SmiteshP/nvim-navic)
 
 ## Credits
 
