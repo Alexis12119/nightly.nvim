@@ -396,6 +396,9 @@ function theme.setup()
     NavicIconsTypeParameter = { link = "Type" },
     NavicText = { link = "SagaText" },
     NavicSeparator = { link = "Operator" },
+
+    -- nvim-notify: https://github.com/rcarriga/nvim-notify
+    NotifyBackground = { bg = "#141B1E" },
   }
 
   theme.terminal_colors = {
