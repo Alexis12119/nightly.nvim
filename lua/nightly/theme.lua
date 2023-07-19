@@ -6,6 +6,7 @@ function theme.setup()
   local p = require("nightly.palette").dark_colors
 
   if options.transparent then
+    p.linenr =  p.color15
     p.background = "NONE"
     vim.o.pumblend = 0
   end
@@ -48,7 +49,7 @@ function theme.setup()
     Include = { fg = p.color6 },
     Keyword = { fg = p.color6, style = options.styles.keywords },
     Label = { fg = p.color4 },
-    LineNr = { fg = p.color8 },
+    LineNr = { fg = p.linenr or p.color8 },
     Macro = { fg = p.color6 },
     MatchParen = { fg = p.color4, bg = p.background },
     ModeMsg = { fg = p.foreground, bg = p.background },
