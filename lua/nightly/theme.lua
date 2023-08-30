@@ -6,7 +6,7 @@ function theme.setup()
   local p = require("nightly.palette").dark_colors
 
   if options.transparent then
-    p.linenr =  p.color15
+    p.linenr = p.color15
     p.background = "NONE"
     vim.o.pumblend = 0
   end
@@ -27,7 +27,7 @@ function theme.setup()
     CursorLine = { bg = p.none },
     CursorLineNr = { fg = p.foreground },
     Debug = { fg = p.color1 },
-    Define = { fg = p.color6 },
+    Define = { fg = p.color5 },
     Delimiter = { fg = p.foreground },
     DiffAdd = { bg = p.color4, fg = p.black },
     DiffChange = { bg = p.color5, fg = p.black },
@@ -85,7 +85,7 @@ function theme.setup()
     StatusLine = { fg = p.foreground, bg = p.background },
     StatusLineNC = { bg = p.background, fg = p.background },
     Storage = { fg = p.color9 },
-    StorageClass = { fg = p.color7 },
+    StorageClass = { fg = p.color5 },
     String = { fg = p.color2 },
     Structure = { fg = p.color6 },
     Substitute = { fg = p.black, bg = p.color9 },
@@ -263,7 +263,7 @@ function theme.setup()
     ["@label"] = { fg = p.color4 },
     ["@method"] = { fg = p.color12 },
     ["@namespace"] = { fg = p.color9 },
-    ["@number"] = { fg = p.color15 },
+    ["@number"] = { fg = p.color6 },
     ["@operator"] = { fg = p.color7 },
     ["@parameter"] = { fg = p.color1 },
     ["@parameter.reference"] = { fg = p.color9 },
@@ -296,7 +296,7 @@ function theme.setup()
     ["@text.uri"] = { fg = p.color3, underline = true },
     ["@text.warning"] = { fg = p.color0, bg = p.color1 },
     ["@type"] = { fg = p.color4 },
-    ["@type.builtin"] = { fg = p.color3 },
+    ["@type.builtin"] = { fg = p.color4 },
     ["@variable"] = { fg = p.color7, style = options.styles.variables },
     ["@variable.builtin"] = { fg = p.color4 },
 
