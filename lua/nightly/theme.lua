@@ -111,7 +111,7 @@ function theme.setup()
     lCursor = { fg = p.foreground, bg = p.foreground },
 
     -- bufferline.nvim: https://github.com/akinsho/bufferline.nvim
-    BufferLineFill = { fg = p.background },
+    BufferLineFill = { bg = p.color16 },
     BufferLineIndicatorSelected = { fg = p.color2 },
 
     -- Diagnostic
