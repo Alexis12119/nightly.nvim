@@ -136,9 +136,6 @@ function theme.setup()
     GitSignsChange = { fg = p.color5 },
     GitSignsDelete = { fg = p.color1 },
 
-    -- indent-blankline.nvim: https://github.com/lukas-reineke/indent-blankline.nvim
-    IndentBlanklineChar = { fg = p.color0 },
-
     -- LSP
     LspInfoFiletype = { fg = p.color15 },
     LspReferenceText = { bg = p.color18 },
