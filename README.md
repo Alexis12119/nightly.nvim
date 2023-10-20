@@ -85,7 +85,6 @@ EOF
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic)
